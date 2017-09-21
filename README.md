@@ -17,7 +17,9 @@ Paralelamente se ira construyendo el marco teorico de deep learning en el cual d
      + Neural Network
      + Tipos de Neural Network(Standard NN, Convolutional NN, Recurrent NN)
      + Tipos de datos  a Tratar(Estructurados , No estructurados)
-    
+* Opciones de datos a tratar para CNN
+     + [Dataset para reconocimiento de reconocimiento de lenguaje de señas](http://facundoq.github.io/unlp/sign_language_datasets/index.html)
+     
 * Plazos de avances:
 
      + Definición concreta de los 2 primeros puntos de GPU y DeepLearning(27 de setiembre)
@@ -25,4 +27,4 @@ Paralelamente se ira construyendo el marco teorico de deep learning en el cual d
      + Definición de los puntos restantes (3 de setiembre)
 
 
-[Avance Teorico]: https://github.com/Visot/SeminarioTesisI/blob/master/SeminarioI.ipynb
+[Avance teorico](https://github.com/Visot/SeminarioTesisI/blob/master/SeminarioI.ipynb)
