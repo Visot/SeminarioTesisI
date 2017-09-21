@@ -17,3 +17,8 @@ Paralelamente se ira construyendo el marco teorico de deep learning en el cual d
      + Tipos de Neural Network(Standard NN, Convolutional NN, Recurrent NN)
      + Tipos de datos  a Tratar(Estructurados , No estructurados)
     
+* Plazos de avances:
+
+     + Definición concreta de los 2 primeros puntos de GPU y DeepLearning(27 de setiembre)
+    
+     + Definición de los puntos restantes (3 de setiembre)
