@@ -9,8 +9,8 @@ Paralelamente se ira construyendo el marco teorico de deep learning en el cual d
 * GPU:
      + Introducción a GPU
      + Marco Teorico GPU y GPGPU
-     + Manejo de OpenCL (Opcional: Numba para acelerar proceso)
-     + Uso de TensorFlow
+     + [Numba](https://numba.pydata.org/) para acelerar procesamiento
+     + Uso de [TensorFlow](https://www.tensorflow.org/)
      + Pruebas con distintos GPU para comparar eficiencia
 * DeepLearning 
      + Introducción a DeepLearning:
@@ -28,3 +28,8 @@ Paralelamente se ira construyendo el marco teorico de deep learning en el cual d
 
 
 [Avance teorico](https://github.com/Visot/SeminarioTesisI/blob/master/SeminarioI.ipynb)
+
+* Referencias:
+     + [Fundamentals of deep Learning](http://www.oreilly.com/ai/free/files/fundamentals-of-deep-learning-sampler.pdf)
+     + [Deep learning Book Sebastian Raschka](https://github.com/rasbt/deep-learning-book)
+     + [Programming Massively Parallel Processor](http://jscit.nit.ac.ir/NeededForms/Programming%20Massively%20Parallel%20Processors%20A%20Hands-on-Approach.pdf)
