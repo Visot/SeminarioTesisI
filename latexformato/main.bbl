@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{Wan09}
+Anindya~S Paul and Eric~A Wan.
+\newblock Rssi-based indoor localization and tracking using sigma-point kalman
+  smoothers.
+\newblock {\em Selected Topics in Signal Processing, IEEE Journal of},
+  3(5):860--873, 2009.
+
+\bibitem{Shuo10}
+Shi Shuo, Sun Hao, and Song Yang.
+\newblock Design of an experimental indoor position system based on rssi.
+\newblock In {\em Information Science and Engineering (ICISE), 2010 2nd
+  International Conference on}, pages 1989--1992. IEEE, 2010.
+
+\bibitem{Feldmann03}
+Silke Feldmann, Kyandoghere Kyamakya, Ana Zapater, and Zighuo Lue.
+\newblock An indoor bluetooth-based positioning system: Concept, implementation
+  and experimental evaluation.
+\newblock In {\em International Conference on Wireless Networks}, pages
+  109--113, 2003.
+
+\end{thebibliography}

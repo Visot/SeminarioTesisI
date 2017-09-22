@@ -1,0 +1,152 @@
+\documentclass[12pt,spanish, singlespacing,]{MastersDoctoralThesis}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage[none]{hyphenat}
+\usepackage{palatino} 
+\usepackage{acronym}
+\spacing{1.5}
+\usepackage[acronym,nomain]{glossaries}
+%\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex}
+%\addbibresource{main.bib}
+\usepackage[autostyle=true]{csquotes}
+
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{0}%
+    \newpage}
+    
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Código}
+\renewcommand\lstlistlistingname{Índice de Código}
+
+\usepackage{float}
+\usepackage{url}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+\thesistitle{}
+\supervisor{} 
+\examiner{} 
+\degree{} 
+\author{} 
+\subject{}
+\keywords{} 
+\university{\href{http://www.uni.edu.pe/}{Universidad Nacional de Ingenier\'ia}} 
+\department{\href{http://fc.uni.edu.pe/fc/index.php/escuelas/ciencia-de-la-computacion}{}} 
+\faculty{\href{http://fc.uni.edu.pe/fc/}{}}
+\hypersetup{pdftitle=\ttitle} 
+\hypersetup{pdfauthor=\authorname}
+\hypersetup{pdfkeywords=\keywordnames} 
+\sloppy
+\decimalpoint
+\begin{document}
+\frontmatter 
+\pagestyle{plain} 
+\begin{titlepage}
+\begin{center}
+%\textsc{\huge \univname}\\[0.5cm]
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{Figures/log_uni.png}
+\end{figure}
+
+\textsc{\huge \univname}\\[0.3cm]
+\textsc{\Large Facultad de Ciencias}\\[0.2cm]
+\textsc{\large Escuela Profesional de Ciencia de la Computaci\'on}\\[2cm]
+\textsc{\LARGE \textit{T\'itulo del trabajo}}\\[2cm] 
+{\Large \textbf{SEMINARIO DE TESIS 1}}
+{\huge \bfseries \ttitle}\\[2cm] 
+% Thesis title
+%\bigskip
+%\HRule \\[0.8cm] % Horizontal line
+
+%\begin{minipage}{1.5\textwidth}
+%\begin{flushleft} \large
+\bigskip
+\bigskip
+\large\emph{Autor: Enrique Alexis Peinado Rodriguez}
+{\authorname}\\ 
+\large\emph{Asesor: Cesar Lara Avila}
+{\supname} 
+%\end{flushleft}
+%\end{minipage}
+%\\[2cm]
+\\[1cm]
+{\large Mes, 2017}\\[4cm] 
+ 
+\vfill
+\end{center}
+\end{titlepage}
+\afterpage{\blankpage}
+%\cleardoublepage
+%\renewcommand{\abstractname}{Abstract}
+\begin{abstract}
+\addchaptertocentry{\abstractname}
+
+Las predicciones de tráfico vehicular pueden llegar a ser muy importante para la vida diaria de una persona ya que ello nos permite detectar puntos de atasco y asi poder prevenir un atasco. Con base en la información proporcionada por una agencia de taxis, podríamos realizar cierto análisis a esa gran cantidad de datos que nos ayuden a evitar los atascos. Mediante el uso del Apache spark, Analísis de datos y tecnicas de Maching Learning realizaremos predicciones en el tiempo de manera rápida y eficiente. Y con la ayuda de estas predicciones poder ayudar a los sistemas de control de tránsito, y asi puedan anticipar y administrar mejor el flujo del tráfico.
+\end{abstract}
+
+\afterpage{\blankpage}
+\tableofcontents
+%\afterpage{\blankpage}
+\listoffigures
+%\afterpage{\blankpage}
+%\listoftables
+%\afterpage{\blankpage}
+%\listoftables 
+%\lstlistoflistings
+%\afterpage{\blankpage}
+\newpage
+
+\begin{center}
+{\huge Índice de Acrónimos}\\[2cm]
+\end{center}
+\bigskip
+\begin{tabular}{ l c l }
+\textbf{API} & & Application Programming Interface\\
+\textbf{AJAX} & & Asynchronous JavaScript And XML\\
+\textbf{ETC} & & Etcétera \\
+
+\end{tabular}
+\afterpage{\blankpage}
+
+\newpage
+\begin{center}
+{\huge \textit{Agradecmientos}}\\[1.5cm]
+\end{center}
+
+The acknowledgements and the people to thank go here, don't forget to include your project advisor\ldots
+With thanks to my friends, my family, my cats and Chris
+
+\afterpage{\blankpage}
+
+\mainmatter 
+\pagestyle{thesis}
+\input{Chapters/Cap1}
+%\newpage
+%$\ $
+%\thispagestyle{empty} % para que no se numere esta pagina
+\input{Chapters/Cap2}
+%\newpage
+$\ $
+%\thispagestyle{empty} % para que no se numere esta pagina
+\input{Chapters/Cap3}
+%\newpage
+$\ $
+%\thispagestyle{empty} % para que no se numere esta pagina
+\input{Chapters/Cap4}
+
+
+
+\bibliography{main}
+\bibliographystyle{unsrt}
+\afterpage{\blankpage}
+
+\appendix
+\input{Appendix/AppendixA}
+
+\end{document}
