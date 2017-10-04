@@ -2,7 +2,7 @@
 \contentsline {chapter}{Resumen}{\es@scroman {iii}}{figure.caption.1}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.4}
 \contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{1}{section.5}
-\contentsline {section}{\numberline {1.2}Objetivos}{1}{section.6}
+\contentsline {section}{\numberline {1.2}Objetivos}{2}{section.6}
 \contentsline {section}{\numberline {1.3}Estructura del Seminario}{2}{section.7}
 \contentsline {chapter}{\numberline {2}Estado del Arte}{4}{chapter.8}
 \contentsline {section}{\numberline {2.1}punto 1 de este cap\IeC {\'\i }tulo}{4}{section.9}
