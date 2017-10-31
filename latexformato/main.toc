@@ -1,18 +1,23 @@
 \select@language {spanish}
 \contentsline {chapter}{Resumen}{\es@scroman {iii}}{figure.caption.1}
-\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.4}
-\contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{1}{section.5}
-\contentsline {section}{\numberline {1.2}Objetivos}{2}{section.6}
-\contentsline {section}{\numberline {1.3}Estructura del Seminario}{3}{section.7}
-\contentsline {chapter}{\numberline {2}Estado del Arte}{4}{chapter.8}
-\contentsline {section}{\numberline {2.1}punto 1 de este cap\IeC {\'\i }tulo}{4}{section.9}
-\contentsline {section}{\numberline {2.2}punto 2}{4}{section.10}
-\contentsline {subsection}{\numberline {2.2.1}punto 2.1}{4}{subsection.11}
-\contentsline {section}{\numberline {2.3}Conclusiones}{5}{section.12}
-\contentsline {chapter}{\numberline {3}OTRO CAPITULO}{6}{chapter.13}
-\contentsline {section}{\numberline {3.1}Metodolog\IeC {\'\i }a}{6}{section.14}
-\contentsline {subsection}{\numberline {3.1.1}SCRUM}{6}{subsection.15}
-\contentsline {chapter}{\numberline {4}Conclusiones y Trabajo Futuro}{8}{chapter.18}
-\contentsline {section}{\numberline {4.1}Conclusiones}{8}{section.19}
-\contentsline {section}{\numberline {4.2}Trabajo Futuro}{8}{section.20}
-\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del ap\IeC {\'e}ndice}{12}{appendix.25}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{2}{chapter.4}
+\contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{2}{section.5}
+\contentsline {section}{\numberline {1.2}Objetivos}{3}{section.6}
+\contentsline {section}{\numberline {1.3}Estructura del Seminario}{4}{section.7}
+\contentsline {chapter}{\numberline {2}Estado del Arte}{5}{chapter.8}
+\contentsline {section}{\numberline {2.1}Machine learning aplicado a GPU's}{5}{section.9}
+\contentsline {subsection}{\numberline {2.1.1}Uso de redes neuronales para encontrar el rendimiento de una GPU}{5}{subsection.10}
+\contentsline {section}{\numberline {2.2}punto 2}{6}{section.11}
+\contentsline {subsection}{\numberline {2.2.1}punto 2.1}{6}{subsection.12}
+\contentsline {section}{\numberline {2.3}Conclusiones}{6}{section.13}
+\contentsline {chapter}{\numberline {3}Marco Teor\IeC {\'\i }co}{7}{chapter.14}
+\contentsline {section}{\numberline {3.1}Conceptos previos}{7}{section.15}
+\contentsline {subsection}{\numberline {3.1.1}CPU}{7}{subsection.16}
+\contentsline {subsection}{\numberline {3.1.2}GPU}{7}{subsection.17}
+\contentsline {subsection}{\numberline {3.1.3}GPGPU}{8}{subsection.18}
+\contentsline {section}{\numberline {3.2}Metodolog\IeC {\'\i }a}{8}{section.20}
+\contentsline {subsection}{\numberline {3.2.1}SCRUM}{8}{subsection.21}
+\contentsline {chapter}{\numberline {4}Conclusiones y Trabajo Futuro}{11}{chapter.24}
+\contentsline {section}{\numberline {4.1}Conclusiones}{11}{section.25}
+\contentsline {section}{\numberline {4.2}Trabajo Futuro}{11}{section.26}
+\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del ap\IeC {\'e}ndice}{15}{appendix.31}
