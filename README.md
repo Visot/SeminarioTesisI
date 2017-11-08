@@ -27,7 +27,7 @@ Paralelamente se ira construyendo el marco teorico de deep learning en el cual d
      + Definición de los puntos restantes (3 de setiembre)
 
 ## Estructura del Seminario
-[Avance teorico](https://github.com/Visot/SeminarioTesisI/blob/master/SeminarioI.ipynb
+[Avance teorico](https://github.com/Visot/SeminarioTesisI/blob/master/SeminarioI.ipynb)
 * Introducción
   * Motivación
 * Estado del Arte
