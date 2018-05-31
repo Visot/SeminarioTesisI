@@ -1,5 +1,8 @@
 \chapter{Estado del Arte}
-En este capítulo describiremos anteriores investigaciones de la relación entre GPGPU computing y machine learning, además de sus aplicaciones. También mostraremos investigaciones referentes a deep learning exclusivamente nos enfocaremos a Convolutional Neural Network(CNN) que son parte del tema de estudio en este seminario. 
+En este capítulo describiremos anteriores investigaciones de machine learning, además de sus aplicaciones. Además veremos algunas investigaciones GPU como un modo de obtener un mejor rendimiento y nos enfocaremos principalmente en los estudios de los métodos de optimización.
+
+También mostraremos investigaciones referentes a deep learning exclusivamente nos enfocaremos a Convolutional Neural Network(CNN) ya que son parte del tema de estudio en este seminario. 
+
 %---Escribir un texto de un o dos párrafo(s) máximo de 10 líneas con una introducción al capítulo 
 
 %---El capítulo estado del arte es tanto o más importante que la tesis en sí. En el se debe especificar que desarrollo relacionado a tu tesis existe ya a nivel global y en que se diferencia tu trabajo de ellos. Por lo tanto un análisis exhaustivo de la especialidad y de los trabajos previos es tanto o más importante que el trabajo en sí, ya que indica un alto conocimiento de la materia si está bien estudiado.
@@ -11,7 +14,7 @@ En este capítulo describiremos anteriores investigaciones de la relación entre
 El uso de las GPU's han permitido lograr aplicaciones que antes podriamos imaginar que eran imposibles debido a su largo tiempo de ejecución. Hoy en día las GPU's son altamentes usadas debido que cuentan con cientos de núcleos de procesadores en paralelo que permiten resolver rápidamente los problemas que son altamente paralelizables.
 \subsection{The GPU computing Era}
 	En artículo se enfoca principalmente en describir la evolución que sufrieron las arquitecturas de GPU's, además de mostrar la importancia del uso de las GPU's para un mayor rendimiento y eficiencia que antes hubiesen sido consideradas imposibles de	bido al alto tiempo de ejecución que requerian. Además nos muestra que la escalabilidad es la principal característica que ha permito que las GPU's aumenten su paralelismo y redimiento.
-\section{Machine learning aplicado a GPU's}
+\section{Machine learning}
 El uso de machine learning representa una gran ventaja para empresas que manejan gran cantidad de datos debido a que permiten descubrir patrones y analizar los datos.
 
 \subsection{Uso de redes neuronales para encontrar el rendimiento de una GPU}
@@ -25,9 +28,12 @@ Este trabajo de investigación fue realizado por investigadores oak Ridge Nation
 Además de mostrarnos las aplicaciones del aprendizaje profundo, como : analísis de documentos, detección de voz, rostro, procesamiento natural del lenguaje, etc.
 
 Actualmente existen algunas empresas privadas que apoyan el campo de deep learning con el objetivo de buscar sus aplicaciones comerciales entre estas empresas tenemos: Numenta y Binatix.
-
+\section{Métodos de optimización}
+El campo de machine learning continuamente evoluciona y con esta evolución surgen nuevas necesidades al trabajar con grandes conjuntos de datos se buscan cada vez obtener buenos resultados sin afectar el rendimiento. Una forma de lograr esto es mediante el uso de algoritmos de optimización.
+\subsection{On Optimization Methods for Deep Learning}
+Un equipo de la universidad de standford realizó una pruebas con el objetivos de encontrar métodos adecuados para un entrenamiento en deep learning. El equipo se percato de lo común que resulta el uso de Gradiente de descenso estocástica o SGD por sus siglas en inglés en deep learning . Se realizaron pruebas con otros métodos de optimización como la gradiente conjugada y Limited memmory BFGS(L-BFGS) los cuales permitieron acelerar el proceso de entrenamiento de algoritmos de deep learning mostrando en su mayoría mejores resultados que el SGD. \textquotedblleft Usando L-BFGS el modelo CNN alcanza el 0.69\%  en el estandar del MNIST dataset. \textquotedblright
 \section{Conclusiones}
-Hemos visto la necesidad....
+%Hemos visto la necesidad....
 
-Poner unas conclusiones del capítulo y lo más importante, donde se enfoca tu trabajo y lo que se diferenncia del resto
+%Poner unas conclusiones del capítulo y lo más importante, donde se enfoca tu trabajo y lo que se diferenncia del resto
 

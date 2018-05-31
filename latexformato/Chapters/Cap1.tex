@@ -1,14 +1,17 @@
 \chapter{Introducción}
 %-- 10 lineas
-En el campo de la inteligencia artificial las redes neuronales profundas tienen un papel muy importante debido a que estas son el camino para que las computadoras realicen tareas que nuestros cerebros realizan de manera natural, tareas como el reconocimiento de voz, imagenes y patrones. En la actualidad empresas importantes utilizan las redes neuronales profundas uno ejemplo de esto es google con el reconocimiento de voz e imagenes. Un caracteristica de las redes neuronales profundas es que están compuestas por una gran cantidad de capas lo cual dificulta el entrenamiento en computadoras que solo usan el CPU. Una manera de resolver este problema es mediante el uso de las GPU's debido que las tareas de entrenamiento son paralelizables podemos usar las GPU'S para acelerar el proceso de entrenamientos de nuestra red neuronal profunda.
+En el campo de la inteligencia artificial las redes neuronales profundas tienen un papel muy importante debido a que estas son el camino para que las computadoras realicen tareas que nuestros cerebros realizan de manera natural, tareas como el reconocimiento de voz, imagenes y patrones. En la actualidad empresas importantes utilizan las redes neuronales profundas uno ejemplo de esto es google con el reconocimiento de voz e imagenes. Un caracteristica de las redes neuronales profundas es que están compuestas por una gran cantidad de capas lo cual dificulta el entrenamiento en computadoras que solo usan el CPU. Una manera de resolver este problema es mediante el uso de las GPU's debido que las tareas de entrenamiento son paralelizables se pueden utilizar GPU'S para acelerar el proceso de entrenamientos de nuestra red neuronal profunda. Por otro lado se necesitan métodos de optimización que junto a la fortaleza de las GPU's nos permitan obtener un mejor rendimiento.
 
 \section{Motivación}
-La inteligencia artificial constituye una base muy importante en el campo de la computación, mezcla un conjunto de disciplinas como la estadística y ciencia de la computación con el objetivo de construir modelos que puedan permitir a las computadoras realizar tareas que hace años hubiese sido considerado imposible. El hecho de lograr que las computadoras sean capaces de reconocer objetos, clasificarlos lo cual ha permitido que la industria de la robotíca desarrolle de manera acelerada en las últimas décadas.  Hoy en día existen muchas herramientas que nos permiten desarrollar este tema y profundizarlo pero a medida que aumenta la complejidad del problema, el costo computacional incrementa lo cual se convierte un problema importante. Una de la soluciones que apareció fue el uso de la GPU's para acelerar procesos como el entrenamiento de una red neural con muchas capas ocultas, las GPU's representa una solución muy eficaz debido a que en el campo de la inteligencia artificial existen muchas tareas que son paralelizables.
+La inteligencia artificial constituye una base muy importante en el campo de la computación, mezcla un conjunto de disciplinas como la estadística y ciencia de la computación con el objetivo de construir modelos que puedan permitir a las computadoras realizar tareas que hace algunos años hubiese sido considerado imposible. El hecho de lograr que las computadoras sean capaces de reconocer objetos, clasificarlos lo cual ha permitido que la industria de la robotíca desarrolle de manera acelerada en las últimas décadas.  Hoy en día existen muchas herramientas que nos permiten desarrollar este tema y profundizarlo pero a medida que aumenta la complejidad del problema, el costo computacional incrementa lo cual se convierte un problema importante.
 
- Actualmente el mercado de GPU's evoluciona muy rápido debido a su gran demanda en la industria de los videojuegos este mercado esta dominado por NVIDIA y AMD esta competencia y la alta demanda permite que las GPU's tengan mejor rendimiento, además actualmente la nube ofrece otra posibiliad para el desarrollo de GPGPU computing debido a que nos permite tener acceso a mejores recursos. La evolución de GPU's nos permite usarlos en para mejorar el procesamiento de grandes cantidades de datos.  
- 
-Las redes neuronales nos permiten realizar tareas 
+ Una de la soluciones que apareció fue el uso de la GPU's para acelerar procesos como el entrenamiento de una red neural con muchas capas ocultas, las GPU's representa una solución muy eficaz debido a que en el campo de la inteligencia artificial existen muchas tareas que son paralelizables.
 
+Actualmente el mercado de GPU's evoluciona muy rápido debido a su gran demanda en la industria de los videojuegos este mercado esta dominado por NVIDIA y AMD esta competencia y la alta demanda permite que las GPU's tengan mejor rendimiento lo cual puede ser usado obtener mejores resultados en el campo de machine learning. 
+
+Por otro lado la optimización no solo se basa el uso de hardwares más potentes sino también depende de la elección de métodos adecuados para nuestro modelos esta elección dependerá mucho del problema a tratar métodos un método usado comúnmente en el campo de machine learning es la gradiente de descenso estocástica pero realmente es adecuado para toda variedad de problemas.
+
+Respecto a la problemática de encontrar métodos más eficientes de optimización que obtengan un mejor rendimiento, este presente seminario se centra en la búsqueda y comparación de estos métodos con el fin de encontrar aquellos que sean más rápidos y eficientes.
 %-----
 %-----Que es lo que te ha motivado para realizar la tesis en esta temática y los aspectos más esenciales que pensabas obtener de ella...
 
@@ -16,24 +19,27 @@ Las redes neuronales nos permiten realizar tareas
 
 \section{Objetivos}
 
-El objetivo de este seminario es el de mostrar las ventanjas que presenta el uso de GPGPU computing frente a otro tipos de recursos en el entrenamiento de una deep neural network.
+El objetivo de este seminario es el de mostrar las ventanjas del uso de distintos métodos de optimización en el entranimiento de una deep neural network en una tarea de clasificación.
 
 Especificamente, los objetivos de este trabajo con respecto al sistema son:
 
 \begin{itemize}
 \item[•] Entender el funcionamiento de las redes neuronales profundas%--OBJETIVO ESPECÍFICO 1.
-\item[•] Mostrar los resultados de distintas GPU's en el entramiento de una red neuronal profunda.%--OBJETIVO ESPECÍFICO 2.
-\item[•] Realizar un análisis comparar el rendimiento de cada GPU al momento de entrenar la deep neural network.%--OBJETIVO ESPECÍFICO 3.
+
+\item[•] Estudiar métodos de optimización en machine learning.
+
+\item[•] Conocer las ventajas y desventajas de diferentes métodos de optimización.
+\item[•] Mostrar los resultados de distintos métodos de optimización en el entramiento de una red neuronal profunda.
+
 
 
 \end{itemize}
 
 Y los objetivos con respecto a las competencias académicas desplegadas en el trabajo son:
 \begin{itemize}
-\item[•] Desarrollar un manejo adecuado del uso GPU computing.%--OBJETIVO COMPETENCIA 1.
-\item[•] Lograr un entendimiento de la tareas que son paralelizabeles en el entrenamiento de la red neuronal profunda.%--OBJETIVO COMPETENCIA 2.
-\item[•] Desarrollar un manejo adecuado de tensorflow como herramienta para el reconocimiento de imagenes.%--OBJETIVO COMPETENCIA 3.
-
+\item[•] Desarrollar un mejor entendimiento de las redes neuronales y sus aplicaciones, para así poder lograr afrontar problemas en el campo de la inteligencia artificial. %--OBJETIVO COMPETENCIA 1.
+\item[•] Obtener la capacidad de discriminar entre los distintos métodos de optimización y elegir el adecuado para un problema de deep learning.%--OBJETIVO COMPETENCIA 2.
+\item[•] Obtener un conocimiento de las herramientas y recursos que existen actualmente para abordar problemas de deep learning, además de poder analizar que herramientas son adecuadas para algunos problemas.
 \end{itemize}
 
 \section{Estructura del Seminario}
@@ -42,11 +48,11 @@ Y los objetivos con respecto a las competencias académicas desplegadas en el tr
 \begin{itemize}
 
 \item \textbf{Introducción:} \\
-En este capítulo introductorio se comentará sobres las motivaciones, objetivos con los cual se penso el presente seminario.
+En este capítulo introductorio se comenta sobre el tema a tratar, las motivaciones, intereses, objetivos con los cuales se planteo el presente seminario.
 %--En este capítulo introductorio se comenta sobre las motivaciones ...
 
 \item \textbf{Estado del Arte:} \\
-En este capítulo observaremos los trabajos e investigaciones previa que tiene el presente seminario , además se expondrá el aporte que relizaremos.
+En este capítulo muestra los trabajos e investigaciones ya realizadas, además de algunas aplicaciones que motivaron al presente seminario y muestra la importancia del seminario.
 
 %--\item \textbf{Metodología y Herramientas:} \\
 %--....
