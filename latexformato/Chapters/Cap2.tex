@@ -30,10 +30,12 @@ Además de mostrarnos las aplicaciones del aprendizaje profundo, como : analísi
 Actualmente existen algunas empresas privadas que apoyan el campo de deep learning con el objetivo de buscar sus aplicaciones comerciales entre estas empresas tenemos: Numenta y Binatix.
 \section{Métodos de optimización}
 El campo de machine learning continuamente evoluciona y con esta evolución surgen nuevas necesidades al trabajar con grandes conjuntos de datos se buscan cada vez obtener buenos resultados sin afectar el rendimiento. Una forma de lograr esto es mediante el uso de algoritmos de optimización.
+\subsection{Neural Network Optimization Algorithms: A comparison study based on TensorFlow}
+Vadim Smolyakov realizo un estudio comparativo de diversos optimizadores entre los cuales se encuentran el método de gradiente de descenso estocástica, Nesterov Momentum,RMSProp y Adam. Se realizo una prueba comparativa con una arquitectura simple de CNN usando el conjunto de datos del MNIST. \textquotedblleft Se comparo diferentes optimizadores y se obtuvo que SGD con Nesterov y Adam producen mejores resultados en el entrenamiento de una CNN simple usando tensorflow \textquotedblright
 \subsection{On Optimization Methods for Deep Learning}
 Un equipo de la universidad de standford realizó una pruebas con el objetivos de encontrar métodos adecuados para un entrenamiento en deep learning. El equipo se percato de lo común que resulta el uso de Gradiente de descenso estocástica o SGD por sus siglas en inglés en deep learning . Se realizaron pruebas con otros métodos de optimización como la gradiente conjugada y Limited memmory BFGS(L-BFGS) los cuales permitieron acelerar el proceso de entrenamiento de algoritmos de deep learning mostrando en su mayoría mejores resultados que el SGD. \textquotedblleft Usando L-BFGS el modelo CNN alcanza el 0.69\%  en el estandar del MNIST dataset. \textquotedblright
 \section{Conclusiones}
 %Hemos visto la necesidad....
-
+A medida que tratamos muchos problemas vemos la necesidad de encontrar optimizadores adecuados para los tipos de problemas. En el área de deep learning comumente se trabaja en el campo de reconocimiento de imágenes a pesar de la mejorar mediante el uso de GPU's este tipo de problemas necesitan métodos óptimos para obtener una mejor performance.
 %Poner unas conclusiones del capítulo y lo más importante, donde se enfoca tu trabajo y lo que se diferenncia del resto
 

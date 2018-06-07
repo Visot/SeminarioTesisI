@@ -1,3 +1,26 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{WEBSITE:1}
+David Fumo.
+\newblock Types of machine learning algorithms you should know.
+\newblock
+  \url{https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861},
+  Jun 2017.
+\newblock Accessed on 2012-05-11.
+
+\bibitem{WEBSITE:2}
+Machine learning 101 | supervised, unsupervised, reinforcement and beyond.
+\newblock
+  \url{https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2},
+  Sep 2017.
+\newblock Accessed on 2018-05-11.
+
+\bibitem{WEBSITE:3}
+Jason Brownlee.
+\newblock Linear regression for machine learning.
+\newblock
+  \url{https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2},
+  Mar 2016.
+\newblock Accessed on 2018-05-12.
 
 \end{thebibliography}
