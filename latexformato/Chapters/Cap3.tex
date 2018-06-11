@@ -1,16 +1,19 @@
-\chapter{Algortimos de Machine Learning}
+\chapter{Machine Learning y Redes Neuronales}
 
-En este capítulo veremos los principales conocimientos de Aprendizaje automático requeridos para este seminario además se hará énfasis en su clasificación y sus principales algoritmos.
+En este capítulo trataremos los principales conocimientos de Aprendizaje automático como su clasificación y su importante dentro del campo de la inteligencia artificial, además exploraremos algunos modelos importantes. 
+En este seminario se dará énfasis en los algoritmos de clasificación. Luego nos enfocaremos en las redes neuronales para tratar más a fondo los problemas de clasificación.
 
-\section*{Aprendizaje Automático}
+\section{Aprendizaje Automático}
 Machine Learning o aprendizaje automático es una rama de la inteligencia artificial que empezó a cobrar cobrar importancia en los años 80's, en esta rama se diseñan sistemas que aprenden a identificar patrones en un conjunto de datos. A medida que se realice este aprendizaje la máquina podrá ser capaz de realizar una predicción o tomar decisiones sin haber estado programada explícitamente para realizar esta tarea.
 
 
-El aprendizaje automático se puede clasificar en 3 tipos: Supervizado, No supervisado, Aprendizaje con refuerzo\textbf(cita).
-\subsection*{Aprendizaje Supervizado}
-Este tipo de aprendizaje toma un conjuto de datos etiquetados como entrada. Primero se entrana el modelo con data de entrada y luego se trata de precedir  una salida. \textquotedblleft El aprendizaje supervisado trata de modelar la relación entre el resultado de la predicción y las características de las entrenadas de manera que se puedan predecir nuevos valores para un nuevo conjunto de datos \textquotedblright \cite{WEBSITE:1}
-\subsubsection*{Tipos de problemas}
-Dentro del aprendizaje supervisado encontraremos distintos tipos de problemas entre ellos tenemos:
+El aprendizaje automático se puede clasificar en 3 tipos: Supervizado, No supervisado, Aprendizaje con refuerzo.\cite{WEBSITE:2}
+\subsection{Aprendizaje Supervizado}
+Este tipo de aprendizaje  toma un conjuto de datos etiquetados, es decir datos cuyos resultados o clases son conocidos estos datos serán usados como entrada al sistema. Primero se entrena el modelo con los datos de entrada y luego se trata de predecir  una salida de acuerdo a sus etiquetas.
+
+ \textquotedblleft El aprendizaje supervisado trata de modelar la relación entre el resultado de la predicción y las características de las entradas de manera que se puede predecir nuevos valores para un nuevo conjunto de datos \textquotedblright \cite{WEBSITE:1}
+\subsection*{Tipos de problemas}
+Dentro del aprendizaje supervisado podemos dividir los problemas en 2 tipos:
 \subsubsection*{Problemas de Regresión Lineal}
 Los problemas de regresión lineal son muy conocidos en el ámbito de aprendizaje automático y la estadística 
 \subsubsection*{Problemas de Clasificación}
@@ -28,20 +31,66 @@ Los problemas de regresión lineal son muy conocidos en el ámbito de aprendizaj
 
 \subsubsection*{Algoritmos de Aprendizaje Supervizado}
 \subsubsection*{Regresión Lineal}
-\textquotedblleft El modelo de regresión lineal asume que existe una relación entre las variables de entrada $X$ y una salida simple $Y$.  Cuando se tiene solo una variable simple $X$ el método se conoce como simple linear regression y cuando se tienen múltiples entradas se le conoce como multiple linear regression.  \textquotedblright \cite{WEBSITE:3}
+\textquotedblleft El algoritmo de regresión lineal asume que existe una relación entre las variables de entrada $X$ y una salida simple $Y$.  Cuando se tiene solo una variable simple $X$ el método se conoce como simple linear regression y cuando se tienen múltiples entradas se le conoce como multiple linear regression.  \textquotedblright \cite{WEBSITE:3} .Es comúnmente usado para estimar valores reales en base a variables continuas.
 \begin{equation}
 \label{Simple learning regression}
 Y=b_{1}*X+b_{0}
 \end{equation} 
-Uno de los usos de la regresión lineal es realizar predicciones en un conjunto de datos.
-\subsubsection*{Nearest Neighbor}
+En esta ecuación:
+\begin{itemize}
+	\item Y : Variable dependiente
+	\item b1: Pendiente
+	\item X : Variable independiente
+	\item b0: Intercepción
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/Linear.png}
+	\caption{Regresión Lineal \\ Fuente:  \href{https://www.forexmt4indicators.com/linear-regression-mt4-indicator/}{\textit{www.forexmt4indicators.com/}}}
+	\label{Regresión Lineal}
+\end{figure} 
 
+\subsubsection*{Regresión Logística}
+A diferencia de la regresión Lineal, la regresión Logística es usado para precedir el resultado de un variable de tipo categórica es decir variables que pueden ser describen por un número finito de categorías.
+
+ La regresión Logística es usado para problemas de clasificación lo hace mediante la predicción de que una salida $Y$ sea dicotoma es decir que solo tenga 2 posibles valores.
+ la regresión produce una curva la cual produce valores entre 0 y 1.
+ \textquotedblleft Matemáticamente podemos como que las salidas están modeladas como una combinación de los predictores lineales.\textquotedblright \cite{WEBSITE:6}
+ \begin{equation}
+ \label{eq:t}
+ \begin{aligned}
+ odds &= p/ (1-p)\\ 
+ ln(odds) &= ln(p/(1-p))\\      
+ logit(p) &= ln(p/(1-p)) = b_{0}+b_{1}X_{1}+b_{2}X_{2}+b_{3}X_{3}....+b_{k}X_{k}\\
+ Y &=logit(p)
+ \end{aligned}
+ \end{equation}
+ %\end{equation} 
+ 
+ \begin{itemize}
+ 	\item p : probabilidad de presencia de una característica de interés.
+ 	\item odds: probabilidad de éxito.
+ 	\item logit: función logit
+ \end{itemize}
+ 
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=0.9\textwidth]{Figures/logistic.png}
+ 	\caption{Regresión Logística \\ Fuente:  \href{https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/}{\textit{www.analyticsvidhya.com}}}
+ 	\label{Regresión Logistica}
+ \end{figure} 
+\subsubsection*{Nearest Neighbor}
+Es un algoritmo de clasificación que almacena los datos de entrenamiento que clasifica un nuevo ejemplo $X$ encontrando la distancia al ejemplo de entrenamiento $(X_{i},Y_{i})$ de manera que identifica la clase $Y=Y_{i}$ a la que corresponde. Su uso más común es el reconocimiento de patrones.
 \subsubsection*{Support Vector Machines (SVM)}
+Es un algoritmo usado para realizar tareas de clasificación y regresión. El algoritmo usa un conjunto de datos etiquetados y mediante un entrenamiento
 \subsubsection*{Naive Bayes}
+Es una técnica de clasificación basada en el teorema de bayes suponiendo que las características de una clase no esta relacionada con otra característica un ejemplo de esto es \textquotedblleft una fruta puede considerarse una manzana si es roja, redonda y de aproximadamente 3 pulgadas de diámetro. Incluso si estas características dependen unas de otras o de la existencia de otras características, todas estas propiedades contribuyen de forma independiente a la probabilidad de que esta fruta sea una manzana y es por eso que se la conoce como \textbf{naives}  \textquotedblright \cite{WEBSITE:4}
 \subsubsection*{Decision Trees}
+El árbol de decisión construye un modelo basado en los actuales valores de los datos. La decisiones se difurcan en la estructura de árbol hasta que se toma una decisión de predicción para un registro dado. Los arboles de decisión están entrenada para problemas de clasificación y regresión . Una de las principales ventajas de los arboles de decisión es que son rápidos y precisos.
 \subsubsection*{Neural Networks}
+Los modelos de redes neuronales fue inspirado de las redes neuronales biológicas y realizan tareas complejas como reconocimiento de imágenes
 El tema de Neural Network será tratado con más detenimiento en el capítulo 4.
-\subsection*{Aprendizaje No Supervizado}
+\subsection{Aprendizaje No Supervizado}
 Mientras que el aprendizaje supervizado aprende  de un conjunto de datos de entrenamiento con respuestas o etiquetas correctas. En el aprendizaje no supervizado los datos de entrenamiento no poseen ninguno tipo de etiqueta, el sistema debe de interpretar los datos por si mismo.
 El aprendizaje no supervizado es usado principalmente para el reconocimiento de patrones y modelado descriptivo.
 \subsubsection*{Clustering}
@@ -52,22 +101,28 @@ Clustering se refiere a agrupar objetos con características similares es decir 
 	\caption{Clustering \\ Fuente:  \href{https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2}{\textit{https://medium.com/}}}
 	\label{Clustering}
 \end{figure} 
-\subsection*{Aprendizaje por refuerzo}
+\subsubsection*{K-means Clustering}
+
+\subsection{Aprendizaje por refuerzo}
 Este tipo de aprendizaje fue inspirado por la psicología conductista, este tipo busca determinar que tipo de acciones tomar en un entorno dado. \textquotedblleft El objetivo del método es recopilar la interacción con el entorno para tomar acciones que maximicen el beneficio o minimicen el riesgo. \textquotedblright \cite{WEBSITE:1}
 
-\section{Deep Learning}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/esquema.jpeg}
+	\caption{Clustering \\ Fuente:  \href{https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861}{\textit{https://towardsdatascience.com}}}
+	\label{Clustering}
+\end{figure} 
 
-\section{Métodos de optimización}
+
 \section{Redes Neuronales}
-\subsection{Neuronas}
+\subsection*{Neuronas}
 En la biología la neurona es conocida como la unidad fundamental del cerebro humano, el cual está compuesto por millones de neuronas interconectadas entre si. El trabajo de las neuronas consiste en recibir información, procesarla y enviarla a otras células. Este modelo fue copiado en 1943 por Warren S. McCulloch y Walter H. Pitts. Analogamente con las neuronas del cerebro humano nuestra neuro artificial toma una cantidad n de entradas $x_{1}, x_{2}, x_{3}, .. , x_{n}$ estas entradas serán multiplicadas por pesos $w_{1}, w_{2}, w_{3}, .. , w_{n}$ además se puede añadir una constante que llamaremos bias. 
 
 La entrada a de la neurona será la suma total de los productos z=  $\sum_{i=1}^{n}x_{i}$ , el valor de z será la entrada a la neurona la cual la evaluará con una función f de tal forma que nuestra salida sea $y=f(z)$. Otra forma de ver esta expresión es por medio de la notación de vectores donde representaremos a las entradas como $x= [x_{1}  x_{2}  x_{3}  ...  x_{n}]$ y los pesos w= $[w_{1}  w_{2}  w_{3}  ...  w_{n}]$ de esta manera la salida de la neurona estará dada por $y=f(x\cdot w+b)$ donde b representa las bias. 
 
-\subsection{Redes Neuronales Artificiales}
-Las redes neuronales artificiales(ANN)toman de ejemplo la arquitectura del cerebro como inspiración para la construcción de sistemas inteligente. Actualmente son la base para el desarrollo de la inteligencia artificial. Las redes neuronales están constituidas de las uniones de las neuronas.
-
-\subsection{Redes Neuronales Profundas}
+\subsection*{Redes Neuronales Artificiales}
+Las redes neuronales artificiales(ANN)toman de ejemplo la arquitectura del cerebro como inspiración para la construcción de sistemas inteligente. Actualmente son la base para el desarrollo de la inteligencia artificial. Las redes neuronales están constituidas de las uniones de las neuronas. 
+\subsection*{Redes Neuronales Profundas}
 
 
 Las redes neuronales profundas estan constituidas principalmente de un numero de capas de convolución, No linearalidad y pooling.
@@ -80,7 +135,9 @@ Las redes neuronales profundas estan constituidas principalmente de un numero de
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{Figures/relu.png}
-		\caption{ReLu}
+		\caption{ReLu  Fuente:
+			\href{https://medium.com/@kanchansarkar/relu-not-a-differentiable-function-why-used-in-gradient-based-optimization-7fef3a4cecec}{\textit{https://medium.com/}}
+			 }
 		\label{ReLu}
 	\end{figure}
 
