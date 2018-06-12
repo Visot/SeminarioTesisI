@@ -3,11 +3,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Regresi\IeC {\'o}n y clasificaci\IeC {\'o}n Fuente: \href {https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2}{\textit {https://medium.com/}}\relax }}{11}{figure.caption.25}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Regresi\IeC {\'o}n Lineal Fuente: \href {https://www.forexmt4indicators.com/linear-regression-mt4-indicator/}{\textit {www.forexmt4indicators.com/}}\relax }}{12}{figure.caption.29}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Regresi\IeC {\'o}n Log\IeC {\'\i }stica Fuente: \href {https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/}{\textit {www.analyticsvidhya.com}}\relax }}{13}{figure.caption.32}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Clustering Fuente: \href {https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2}{\textit {https://medium.com/}}\relax }}{15}{figure.caption.40}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Clustering Fuente: \href {https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861}{\textit {https://towardsdatascience.com}}\relax }}{16}{figure.caption.43}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces ReLu Fuente: \href {https://medium.com/@kanchansarkar/relu-not-a-differentiable-function-why-used-in-gradient-based-optimization-7fef3a4cecec}{\textit {https://medium.com/}} \relax }}{17}{figure.caption.48}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Regresi\IeC {\'o}n Lineal Fuente: \href {https://www.forexmt4indicators.com/linear-regression-mt4-indicator/}{\textit {www.forexmt4indicators.com/}}\relax }}{12}{figure.caption.30}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Regresi\IeC {\'o}n Log\IeC {\'\i }stica Fuente: \href {https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/}{\textit {www.analyticsvidhya.com}}\relax }}{14}{figure.caption.34}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces knn Fuente: \href {https://medium.com/@adi.bronshtein/a-quick-introduction-to-k-nearest-neighbors-algorithm-62214cea29c7}{\textit {www.medium.com/}}\relax }}{15}{figure.caption.38}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces transformaci\IeC {\'o}n con la funci\IeC {\'o}n kernel Fuente: \href {http://www.statsoft.com/Textbook/Support-Vector-Machines}{\textit {www.statsoft.com}}\relax }}{16}{figure.caption.40}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces transformaci\IeC {\'o}n para un problema de regresi\IeC {\'o}n Fuente: \href {http://www.saedsayad.com/support_vector_machine_reg.htm}{\textit {www.saedsayad.com}}\relax }}{18}{figure.caption.41}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Clustering Fuente: \href {https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2}{\textit {https://medium.com/}}\relax }}{19}{figure.caption.47}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema de aprendizaje por refuerzo Fuente: \href {https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861}{\textit {https://towardsdatascience.com}}\relax }}{20}{figure.caption.50}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces ReLu Fuente: \href {https://medium.com/@kanchansarkar/relu-not-a-differentiable-function-why-used-in-gradient-based-optimization-7fef3a4cecec}{\textit {https://medium.com/}} \relax }}{22}{figure.caption.55}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
