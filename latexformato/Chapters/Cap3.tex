@@ -193,13 +193,42 @@ Las SVR son parecidas a las máquinas de soporte Vectorial para la clasificació
 \end{figure} 
 
 \subsubsection*{Naive Bayes}
-Esta basado en el teorema de bayes donde se asume la independencia entre los predictores.
-Es una técnica de clasificación basada en el teorema de bayes suponiendo que las características de una clase no esta relacionada con otra característica un ejemplo de esto es \textquotedblleft una fruta puede considerarse una manzana si es roja, redonda y de aproximadamente 3 pulgadas de diámetro. Incluso si estas características dependen unas de otras o de la existencia de otras características, todas estas propiedades contribuyen de forma independiente a la probabilidad de que esta fruta sea una manzana y es por eso que se la conoce como \textbf{naives}  \textquotedblright \cite{WEBSITE:4}
-\subsubsection*{Decision Trees}
-El árbol de decisión construye un modelo basado en los actuales valores de los datos. La decisiones se difurcan en la estructura de árbol hasta que se toma una decisión de predicción para un registro dado. Los arboles de decisión están entrenada para problemas de clasificación y regresión . Una de las principales ventajas de los arboles de decisión es que son rápidos y precisos.
+Esta basado en el teorema de bayes donde se asume la independencia entre los predictores.\textquotedblleft El modelo Naive Bayes es fácil de construir, debido a que no tiene que estimar los parámetros iterativamente lo cual lo hace particularmente util para un gran conjunto de datos \textquotedblright \cite{WEBSITE:8}.\\
+Como la  técnica de clasificación esta basada en el teorema de bayes supone que las características de una clase no esta relacionada con otras características.\\ Podemos ilustrar mejor lo dicho mediante el siguiente ejemplo  \textquotedblleft una fruta puede considerarse una manzana si es roja, redonda y de aproximadamente 3 pulgadas de diámetro. Incluso si estas características dependen unas de otras o de la existencia de otras características, todas estas propiedades contribuyen de forma independiente a la probabilidad de que esta fruta sea una manzana y es por eso que se la conoce como \textbf{naives}  \textquotedblright \cite{WEBSITE:4}
+
+
+\begin{equation}
+  \label{eq:naives}
+  \begin{aligned}
+  P(c|x)&=\frac{P(x|c)P(c)}{P(x)}\\
+  P(c|X)&=P(x_{1}|c)\times P(x_{2}|c)\times ... \times P(x_{n}|c)\times P(c)
+  \end{aligned}
+\end{equation}
+
+\begin{itemize}
+	\item $P(c|x):$ probabilidad condicional de una clase(target) dado un predictor(atributo)
+	\item $P(c):$ probabilidad de la clase
+	\item $P(x|c):$es la probabilidad condicional de la clase dada por el predictor.
+	\item $P(x):$ probabilidad del predictor.
+	
+\end{itemize}
+
+\subsubsection*{Arboles de decisión}
+Los arboles de decisión son modelos usados para tareas de regresión y clasificación utilizando la estructura de un árbol. La idea se basa en dividir el conjunto de datos en subconjuntos cada vez más pequeños a su vez se desarrolla un árbol de decisión. El resultado final será un árbol con nodos de decisión y nodos hojas.\\
+Los nodos de decisión tienen 2 o más ramas y los nodos hojas representa una clasificación o decisión. La raiz corresponde al mejor predictor. Un árbol de decisión puede ser usado para manejar datos categóricos o numéricos.\\
+
+\textbf{Árbol de decisión para clasificación}.\\
+El algoritmo principal para construir de decisión es el ID3 que fue desarrollado por J. R. Quinlan.\\ \textquotedblleft ID3 realiza una algoritmo greeady para realizar un búsqueda de arriba hacia abajo a través del espacio de posibles ramas . ID3 usa entropía e información ganada para construir el árbol de decisión \textquotedblright.\\ A diferencia de Naives bayes en los arboles de decisión es importante asumir la dependencia de los predictores.\\
+\begin{itemize}
+	\item \textbf{Entropía}: Para el algoritmo ID3 es importante tener la entropía para calcular la homogeneidad de la muestra.
+	\item \textbf{Información ganada}: se basa en la disminución de la entropía después que un conjunto de datos se divide en atributos.
+\end{itemize}
+
+\textbf{Árbol de decisión para regresión}.\\
+Al igual que el caso de clasificación, se usa el algoritmo ID3 con la diferencia que la información ganada por la desviación standard de reducción. Este tipo de desviación se basa en la disminución de la desviación standard cuando el conjunto de datos se divide en un atributo.
 \subsubsection*{Neural Networks}
 Los modelos de redes neuronales fue inspirado de las redes neuronales biológicas y realizan tareas complejas como reconocimiento de imágenes
-El tema de Neural Network será tratado con más detenimiento en el capítulo 4.
+El tema de Neural Network será tratado con más detenimiento en la siguiente sección.
 \subsection{Aprendizaje No Supervizado}
 Mientras que el aprendizaje supervizado aprende  de un conjunto de datos de entrenamiento con respuestas o etiquetas correctas. En el aprendizaje no supervizado los datos de entrenamiento no poseen ninguno tipo de etiqueta, el sistema debe de interpretar los datos por si mismo.
 El aprendizaje no supervizado es usado principalmente para el reconocimiento de patrones y modelado descriptivo.
@@ -207,12 +236,36 @@ El aprendizaje no supervizado es usado principalmente para el reconocimiento de 
 Clustering se refiere a agrupar objetos con características similares es decir se busca la relación entre ellos sin necesidad de que exista un conocimiento a priori de esos grupos.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{Figures/clustering.png}
+	\includegraphics[width=0.5\textwidth]{Figures/clustering.png}
 	\caption{Clustering \\ Fuente:  \href{https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2}{\textit{https://medium.com/}}}
 	\label{Clustering}
 \end{figure} 
 \subsubsection*{K-means Clustering}
-el algoritmo
+El algoritmo intenta particionar $N$ objetos en $k$ clusters en los cuales cada objeto pertenece al cluster que posee la media más cercana. Este método produce $k$ clústeres con la mayor distinción posible. El k adecuado no se conoce a priori por lo cual debe calcularse a partir de datos. El objetivo de k-means es minimizar la función de error al cuadrado mostrada en la ecuación 3.8.
+
+\begin{equation}
+  \label{eq:clustering}
+  \begin{aligned}
+  J&= \sum_{j=1}^{k} \sum_{i=1}^{n}\parallel x_{i}^j - c_{j}\parallel ^2
+  \end{aligned}
+\end{equation}
+
+\begin{itemize}
+	\item $J$: función de error cuadrado
+	\item $k:$ número de cluster
+	\item $n:$ número de casos.
+	\item $x_{i}^j:$ caso i
+	\item $c_{j}:$ centroide del cluster j
+\end{itemize}
+%%% añadir algoritmo
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Figures/kmeans.png}
+	\caption{k means clustering\\ Fuente:  \href{http://www.saedsayad.com/clustering_kmeans.htm}{\textit{www.saedsayad.com}}}
+	\label{kmeans}
+\end{figure} 
+
+
 \subsection{Aprendizaje por refuerzo}
 Este tipo de aprendizaje fue inspirado por la psicología conductista, este tipo busca determinar que tipo de acciones tomar en un entorno dado. \textquotedblleft El objetivo del método es recopilar la interacción con el entorno para tomar acciones que maximicen el beneficio o minimicen el riesgo. \textquotedblright \cite{WEBSITE:1}
 \begin{figure}[H]
@@ -232,8 +285,6 @@ La entrada a de la neurona será la suma total de los productos z=  $\sum_{i=1}^
 \subsection*{Redes Neuronales Artificiales}
 Las redes neuronales artificiales(ANN)toman de ejemplo la arquitectura del cerebro como inspiración para la construcción de sistemas inteligente. Actualmente son la base para el desarrollo de la inteligencia artificial. Las redes neuronales están constituidas de las uniones de las neuronas. 
 \subsection*{Redes Neuronales Profundas}
-
-
 Las redes neuronales profundas estan constituidas principalmente de un numero de capas de convolución, No linearalidad y pooling.
 \begin{itemize}
 	\item Convolución:
@@ -243,7 +294,7 @@ Las redes neuronales profundas estan constituidas principalmente de un numero de
 	Una de las funciones las común es ReLu.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{Figures/relu.png}
+		\includegraphics[width=0.4\textwidth]{Figures/relu.png}
 		\caption{ReLu  Fuente:
 			\href{https://medium.com/@kanchansarkar/relu-not-a-differentiable-function-why-used-in-gradient-based-optimization-7fef3a4cecec}{\textit{https://medium.com/}}
 			 }
