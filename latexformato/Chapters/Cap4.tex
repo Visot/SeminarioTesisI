@@ -96,12 +96,12 @@ Las SGD tienen problemas para desplazarse en áreas con donde la superficie se c
 	\caption{Actualización sin momentum \\ Fuente:  \href{https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit{www.doc.ic.ac.uk}}}
 	\label{momentum1}
 \end{figure}
-El momentum es un método que ayuda a la SGD a acelerar en la dirección correcta, mientras evitas las oscilaciones. El momentum lográ esto añadiendo una fracción $\gamma$ del vector de actualización pasado al vector presente tal como se muestra en las ecuaciones 4.4. En la figura 4.4 se observa gráficamente la aceleración de la convergencia en la SGD.
+El momentum es un método que ayuda a la SGD a acelerar en la dirección correcta, mientras evitas las oscilaciones. El momentum lográ esto añadiendo una fracción $\gamma$ del vector de actualización pasado al vector presente tal como se muestra en las ecuaciones 4.4. Un valor comunmente elegido de $\gamma =0.9 $, en las actualización el valor del momentum aumenta para dimensiones cuyos gradientes apuntan en la misma dirección y disminuye para dimensional en la que la gradiente cambia de dirección. Esto nos asegura que tendremos una convergencia más rápida con una oscilación reducida.En la figura 4.4 se observa gráficamente la aceleración de la convergencia en la SGD.
 
 \begin{equation}
 \label{mbgds}
 \begin{aligned}
-\nu_{t}&=\gamma \nu_{t-1} +  \nabla_{\theta} J(\theta)\\
+\nu_{t}&=\gamma \nu_{t-1} +  \eta \nabla_{\theta} J(\theta)\\
 \theta &= \theta -\nu_{t}
 \end{aligned}
 \end{equation}
@@ -110,11 +110,32 @@ El momentum es un método que ayuda a la SGD a acelerar en la dirección correct
 	\centering
 	\includegraphics[width=0.5\textwidth]{Figures/momentum2.png}
 	\caption{Actualización con momentum \\ Fuente:  \href{https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit{www.doc.ic.ac.uk}}}
-	\label{momentum2}
+	\label{momentum2 }
 \end{figure}
 
 \subsubsection{Nesterov accelerated gradient}
+Este método en el que nuestro descenso sea más controlado ya que reduce la velocidad antes de volver a subir una pendiente. En momentum usamos el término $\gamma \nu_{t-1}$ para mover los parámetros de $\theta$. Al calcular el valor de $\theta - \gamma \nu_{t-1}$ nos da una aproximación de donde se encontrá la siguiente posición de los parámetros. De esta forma no calculamos la gradiente en el parámetro $\theta$ actual sino que se calcula en una posición futura aproximada.
+
+
+
+
+\begin{equation}
+\label{mbgds}
+\begin{aligned}
+\nu_{t}&=\gamma \nu_{t-1} + \eta \nabla_{\theta} J(\theta- \gamma \nu_{t-1})\\
+\theta &= \theta -\nu_{t}
+\end{aligned}
+\end{equation}
+
+En la figura 4.5 observamos el proceso. Primero el momentum calcula  la gradiente actual(vector azul pequeño)  y luego da un gran salto en la dirección de la gradiente actualizada acumulada (gran vector azul), el NAG primero realiza un gran salto en dirección del gradiente acumulado previo(vector marron) luego realiza un correción(vector rojo), esto nos da como resultado la actualización completa de NAG(vector verde). Esta actualización anticipada es muy importante debido a que nos impide ir demasiado rápido y mejora la capacidad de respuesta lo cual aumenta el rendimiento de las CNN.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Figures/nesterov.png}
+	\caption{Convergencia Nesterov\\ Fuente:  \href{https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit{www.doc.ic.ac.uk}}}
+	\label{nesterov }
+\end{figure}
 \subsubsection{Adagrad}
+Es una algoritmo optimización basada en la gradiente de descenso, el algoritmo adapta la tasa de aprendizaje  realizando actualizaciones más pequeñas para parámetros con carácteristicas que se repiten con más frencuencia y una tasa alta  para parámetros con carácteriscticas pocas frencuentes.
 \subsubsection{Adam	}
 \subsubsection{AdaMax}
 \subsubsection{Nadam}
