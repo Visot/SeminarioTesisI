@@ -13,5 +13,9 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema de aprendizaje por refuerzo Fuente: \href {https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861}{\textit {https://towardsdatascience.com}}\relax }}{22}{figure.caption.53}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces ReLu Fuente: \href {https://medium.com/@kanchansarkar/relu-not-a-differentiable-function-why-used-in-gradient-based-optimization-7fef3a4cecec}{\textit {https://medium.com/}} \relax }}{23}{figure.caption.58}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Operacion de convoluci\IeC {\'o}n Fuente: \href {http://openresearch.ai/t/network-in-network/39}{\textit {www.openresearch.ai}}\relax }}{28}{figure.caption.65}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Funci\IeC {\'o}n costo en SGD Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{30}{figure.caption.74}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Actualizaci\IeC {\'o}n sin momentum Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{31}{figure.caption.79}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Actualizaci\IeC {\'o}n con momentum Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{32}{figure.caption.81}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

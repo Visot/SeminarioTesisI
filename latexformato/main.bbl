@@ -56,4 +56,10 @@ Sunil Ray.
   Sep 2017.
 \newblock Accessed on 2018-05-13.
 
+\bibitem{book1}
+Josh Patterson and Adam Gibson.
+\newblock Major architectures of deep networks.
+\newblock In {\em Deep Learning A Practitioner’s Approach}, pages 132--135.
+  O’Reilly Media, 2017.
+
 \end{thebibliography}
