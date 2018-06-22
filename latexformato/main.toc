@@ -38,10 +38,11 @@
 \contentsline {subsubsection}{Momentum}{31}{section*.78}
 \contentsline {subsubsection}{Nesterov accelerated gradient}{32}{section*.82}
 \contentsline {subsubsection}{Adagrad}{33}{section*.85}
-\contentsline {subsubsection}{Adam }{33}{section*.86}
-\contentsline {subsubsection}{AdaMax}{33}{section*.87}
-\contentsline {subsubsection}{Nadam}{33}{section*.88}
-\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{34}{chapter.89}
-\contentsline {section}{\numberline {5.1}Conclusiones}{34}{section.90}
-\contentsline {section}{\numberline {5.2}Trabajo Futuro}{34}{section.91}
-\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del ap\IeC {\'e}ndice}{39}{appendix.96}
+\contentsline {subsubsection}{RMSprop}{34}{section*.89}
+\contentsline {subsubsection}{Adam }{35}{section*.91}
+\contentsline {subsubsection}{AdaMax}{35}{section*.95}
+\contentsline {subsubsection}{Nadam}{35}{section*.96}
+\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{36}{chapter.97}
+\contentsline {section}{\numberline {5.1}Conclusiones}{36}{section.98}
+\contentsline {section}{\numberline {5.2}Trabajo Futuro}{36}{section.99}
+\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del ap\IeC {\'e}ndice}{41}{appendix.104}

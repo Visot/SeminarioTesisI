@@ -135,7 +135,81 @@ En la figura 4.5 observamos el proceso. Primero el momentum calcula  la gradient
 	\label{nesterov }
 \end{figure}
 \subsubsection{Adagrad}
-Es una algoritmo optimización basada en la gradiente de descenso, el algoritmo adapta la tasa de aprendizaje  realizando actualizaciones más pequeñas para parámetros con carácteristicas que se repiten con más frencuencia y una tasa alta  para parámetros con carácteriscticas pocas frencuentes.
+Es una algoritmo optimización basada en la gradiente de descenso, el algoritmo adapta la tasa de aprendizaje  realizando actualizaciones más pequeñas para parámetros con carácteristicas que se repiten con más frencuencia y una tasa alta  para parámetros con carácteriscticas pocas frencuentes. Adagrad mejora en gran manera a la SGD, este método es usado para entrenar redes neuronales a gran escala. 
+
+En métodos anteriores se usaba la actualización de todos los parámetros $\theta$ al mismo tiempo esto debido a que se usaba la misma tasa de aprendizaje $\eta $. Adagrad usa una tasa de aprendizaje diferente para cada parámetro $\theta_{i}$ en cada paso de tiempo $t$.
+En la ecuación 4.6 
+\begin{equation}
+\label{adagrad1}
+\begin{aligned}
+g_{t,i}&=\nabla_{\theta} J(\theta_{t,i})\\
+\theta_{t+1,i} &= \theta_{t,i} -\eta \cdot g_{t,i}
+\end{aligned}
+\end{equation}
+El termino $\cdot g_{t,i}$ representa el valor de la gradiente en el paso de tiempo $t$, el cual es la derivada de la función objetivo con respecto al termino $\theta_{i}$.
+
+Adagrad modifica la idea de utilizar una tasa $eta$ fija, podemos observar el la ecuación 4.7 es una variante de la ecuación 4.6. En donde se modifica la tasa de aprendizaje en cada paso de tiempo $t$ para todos los parámetros $\theta_{i} $basadas en los valores de las gradientes pasadas que fueron calculas para $\theta_{i}$
+\begin{equation}
+\label{adagrad2}
+\begin{aligned}
+\theta_{t+1,i} &= \theta_{t,i} - \frac{\eta}{\sqrt{G_{t,ii}+\epsilon}} \cdot g_{t,i}
+\end{aligned}
+\end{equation}
+
+\begin{itemize}
+	\item $G_{t,ii}$: representa la suma de los cuadrados de las gradientes pasadas con respecto a $\theta_{i}$
+	\item $\epsilon $ es un término pequeño para evitar la división por 0. $\epsilon$ encuentra en el orden de $10^{-8}$.
+\end{itemize}
+Como $G_{t} \in \Re^{dxd} $contiene la suma de los cuadrados de las gradientes pasados con respecto a todos los parámetros de $\theta$ a lo largo de su diagonal. A lo largo  de su diagonal por lo cual se puede realizar ahora el producto matriz- vector.
+\begin{equation}
+\label{adagrad3}
+\begin{aligned}
+\theta_{t+1,i} &= \theta_{t,i} - \frac{\eta}{\sqrt{G_{t}+\epsilon}} \odot g_{t,i}
+\end{aligned}
+\end{equation}
+El principal beneficio de adagrad nos evita el hecho de trabajar con una taza fija por otro lado su principal desventaja se basa en el la suma de los gradientes al cuadrado aumentará en cada iteración lo cual provocará que su taza sea cada vez más pequeña.
+
+
+\subsubsection{RMSprop}
+Es un método de aprendizaje por adaptación de la taza que fue propuesto por Geoff Hinton
+Este modelo se desarrollo con el objetivo resolver el problema de disminuir radicalmente la tasa de aprendizaje en Adagrad. RMSprop divide la taza de aprendizaje mediante el decaimiento del promedio de la suma de las gradientes cuadradas.
+\begin{equation}
+\label{RMS}
+\begin{aligned}
+E[g^2]_{t} &= 0.9 E[g^2]_{t-1} + 0.1 g^{2}_{t}\\
+\theta_{t+1} &= \theta_{t} - \frac{\eta}{\sqrt{E[g^2]_{t} +\epsilon }} g_{t}
+\end{aligned}
+\end{equation}
+
 \subsubsection{Adam	}
+Adaptative moment estimation  o Adam que calcula la taza de aprendizaje adaptativo para cada parámetro. Este método mantiene un decaimiento exponencial del promedio de las gradientes pasadas. El método adam prefiere los mínimos en las superficies de error. En la figura 4.9 mostramos el calculo de promedio de decaimiento de las gradientes pasadas $m_{t}$ y el cuadrado de las gradientes pasadas $v_{t}$
+\begin{equation}
+\label{adam1}
+\begin{aligned}
+m_{t} &= \beta_{1} m_{t-1} +(1-\beta_{1})g_{t} \\
+v_{t} &= \beta_{2} v_{t-1} +(1-\beta_{2})g_{t}^2
+\end{aligned}
+\end{equation}
+
+\begin{itemize}
+	\item $m_{t}:$ Primer momento (media)
+	\item $v_{t}:$ Segundo momento de la gradiente.
+\end{itemize}
+
+\begin{equation}
+\label{adam2}
+\begin{aligned}
+\hat{m_{t}}&= \frac{m_{t}}{1-\beta_{1}^{t}} \\
+\hat{v_{t}} &= \frac{v_{t}}{1-\beta_{2}^{t}}
+\end{aligned}
+\end{equation}
+La ecuación 4.12 muestra la regla de actualización en Adam.
+\begin{equation}
+\label{adam3}
+\begin{aligned}
+\theta_{t+1}&= \theta_{t+1} - \frac{\eta}{\sqrt{\hat{v_{t}}}+\epsilon} \hat{m_{t}}	
+\end{aligned}
+\end{equation}
+
 \subsubsection{AdaMax}
 \subsubsection{Nadam}
