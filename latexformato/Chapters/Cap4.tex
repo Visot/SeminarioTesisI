@@ -1,21 +1,29 @@
 \chapter{Algoritmos de optimización una Red Neuronal convolucional}
-En este capítulo se detallarán los algoritmos de optimización de Aprendizaje automático y principalmente se enfocará en aquellos aplicados a las redes neuronales convolucionales.
+En este capítulo se detallarán los algoritmos de optimización de Aprendizaje automático y principalmente se enfocará en aquellos aplicados a las redes neuronales convolucionales por lo cual al inicio de este capítulo veremos una introducción a este tipo de redes de prealimentación.
 
 \section{Redes Neuronales Convolucionales}
-Las CNN son un tipo de redes neuronales especiales para procesar data del tipo de topología grid. El termino convolucional hace referencia a la operación lineal matemática usada. Las redes neuronales convolucionales usan esta operación para aprender de las características de alto orden en la data.
+Las CNN son un tipo de redes neuronales especiales para procesar datos como imágenes las cuales son más difíciles de procesar en una red neuronal tradicional como es el caso del perceptron multicapas.\\ El termino convolucional hace referencia a la operación lineal matemática usada. Las redes neuronales convolucionales usan esta operación para aprender de las características de mayor orden en la data.
 La primera CNN fue creada por Yann LeCun. Entre sus usos más comunes tenemos el reconocimiento de imágenes y lenguaje natural.\\
-Las redes neuronales convolucionales fueron inspiradas en la corteza visuales de los animales. Las celulas de la corteza visual principalmente se activan para realizar tareas como el reconocimiento de patrones.
+Las redes neuronales convolucionales fueron inspiradas en la corteza visuales de los animales. Las células de la corteza visual principalmente se activan para realizar tareas como el reconocimiento de patrones.
 
 \subsection{Estructura de una imagen}
-Debido a que las redes neuronales convoluciones trabajan principalmente con imagenes es importante conocer cual es la estructura de una imagen y como la computadora comprende utiliza esta información.
-Las imágenes están constituidas por la sucesión de pixeles podemos entender el pixel como la menor unidad homogenea en color de una imagen digital. Teniendo este concepto la información de una imagen puede dividirse de la siguiente forma:
+Debido a que las redes neuronales convolucionales trabajan principalmente con imágenes, es importante conocer cual es la estructura de una imagen y como la computadora comprende y utiliza esta información.\\
+Las imágenes están constituidas por la sucesión de píxeles, podemos entender el pixel como la menor unidad homogénea en color de una imagen digital. Teniendo este concepto la información de una imagen puede dividirse de la siguiente forma:
 \begin{itemize}
-	\item Width: El ancho de la imagen medido en pixeles
-	\item Height: El alto de la imagen medida en pixeles.
-	\item Canales RGB: Estos canales contiene la información de los colores y profundidad de una imagen. Este canal guarda la información en tres canales Red, Green y Blue.
+	\item \textbf{Width}: El ancho de la imagen medido en pixeles
+	\item \textbf{Height}: El alto de la imagen medida en pixeles.
+	\item \textbf{Canales RGB}: Estos canales contiene la información de los colores y profundidad de una imagen. Este canal guarda la información en tres canales Red, Green y Blue.
 \end{itemize}
-Teniendo en cuenta esta forma de guardar una podemos resaltar el porque de la ventaja de usar Redes convolucionales en lugar de usar una red neuronal multicapas.\\ Las redes multicapas toman un vector de una dimensión como entrada si quisieramos entrar una red multicapas con imagenes de 32x32 pixeles y con 3 canales RGB necesitariamos crear 3072 pesos ($w_{i}$) para una sola neurona en la capa oculta. La creación hace que la tarea resulte complicada usando redes multicapas.
-\subsection{Arquitectura General de CNN}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Figures/image.png}
+	\caption{Estructura de la imagen de entrada \\ Fuente:  \href{https://www.safaribooksonline.com/library/view/deep-learning/9781491924570/ch04.html}{\textit{Deep Learning by Adam Gibson, Josh Patterson}}}
+	\label{image}
+\end{figure} 
+
+Teniendo en cuenta esta forma de guardar una podemos resaltar la ventaja de usar Redes convolucionales en lugar de usar una red neuronal multicapas.\\ Las redes multicapas toman un vector de una dimensión como entrada si quisiéramos entrenar un perceptron multicapas con imágenes de 32x32 píxeles y con 3 canales RGB necesitaríamos crear 3072 pesos ($w_{i}$) para una sola neurona en la capa oculta. La creación hace que la tarea resulte complicada usando redes multicapas.
+\subsection{Capas de una CNN}
 
 \subsubsection{Input layer}
 Esta capa es donde se carga y almacena la información de las imágenes para procesarlas en la red. Esta información contiene detalles de ancho, alto y número de canales de imagen.
@@ -33,13 +41,29 @@ En la figura 4.1 observamos la operación de convolución que por medio del uso 
 	\label{convolucion}
 \end{figure} 
 
-\textbf{Componentes de la capa de convolución}
+\textbf{Componentes de la capa de convolución}.\\	
 Las capas convolucionales poseen paramétros e hiperparametros. La gradiente de descenso se usa principalmente para entrenar los parametros de modo que las clases sean consistentes con las etiquetas en el conjunto de entrenamiento. Entre estos parámetros tenemos:
 \textbf{Filtros}
 
 Los filtros son una función que posee ancho(width) y alto (height) más pequeños que la entrada. Los filtros son aplicados a través de  del ancho y alto de la entrada. También pueden ser aplicados a la profundidad.
-\subsubsection{Classification layers}
 
+\textbf{Hiperparámetros de una capa de convolución}.\\
+A continuación veremos algunos hiperparámetros que determinan la disposición espacial y tamaño del volumen de salida de una capa convolucional.
+\begin{itemize}
+	\item \textbf{Filter size:} Cada filtro es pequeño con respecto al ancho(width) y alto(height). Por ejemplo podemos tener un filtro de tamaño $[5x5x3]$, lo representa 5 de ancho x 5 de alto x 3 de los canales RGB.
+	\item \textbf{Output depth:} Este hiperparámetro controla el número de neuronas en la capa convolucional que están conectadas a la misma del volumen de entrada. Este parámetro puede ser elegido manualmente.
+	\item \textbf{Stride:} Se encarga de configurar el tamaño de desplazamiento de la ventana de filtro. Cada filtro aplicado a la columna de entrada asignará más profundidad en el volumen de salida. Un stride grande creará un volumen de salida más grande y uno valor pequeño obtendrá un volumen menor.
+	\item \textbf{Zero-padding:} Con este parámetro se puede controlar el volumen de salida. Puede ser usado para mantener el tamaño espacial de entrada en la salida.
+\end{itemize}
+
+\subsubsection{Pooling layers}
+Este tipo de capas se encuentran entre las capas convolucionales. Se encarga de reducir el tamaño espacial(ancho,alto) de los datos de representación. Esta capa reduce la representación de los datos progresivamente a través de la red y ayuda a controlar el overfitting.\\
+Esta capa utiliza la operación \textit{max()} para cambiar el tamaño de los datos de entrada espacialmente. A esta operación se le conoce como max pooling. La operación funciona de siguiente forma toma un filtro de $n x n$, la operación $max$ el mayor de los números en el área de filtro.
+
+\subsubsection{Fully Connected Layers}
+
+Esta capa es usada para calcular el puntaje de la clase que usaremos como salida de red. Las dimensiones del volumen de la salida son [1x1xN], donde el valor de N corresponde al número de clases de salida que se están evaluando. En el caso del MNIST (dataset para reconocimiento de dígitos), el valor de N es igual a 10, número que corresponde a los 10 dígitos distintos que posee el dataset($0, ... ,9$).\\
+Esta capa tiene conexión entre todas sus neuronas y las neuronas de la capa anterior. Esta capa realiza las transformaciones del volumen de datos de entrada. Estas transformaciones son funciones de activación en el volumen de entrada y los parámetros (pesos y bias de las neuronas).
 \subsection{Arquitecturas conocidas}
 \section{Métodos de optimización}
 Los métodos de optimización dentro del campo de deep learning son muy importantes debido a que esistentes gran cantidad de parámetros es 

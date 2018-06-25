@@ -277,34 +277,104 @@ Este tipo de aprendizaje fue inspirado por la psicología conductista, este tipo
 
 
 \section{Redes Neuronales}
-\subsection*{Neuronas}
-En la biología la neurona es conocida como la unidad fundamental del cerebro humano, el cual está compuesto por millones de neuronas interconectadas entre si. El trabajo de las neuronas consiste en recibir información, procesarla y enviarla a otras células. Este modelo fue copiado en 1943 por Warren S. McCulloch y Walter H. Pitts. Analogamente con las neuronas del cerebro humano nuestra neuro artificial toma una cantidad n de entradas $x_{1}, x_{2}, x_{3}, .. , x_{n}$ estas entradas serán multiplicadas por pesos $w_{1}, w_{2}, w_{3}, .. , w_{n}$ además se puede añadir una constante que llamaremos bias. 
+\subsection{Neuronas}
+En la biología la neurona es conocida como la unidad fundamental del cerebro humano, el cual está compuesto por millones de neuronas interconectadas entre si(sinapsis). El trabajo de las neuronas consiste en recibir información, procesarla y enviarla a otras células.\\ Este modelo fue copiado en 1943 por Warren S. McCulloch y Walter H. Pitts para poder diseñar un neurona artificial que análogamente con las neuronas del cerebro humano, la neurona artificial tomará una cantidad n de entradas $x_{1}, x_{2}, x_{3}, .. , x_{n}$ estas entradas serán multiplicadas por pesos $w_{1}, w_{2}, w_{3}, .. , w_{n}$ además se puede añadir una constante que llamaremos bias($b$) para producir un salida.
 
-La entrada a de la neurona será la suma total de los productos z=  $\sum_{i=1}^{n}x_{i}$ , el valor de z será la entrada a la neurona la cual la evaluará con una función f de tal forma que nuestra salida sea $y=f(z)$. Otra forma de ver esta expresión es por medio de la notación de vectores donde representaremos a las entradas como $x= [x_{1}  x_{2}  x_{3}  ...  x_{n}]$ y los pesos w= $[w_{1}  w_{2}  w_{3}  ...  w_{n}]$ de esta manera la salida de la neurona estará dada por $y=f(x\cdot w+b)$ donde b representa las bias. 
+La entrada a de la neurona será la suma total de los productos z=  $\sum_{i=1}^{n}{ w_{i}x_{i}}+b$ , el valor de z será la entrada a la neurona la cual la evaluará con una función f de tal forma que nuestra salida sea $y=f(z)$.\\ En la ecuación 3.9 observamos la misma salida expresada en forma vectorial para nuestros vectores  $x = [x_{1}  x_{2}  x_{3}  ...  x_{n}]$ y $w = [w_{1}  w_{2}  w_{3}  ...  w_{n}]$
 
-\subsection*{Redes Neuronales Artificiales}
-Las redes neuronales artificiales(ANN)toman de ejemplo la arquitectura del cerebro como inspiración para la construcción de sistemas inteligente. Actualmente son la base para el desarrollo de la inteligencia artificial. Las redes neuronales están constituidas de las uniones de las neuronas. 
-\subsection*{Redes Neuronales Profundas}
-Las redes neuronales profundas estan constituidas principalmente de un numero de capas de convolución, No linearalidad y pooling.
+
+
+\begin{equation}
+\label{forma vectorial}
+\begin{aligned}
+y&=f(x\cdot w+b)
+\end{aligned}
+\end{equation}
+\subsubsection{Funciones de Activación}
+La función $f$ anteriormente mencionada es una función no lineal, conocida como función de activación.\\ La tarea principal de la función de activación es introducir no linealidad a la salida de una neurona. Esto es importante debido a que la vida real no trabajamos con data no lineal y de esta forma la neurona puede aprender representaciones no lineales.\\ Entre funciones de activación tenemos algunas comúnmente usada como:
 \begin{itemize}
-	\item Convolución:
-	Un proceso importante dentro de las redes neuronales es la convolución que es usada para detectar las características de una imagen estas características pueden ser bordes, curvas, etc.
-	\item No linearalidad:
-	Debido a que las convoluciones son operaciones lineales, lo cual no es adecuado para las tareas del mundo real. Debido a esto es importante introducir el ReLu que aplicará funciones no lineales a los mapas de característica producidas en las capas de convolución.
-	Una de las funciones las común es ReLu.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.4\textwidth]{Figures/relu.png}
-		\caption{ReLu  Fuente:
-			\href{https://medium.com/@kanchansarkar/relu-not-a-differentiable-function-why-used-in-gradient-based-optimization-7fef3a4cecec}{\textit{https://medium.com/}}
-			 }
-		\label{ReLu}
-	\end{figure}
+	\item \textbf{Sigmoid}: Toma un valor real, y lo transforma en una valor en el rango de 0 a 1.\\
+	$ \sigma (x) = \frac{1}{1+e^{-x}}$
+	\item \textbf{tanh}: Toma por entrada un valor real y lo transfroma a un número en le rango de -1 a 1.\\
+	$\tanh (x)=\frac{2}{1+e^{-x}} -1$
+	\item \textbf{ReLu}: o Unidad lineal rectificada es una función que para valores menores que 0 asigna 0 y para valores mayores 
+	\[   
+	f(x) = 
+	\begin{cases}
+	\text{0} &\quad x<0\\
+	\text{x} &\quad x\geq0\\
 
-	
-	\item Pooling:
-	Sirve para transformar el mapa de características en una representación de menor dimensión con el objetivo de la red sea más invariante a pequeñas transformaciones o variación de la imagen de entrada.
+	\end{cases}
+	\]
 \end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/factivacion.png}
+	\caption{Funciones de activación \\ Fuente:  \href{https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}{\textit{https://ujjwalkarn.me}}}
+	\label{activacion}
+\end{figure} 
+
+\subsection{Redes Neuronales Artificiales}
+Las redes neuronales artificiales(ANN)toman de ejemplo la arquitectura del cerebro como inspiración para la construcción de sistemas inteligente. Actualmente son la base para el desarrollo de la inteligencia artificial. Las redes neuronales están constituidas de las uniones de las neuronas.\\
+En la figura 3.10 podemos ver la comparación entre una neurona biológica y un artificial etiquetas con A y B respectivamente. Además observamos que las redes neuronales artificiales (etiqueta D) imitan el la unión biológicas de las neuronas o sinapsis(Etiqueta C).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Figures/ANN.png}
+	\caption{Redes neuronales biológicas y artificiales \\ Fuente:  \href{https://medium.com/@ivanliljeqvist/the-essence-of-artificial-neural-networks-5de300c995d6}{\textit{https://medium.com}}}
+	\label{neuronas}
+\end{figure} 
+\subsubsection{Redes Neuronales Prealimentadas}
+Fue uno de los primeros y más simples tipos de redes neuronales que se desarrollaron. Contiene múltiples neuronas (nodos) ordenadas en capas de modo que los nodos en capas adyacentes se conectan. Cada una de estas conexiones poseen un peso asociado a dicha conexión.\\
+En la figura 3.12 mostramos el esquema de Redes prealimentadas con sus distintas capas(layer).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/esquemaff.png}
+	\caption{Esquema de Redes Neuronales Prealimentadas \\ Fuente:  \href{https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}{\textit{https://ujjwalkarn.me}}}
+	\label{neuronasredes}
+\end{figure} 
+\begin{itemize}
+	\item \textbf{Nodo de entrada(Input Node):} Proveen información a la red. En conjunto representan la capa de entrada, ningún calculo es realizado en esta capa solo se transfiere la información a la capa oculta.
+	\item \textbf{Nodo Oculto(Hidden Node):} El trabajo de los nodos ocultos es calcular y transferir la información hacia a el nodo de salida. Una Red prealimentada tiene solo una capa de entrada y una salida pero puede tener múltiples capas ocultas.
+	\item \textbf{Output Node:}Su tarea principal es realizar cálculos y transferir la información fuera de la red.
+\end{itemize}
+En las redes neuronales prealimentadas la información solo se propaga en una dirección hacia adelante desde los nodos de entradas pasando por los nodos ocultos hacia los nodos de salida. No existen ciclos en este tipo de red.\\
+Dentro de las redes neuronales prealimentadas tenemos algunos ejemplos:
+\begin{itemize}
+	\item \textbf{Perceptron Simple:} Es un red prealimentada simple que no posee capa oculta.Solo puede aprender de funciones lineales.
+	\item \textbf{Perceptron Multicapas:} Esta red posee una o más capas ocultas. Este perceptron puede aprender de funciones no lineales.
+	\item \textbf{Redes neuronales de convolución:} Este tipo de redes neuronal será explica con más detalle en el capítulo 4 sección 1.
+\end{itemize}
+\subsubsection{Algoritmo de propagación hacia atrás}
+La propagación hacia atrás trata de aprender de los errores, como ya hemos visto en el aprendizaje supervizado los conjuntos de entrenamiento se encuentran etiquetados. Por lo cual podemos saber cual es la salida esperada. \\
+El algoritmos se aplica de la siguiente forma:
+
+\begin{enumerate}
+	\item Se toma un ejemplo y se asignan pesos aleatorios a todas las conexiones de la red. Luego por medio de las conexiones y las funciones de activación se calcula la salida en las capas ocultas y de salida.
+	\item Se calcula el error total y se propagan estos errores hacia atrás a través de la red y se calcula la gradiente, luego se usan métodos como gradientes de descenso para ajustar los pesos y reducir el error en la capa de salida. La técnica de gradiente de descenso será explicada con más detalle en el siguiente capítulo.
+	\item Se repite el proceso con los otros ejemplos
+\end{enumerate}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/backp.png}
+	\caption{Propagación hacia atrás \\ Fuente:  \href{https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}{\textit{https://ujjwalkarn.me}}}
+	\label{backpropagation}
+\end{figure} 
+\subsubsection{Conjunto de datos para una red neuronal}
+Para alimentar nuestra red es importante tener información que le permita aprender. Esta información es llamada conjunto de datos o dataset, el cual nos permite entrenar a nuestra red y testear.\\ Una tarea principal para construir nuestro modelo es separar este dataset en 3 categorías.
+\begin{itemize}
+	\item \textbf{Datos de entrenamiento:} Permite entrar nuestro modelo.
+	\item \textbf{Datos de Validación:} Permite evaluar y actualizar los parámetros de entrenamiento
+	\item \textbf{Datos de testeo:} Permite testear el funcionamiento del modelo al ingresar datos nuevos.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/validation.PNG}
+	\caption{División del dataset \\ Fuente:  \href{http://magizbox.com/training/machinelearning/site/evaluation/}{\textit{http://magizbox.com}}}
+	\label{validacion}
+\end{figure} 
+
 
 
 
