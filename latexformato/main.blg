@@ -3,49 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: unsrt.bst
 Database file #1: main.bib
-Too many commas in name 1 of "Quoc V. Le, Jiquan Ngiam, Adam Coates, Abhik Lahiri, Bobby Prochnow and Andrew Y. Ng" for entry Optimization
-while executing---line 944 of file unsrt.bst
-Too many commas in name 1 of "Quoc V. Le, Jiquan Ngiam, Adam Coates, Abhik Lahiri, Bobby Prochnow and Andrew Y. Ng" for entry Optimization
-while executing---line 944 of file unsrt.bst
-You've used 9 entries,
+Warning--I didn't find a database entry for "Optimizacion"
+You've used 14 entries,
             1791 wiz_defined-function locations,
-            498 strings with 4992 characters,
-and the built_in function-call counts, 1505 in all, are:
-= -- 145
-> -- 32
-< -- 2
-+ -- 16
-- -- 7
-* -- 46
-:= -- 203
-add.period$ -- 31
-call.type$ -- 9
-change.case$ -- 9
+            531 strings with 5702 characters,
+and the built_in function-call counts, 2408 in all, are:
+= -- 230
+> -- 56
+< -- 4
++ -- 27
+- -- 13
+* -- 76
+:= -- 341
+add.period$ -- 49
+call.type$ -- 14
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 70
-empty$ -- 188
-format.name$ -- 7
-if$ -- 374
+cite$ -- 14
+duplicate$ -- 113
+empty$ -- 289
+format.name$ -- 13
+if$ -- 593
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 2
-newline$ -- 51
-num.names$ -- 5
-pop$ -- 57
+int.to.str$ -- 14
+missing$ -- 4
+newline$ -- 79
+num.names$ -- 10
+pop$ -- 81
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 43
+skip$ -- 67
 stack$ -- 0
-substring$ -- 44
-swap$ -- 24
-text.length$ -- 2
+substring$ -- 71
+swap$ -- 39
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 10
-width$ -- 10
-write$ -- 99
-(There were 2 error messages)
+while$ -- 19
+width$ -- 16
+write$ -- 157
+(There was 1 warning)

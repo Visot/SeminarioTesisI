@@ -3,15 +3,17 @@
 En el campo de la inteligencia artificial las redes neuronales profundas tienen un papel muy importante, debido a que estas son el camino para que las computadoras realicen tareas que nuestros cerebros realizan de manera natural, tareas como el reconocimiento de voz, imágenes y patrones. En la actualidad empresas importantes utilizan las redes neuronales profundas, un ejemplo de esto es Google con el reconocimiento de voz e imágenes. Una característica de las redes neuronales profundas es que están compuestas por una gran cantidad de capas lo cual dificulta el entrenamiento en computadoras que solo usan el CPU. Una manera de resolver este problema es mediante el uso de las GPU's debido que las tareas de entrenamiento son paralelizables. Se pueden utilizar GPU'S para acelerar el proceso de entrenamientos de nuestra red neuronal profunda. Por otro lado se necesitan métodos de optimización que junto a la fortaleza de las GPU's nos permitan obtener un mejor rendimiento.
 
 \section{Motivación}
-La inteligencia artificial constituye una base muy importante en el campo de la computación, mezcla un conjunto de disciplinas como la estadística y ciencia de la computación con el objetivo de construir modelos que puedan permitir a las computadoras realizar tareas que hace algunos años hubiese sido considerado imposible. El hecho de lograr que las computadoras sean capaces de reconocer objetos, clasificarlos lo cual ha permitido que la industria de la robotíca desarrolle de manera acelerada en las últimas décadas.  Hoy en día existen muchas herramientas que nos permiten desarrollar este tema y profundizarlo pero a medida que aumenta la complejidad del problema, el costo computacional incrementa lo cual se convierte un problema importante.
+La inteligencia artificial constituye una base muy importante en el campo de la computación, mezcla un conjunto de disciplinas como la estadística y ciencia de la computación con el objetivo de construir modelos que puedan permitir a las computadoras realizar tareas que hace algunos años hubiesen sido considerada imposibles.\\
+Actualmente las computadoras son capaces de reconocer objetos y clasificarlo. Esto ha permitido que la industria de la robótica se desarrolle de manera acelerada en las últimas décadas.
+ Además hoy en día existen muchas herramientas que nos permiten desarrollar este tema y profundizarlo pero a medida que aumenta la complejidad del problema, el costo computacional se incrementa lo cual se convierte un problema importante.
 
- Una de la soluciones que apareció fue el uso de la GPU's para acelerar procesos como el entrenamiento de una red neural con muchas capas ocultas, las GPU's representa una solución muy eficaz debido a que en el campo de la inteligencia artificial existen muchas tareas que son paralelizables.
+ Una de la soluciones que apareció fue el uso de la GPU's para acelerar procesos como el entrenamiento de una red neuronal con muchas capas ocultas, las GPU's representa una solución muy eficaz debido a que en el campo de la inteligencia artificial existen muchas tareas que son paralelizables.
 
-Actualmente el mercado de GPU's evoluciona muy rápido debido a su gran demanda en la industria de los videojuegos este mercado esta dominado por NVIDIA y AMD esta competencia y la alta demanda permite que las GPU's tengan mejor rendimiento lo cual puede ser usado obtener mejores resultados en el campo de machine learning. 
+Actualmente el mercado de GPU's evoluciona muy rápido debido a su gran demanda en la industria de los videojuegos, este mercado está dominado por NVIDIA y AMD, esta competencia y la alta demanda permite que las GPU's tengan mejor rendimiento lo cual puede ser usado obtener mejores resultados en el campo de Aprendizaje automático. 
 
-Por otro lado la optimización no solo se basa el uso de hardwares más potentes sino también depende de la elección de métodos adecuados para nuestro modelos esta elección dependerá mucho del problema a tratar métodos un método usado comúnmente en el campo de machine learning es la gradiente de descenso estocástica pero realmente es adecuado para toda variedad de problemas.
+Por otro lado la optimización no solo se basa en el uso de hardwares más potentes sino también depende de la elección de métodos adecuados para nuestros modelos, esta elección dependerá mucho del problema a tratar. Uno de los métodos más usado en el campo de Aprendizaje Automático es la gradiente de descenso estocástica pero este métodos por si solo no es muy optimo. 
 
-Respecto a la problemática de encontrar métodos más eficientes de optimización que obtengan un mejor rendimiento, este presente seminario se centra en la búsqueda y comparación de estos métodos con el fin de encontrar aquellos que sean más rápidos y eficientes.
+Actualmente existe la problemática de encontrar métodos más eficientes de optimización que obtengan un mejor rendimiento, este presente seminario se centra en la búsqueda y comparación de estos métodos con el fin de encontrar aquellos que sean más rápidos y eficientes. Además adquirir el conocimiento y entender como estos funcionan.
 %-----
 %-----Que es lo que te ha motivado para realizar la tesis en esta temática y los aspectos más esenciales que pensabas obtener de ella...
 
@@ -19,17 +21,17 @@ Respecto a la problemática de encontrar métodos más eficientes de optimizaci�
 
 \section{Objetivos}
 
-El objetivo de este seminario es el de mostrar las ventanjas del uso de distintos métodos de optimización en el entranimiento de una deep neural network en una tarea de clasificación.
+El objetivo de este seminario es el de mostrar las ventajas del uso de distintos métodos de optimización para acelerar el entrenamiento de una red neuronal convolucional en una tarea de clasificación.
 
-Especificamente, los objetivos de este trabajo con respecto al sistema son:
+Específicamente, los objetivos de este trabajo con respecto al sistema son:
 
 \begin{itemize}
-\item[•] Entender el funcionamiento de las redes neuronales profundas%--OBJETIVO ESPECÍFICO 1.
+\item[•] Entender el funcionamiento de las redes neuronales profundas.%--OBJETIVO ESPECÍFICO 1.
 
-\item[•] Estudiar métodos de optimización en machine learning.
+\item[•] Estudiar métodos de optimización en Aprendizaje Automático.
 
 \item[•] Conocer las ventajas y desventajas de diferentes métodos de optimización.
-\item[•] Mostrar los resultados de distintos métodos de optimización en el entramiento de una red neuronal profunda.
+\item[•] Mostrar los resultados de distintos métodos de optimización en el entrenamiento de una red neuronal convolucional para tareas de clasificación.
 
 
 
@@ -38,8 +40,8 @@ Especificamente, los objetivos de este trabajo con respecto al sistema son:
 Y los objetivos con respecto a las competencias académicas desplegadas en el trabajo son:
 \begin{itemize}
 \item[•] Desarrollar un mejor entendimiento de las redes neuronales y sus aplicaciones, para así poder lograr afrontar problemas en el campo de la inteligencia artificial. %--OBJETIVO COMPETENCIA 1.
-\item[•] Obtener la capacidad de discriminar entre los distintos métodos de optimización y elegir el adecuado para un problema de deep learning.%--OBJETIVO COMPETENCIA 2.
-\item[•] Obtener un conocimiento de las herramientas y recursos que existen actualmente para abordar problemas de deep learning, además de poder analizar que herramientas son adecuadas para algunos problemas.
+\item[•] Obtener la capacidad de discriminar entre los distintos métodos de optimización y elegir el adecuado para un problema de aprendizaje profundo.%--OBJETIVO COMPETENCIA 2.
+\item[•] Obtener un conocimiento de las herramientas y recursos que existen actualmente para abordar problemas de aprendizaje profundo, además de poder analizar que herramientas son adecuadas para algunos problemas.
 \end{itemize}
 
 \section{Estructura del Seminario}
@@ -52,8 +54,16 @@ En este capítulo introductorio se comenta sobre el tema a tratar, las motivacio
 %--En este capítulo introductorio se comenta sobre las motivaciones ...
 
 \item \textbf{Estado del Arte:} \\
-En este capítulo muestra los trabajos e investigaciones ya realizadas, además de algunas aplicaciones que motivaron al presente seminario y muestra la importancia del seminario.
+En este capítulo muestra los trabajos e investigaciones ya realizadas, además de algunas aplicaciones que motivaron al presente seminario y además las investigación mostrarán el interés del problema planteado en este seminario.
 
+\item \textbf{Aprendizaje automático y Redes Neuronales:} \\
+En este capítulo daremos una introducción general al Aprendizaje automático y distinguiremos los tipos de aprendizajes que existen, Además veremos los tipos de problema en esta área. Luego trataremos el tema de las Redes neuronales como una introducción al capítulo 4.
+\item \textbf{Optimizadores para la gradiente de descenso en una Red Neuronal Convolucional:} \\
+En este capítulo conoceremos más de un tipo específico de redes neuronal, las redes neuronales convolucionales. Detallares las principales diferencias con las redes tradicionales y describiremos sus principales hiperparámetros. Luego de eso nos enfocaremos en los optimizadores de la gradiente de descenso.
+\item \textbf{Resultados:} \\
+Se mostrarán los resultados obtenidos en las pruebas de los optimizadores además de describir los resultados.
+\item \textbf{Conclusiones y Trabajo Futuro:} \\
+En este capítulo se plantean las conclusiones y se detalla algunos inconvenientes encontrados durante el trabajo. Además que se comprueba la teoría descrita en el capítulo 4.
 %--\item \textbf{Metodología y Herramientas:} \\
 %--....
 

@@ -1,4 +1,4 @@
-\chapter{Algoritmos de optimización una Red Neuronal convolucional}
+\chapter{Optimizadores para la gradiente de descenso en una Red Neuronal Convolucional}
 En este capítulo se detallarán los algoritmos de optimización de Aprendizaje automático y principalmente se enfocará en aquellos aplicados a las redes neuronales convolucionales por lo cual al inicio de este capítulo veremos una introducción a este tipo de redes de prealimentación.
 
 \section{Redes Neuronales Convolucionales}
@@ -26,20 +26,22 @@ Teniendo en cuenta esta forma de guardar una podemos resaltar la ventaja de usar
 \subsection{Capas de una CNN}
 
 \subsubsection{Input layer}
-Esta capa es donde se carga y almacena la información de las imágenes para procesarlas en la red. Esta información contiene detalles de ancho, alto y número de canales de imagen.
+Esta capa es donde se carga y almacena la información de las imágenes para procesarlas en la red. Esta información contiene detalles de ancho, alto y número de canales de imagen. Esta entrada corresponde a la figura 4.1.
 
 \subsubsection{Convolutional layers}
 Son una capa importante en el diseño de las CNN's, las capas convolucionales transformarán la entrada de la data usando las conexiones de las neuronas de las capas anteriores. La capa calculará el producto punto entre la región de la neurona de la capa de entrada y los pesos a los que están colocados localmente en la capa de salida. Esta salida tendrá la misma dimensión de espacios o una dimensión menor.
 
-Para entender más a fondo debemos definir la operación de convolución.  La convolución es una operación matematica que describe una regla de como fusionar 2 conjuntos de información.\textquotedblleft Esta operación tiene importancia en campos como la matematica y la física debido que permite definir un puente entre el domino del espacio/tiempo y el dominio de la frecuencias a través del uso de transformada de fourier. Toma la entrada un entrada, aplica un kernel de convolución y nos da un mapa de características como salida \textquotedblright \cite{book1} .\\
+Para entender más a fondo debemos definir la operación de \textit{convolución}.  La \textit{convolución} es una operación matematica que describe una regla de como fusionar 2 conjuntos de información.\textquotedblleft Esta operación tiene importancia en campos como la matematica y la física debido que permite definir un puente entre el domino del espacio/tiempo y el dominio de la frecuencias a través del uso de transformada de fourier. Toma la entrada un entrada, aplica un kernel de convolución y nos da un mapa de características como salida \textquotedblright \cite{book1} .\\
 Las convoluciones son usadas principalmente como un detector de características cuyas entradas principalmente son la capa de entrada u otra convolución.
-En la figura 4.1 observamos la operación de convolución que por medio del uso de un kernel o filtro de convolución extrae características de la data por ejemplo detalles como bordes de una imagen. Haciendo analogía con los pesos en las redes neuronales convencionales, las redes poseen el filtro o kernel lo cual es beneficioso ya que no se debe definir un peso para cada neurona.
+En la figura 4.1 observamos la operación de convolución que por medio del uso de un kernel o filtro de convolución extrae características de la data por ejemplo detalles como bordes de una imagen. Haciendo analogía con los pesos en las redes neuronales convencionales, las redes poseen el filtro o kernel lo cual es beneficioso ya que no se debe definir un peso para cada neurona. En la figura 4.2 vemos como se aplica el kernel para producir datos de característica, este kernel será desplazado a lo largo de las dimensiones espaciales. Este kernel se multiplica por los datos de entrada dentro de su limite, produciendo una sola salida al mapa de características.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Figures/convolucion.jpeg}
 	\caption{Operacion de convolución \\ Fuente:  \href{http://openresearch.ai/t/network-in-network/39}{\textit{www.openresearch.ai}}}
 	\label{convolucion}
 \end{figure} 
+
+Las capas convolucionales aplican transformaciones o funciones de activación al conjunto de entrada. El mapa de activación se apila a lo largo de dimensión de profundidad para construir el volumen de salida.
 
 \textbf{Componentes de la capa de convolución}.\\	
 Las capas convolucionales poseen paramétros e hiperparametros. La gradiente de descenso se usa principalmente para entrenar los parametros de modo que las clases sean consistentes con las etiquetas en el conjunto de entrenamiento. Entre estos parámetros tenemos:
@@ -53,26 +55,42 @@ A continuación veremos algunos hiperparámetros que determinan la disposición 
 	\item \textbf{Filter size:} Cada filtro es pequeño con respecto al ancho(width) y alto(height). Por ejemplo podemos tener un filtro de tamaño $[5x5x3]$, lo representa 5 de ancho x 5 de alto x 3 de los canales RGB.
 	\item \textbf{Output depth:} Este hiperparámetro controla el número de neuronas en la capa convolucional que están conectadas a la misma del volumen de entrada. Este parámetro puede ser elegido manualmente.
 	\item \textbf{Stride:} Se encarga de configurar el tamaño de desplazamiento de la ventana de filtro. Cada filtro aplicado a la columna de entrada asignará más profundidad en el volumen de salida. Un stride grande creará un volumen de salida más grande y uno valor pequeño obtendrá un volumen menor.
-	\item \textbf{Zero-padding:} Con este parámetro se puede controlar el volumen de salida. Puede ser usado para mantener el tamaño espacial de entrada en la salida.
+	\item \textbf{Zero-padding:} Con este parámetro se puede controlar el volumen de salida. Puede ser usado para mantener el tamaño espacial de entrada en la salida. 
 \end{itemize}
 
 \subsubsection{Pooling layers}
 Este tipo de capas se encuentran entre las capas convolucionales. Se encarga de reducir el tamaño espacial(ancho,alto) de los datos de representación. Esta capa reduce la representación de los datos progresivamente a través de la red y ayuda a controlar el overfitting.\\
-Esta capa utiliza la operación \textit{max()} para cambiar el tamaño de los datos de entrada espacialmente. A esta operación se le conoce como max pooling. La operación funciona de siguiente forma toma un filtro de $n x n$, la operación $max$ el mayor de los números en el área de filtro.
+Esta capa utiliza la operación \textit{max()} para cambiar el tamaño de los datos de entrada espacialmente. A esta operación se le conoce como max pooling. La operación funciona de siguiente forma toma un filtro de $n x n$, la operación $max$ el mayor de los números en el área de filtro.\\ Por ejemplo en caso tener una imagen de entrada $32 \times 32$ píxeles y se aplica un filtro de $2\times2$  nuestra salida sería de $16\times16$ píxeles. Esto reduce cada segmento de profundidad en el volumen de entrada por un factor de 2.
 
 \subsubsection{Fully Connected Layers}
 
 Esta capa es usada para calcular el puntaje de la clase que usaremos como salida de red. Las dimensiones del volumen de la salida son [1x1xN], donde el valor de N corresponde al número de clases de salida que se están evaluando. En el caso del MNIST (dataset para reconocimiento de dígitos), el valor de N es igual a 10, número que corresponde a los 10 dígitos distintos que posee el dataset($0, ... ,9$).\\
 Esta capa tiene conexión entre todas sus neuronas y las neuronas de la capa anterior. Esta capa realiza las transformaciones del volumen de datos de entrada. Estas transformaciones son funciones de activación en el volumen de entrada y los parámetros (pesos y bias de las neuronas).
 \subsection{Arquitecturas conocidas}
+Actualmente existen algunas arquitecturas de CNN ya diseñadas que son aplicadas para el trabajo de reconocimiento de imágenes. El proyecto ImageNet, posee una gran base de datos de imágenes. Este proyecto realiza una competición \textit{ImageNet Large Scale Visual Recognition Challenge (ILSVRC) } donde compiten programas de software para detectar y clasificar objetos.\\ A continuación mostraremos algunas de las arquitecturas más importante de esta competencia:
+
+\begin{itemize}
+	\item \textbf{LeNet-5 (1998)} \textquotedblleft Arquitectura propuesta por LeCun, consiste 2 capas de convolución, activación  y capas pooling seguidas por a fully conected layer\textquotedblright \cite{WEBSITE:9}
+	\item \textbf{AlexNet (2012)} Fue propuesta por Alex Krizhevsky, esta arquitectura posee 5 capas de convolución seguida por 3 fully connected layers.
+	\item \textbf{VGGNet (2014)} Fue desarrollada para Sigmoyan y Zisserman para la competición ILSVRC. \textquotedblleft VGG consta de 16 capas convolucionales y es muy atractivo debido a su arquitectura uniforme. Consta de convoluciones de 3x3 y utiliza múltiples filtros \textquotedblright \cite{WEBSITE:10}	
+\end{itemize}
 \section{Métodos de optimización}
-Los métodos de optimización dentro del campo de deep learning son muy importantes debido a que esistentes gran cantidad de parámetros es 
+En el campo de aprendizaje profundo es recomendable la elección de un buen algoritmo de optimización, debido a que este algoritmo puede representar la diferencia entre minutos,horas , etc. La tarea principal de este algoritmo es reducir un función objetivo, en nuestro caso nuestra función objetivo será la función de perdida $J(\theta)$.
 
 \subsection{Gradiente de descenso}
-La gradiente de descenso es un algoritmo común para optimizar redes neuronales. La gradiente de descenso es una forma de minimizar la función de costo $J(\theta)$ para metrizada por los parámetros $\theta \in\Re^{d}$ actualizando los parámetros en la dirección opuesta a la gradiente de la función objetivo en este caso a nuestra función de costo $\nabla_{\theta} J(\theta)$
+La gradiente de descenso es un algoritmo más común para optimizar redes neuronales. La gradiente de descenso es una forma de minimizar la función de costo $J(\theta)$ parametrizada por los parámetros $\theta \in\Re^{d}$. Esta función nos permitirá determinar que tan precisa es el rendimiento de nuestra red. La gradiente actualiza los parámetros en la dirección opuesta a la gradiente de la función objetivo en este caso a nuestra función de costo $\nabla_{\theta} J(\theta)$.\\ En la figura 4.3 observamos una función de costo con solo 2 parámetros, la tarea de la gradiente de descenso es encontrar valores particulares de $\theta$ que nos permitan llegar de el punto A al punto B donde la función alcanza un valor mínimo. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Figures/gd.png}
+	\caption{Estructura de la imagen de entrada \\ Fuente:  \href{https://blog.paperspace.com/intro-to-optimization-in-deep-learning-gradient-descent/}{\textit{https://blog.paperspace.com/}}}
+	\label{image}
+\end{figure} 
+
 Dentro de la gradiente de descenso podemos diferenciar 3 variantes de acuerdo al la cantidad de datos que se usan para calcular la gradiente de la función objetivo entre estas variantes tenemos a:\\
+
 \subsubsection{Batch gradient descent}
-Esta variante calcula la gradiente de descenso de la función de costo con respecto a un parámetro $\theta$, para todo el conjunto de datos. En la ecuación 4.1 podemos observar la actualización que se dará para cada ejecución. $\eta$ representa la taza o tamaño de los pasos para encontrar el mínimo local.
+Esta variante calcula la gradiente de descenso de la función de costo con respecto a un parámetro $\theta$, \textit{para todo el conjunto de datos}. En la ecuación 4.1 podemos observar la actualización que se dará para cada ejecución. $\eta$ representa la taza o tamaño de los pasos para encontrar el mínimo local.
 \begin{equation}
 \label{bgds}
 \begin{aligned}
@@ -88,7 +106,7 @@ A diferencia del método anterior las actualización se realizan para cada ejemp
 \theta &= \theta - \eta \nabla_{\theta} J(\theta,x^{i},y^{i})
 \end{aligned}
 \end{equation}
-En la figura 4.2 vemos que la función de costo en SGD fluctúa demasiado esto podría representar un problema pero al contrario de la figura representa que el método SGD es capaz de saltar de un mínimo local con lo cual puede encontrar mínimos locales potencialmente mejores.
+En la figura 4.4 vemos que la función de costo en SGD fluctúa demasiado esto podría representar un problema pero por el contrario, esta figura representa que el método SGD es capaz de saltar de un mínimo local a otro con lo cual puede encontrar mínimos locales potencialmente mejores.
 
 \begin{figure}[H]
 	\centering
@@ -98,7 +116,7 @@ En la figura 4.2 vemos que la función de costo en SGD fluctúa demasiado esto p
 \end{figure} 
 
 \subsubsection{Mini-batch gradient descent}
-Este método pude verse como una mezcla de los 2 métodos anteriores, en lugar de aplicarlo para un conjunto entero de datos, los datos se particionan en pequeños conjuntos o mini batches.
+Este método pude verse como una mezcla de los 2 métodos anteriores, en lugar de aplicarlo para un conjunto entero de datos, los datos se particionan en pequeños conjuntos o mini batches, estos conjunto alimentan nuestro modelo para el entrenamiento.			
 Este método nos permite reducir la varianza de las actualizaciones de los parámetros lo cual nos permite una convergencia más estable. El tamaño de los mini-batches oscilan entre 50-250 y varían de acuerdo a su aplicación.
 
 \begin{equation}
@@ -108,19 +126,20 @@ Este método nos permite reducir la varianza de las actualizaciones de los pará
 \end{aligned}
 \end{equation}
 
-
+Mini-batch gradient descent es necesario elegir un $\nabla$ adecuado. Debido  que uno pequeño puede ocasionar una convergencia lenta y una grande puede ocasionar que la fluctué entre los valores mínimos y no converga.\\
+Una de las ventajas principales es que aprovechan el rendimiento de las GPU's para realizar cálculos más rápidos, esto se debe a que la información se guarda como tensores(Matrices de gran dimensión) y las GPU's realizan cálculos de operaciones de matrices más rápidos que una CPU.
 
 \subsection{Optimizadores}
 En la siguiente sección analizaremos algunos optimizadores que acelerarán el proceso de gradiente de descenso.
 \subsubsection{Momentum}
-Las SGD tienen problemas para desplazarse en áreas con donde la superficie se curva más en una dimensión que en otra, estos lugares son los alrededores de los óptimos locales. En este escenario la SGD oscilará en la curvatura y descenderá lentamente hacia el óptimo como se muestra en la figura 4.3.
+Las SGD tienen problemas para desplazarse en áreas con donde la superficie se curva más en una dimensión que en otra, estos lugares son los alrededores de los óptimos locales. En este escenario la SGD oscilará en la curvatura y descenderá lentamente hacia el óptimo como se muestra en la figura 4.5.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{Figures/momentum1.png}
 	\caption{Actualización sin momentum \\ Fuente:  \href{https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit{www.doc.ic.ac.uk}}}
 	\label{momentum1}
 \end{figure}
-El momentum es un método que ayuda a la SGD a acelerar en la dirección correcta, mientras evitas las oscilaciones. El momentum lográ esto añadiendo una fracción $\gamma$ del vector de actualización pasado al vector presente tal como se muestra en las ecuaciones 4.4. Un valor comunmente elegido de $\gamma =0.9 $, en las actualización el valor del momentum aumenta para dimensiones cuyos gradientes apuntan en la misma dirección y disminuye para dimensional en la que la gradiente cambia de dirección. Esto nos asegura que tendremos una convergencia más rápida con una oscilación reducida.En la figura 4.4 se observa gráficamente la aceleración de la convergencia en la SGD.
+El momentum es un método que ayuda a la SGD a acelerar en la dirección correcta, mientras evitas las oscilaciones. El momentum lográ esto añadiendo una fracción $\gamma$ del vector de actualización pasado al vector presente tal como se muestra en las ecuaciones 4.4.\\ Un valor comunmente elegido de $\gamma =0.9 $, en las actualización el valor del momentum aumenta para dimensiones cuyos gradientes apuntan en la misma dirección y disminuye para dimensional en la que la gradiente cambia de dirección. Esto nos asegura que tendremos una convergencia más rápida con una oscilación reducida.En la figura 4.6 se observa gráficamente la aceleración de la convergencia en la SGD.
 
 \begin{equation}
 \label{mbgds}
@@ -191,22 +210,33 @@ Como $G_{t} \in \Re^{dxd} $contiene la suma de los cuadrados de las gradientes p
 \theta_{t+1,i} &= \theta_{t,i} - \frac{\eta}{\sqrt{G_{t}+\epsilon}} \odot g_{t,i}
 \end{aligned}
 \end{equation}
-El principal beneficio de adagrad nos evita el hecho de trabajar con una taza fija por otro lado su principal desventaja se basa en el la suma de los gradientes al cuadrado aumentará en cada iteración lo cual provocará que su taza sea cada vez más pequeña.
+El método adagrap en palabras de los autores:
+\textquotedblleft Informalmente nuestros procedimientos dan a las características más frecuentes tazas de aprendizaje bajas y para características poco frecuentes, Por lo tanto, la adaptación permite identificar características predictivas pero comparativamente raras. \textquoteright  \cite{ADA} Lo cual también representa problemas en caso
+
+
+De esta afirmación notamos que el principal beneficio de Adagrad es que nos evita el hecho de trabajar con una taza fija por otro lado su principal desventaja se basa en el la suma de los gradientes al cuadrado aumentará en cada iteración lo cual provocará que su taza sea cada vez más pequeña.
 
 
 \subsubsection{RMSprop}
 Es un método de aprendizaje por adaptación de la taza que fue propuesto por Geoff Hinton
-Este modelo se desarrollo con el objetivo resolver el problema de disminuir radicalmente la tasa de aprendizaje en Adagrad. RMSprop divide la taza de aprendizaje mediante el decaimiento del promedio de la suma de las gradientes cuadradas.
+Este modelo se desarrollo con el objetivo resolver el problema de disminuir radicalmente la tasa de aprendizaje en Adagrad.\\ RMSprop divide la taza de aprendizaje mediante el decaimiento del promedio de la suma de las gradientes cuadradas.
 \begin{equation}
 \label{RMS}
 \begin{aligned}
-E[g^2]_{t} &= 0.9 E[g^2]_{t-1} + 0.1 g^{2}_{t}\\
+E[g^2]_{t} &= \gamma E[g^2]_{t-1} + (1-\gamma)g^{2}_{t}\\
 \theta_{t+1} &= \theta_{t} - \frac{\eta}{\sqrt{E[g^2]_{t} +\epsilon }} g_{t}
 \end{aligned}
 \end{equation}
-
+\begin{itemize}
+	\item $E[g^2]$: Promedio de la raíz de la gradiente para cada peso.
+	\item $\gamma$  : Parámetro de decaimiento
+	\item $\eta$    : tasa de aprendizaje
+\end{itemize}
+Divide la gradiente $g_{t}$ por la raíz $\sqrt{E[g^2]_{t} +\epsilon}$ hace que el aprendizaje trabaje mucho mejor.
 \subsubsection{Adam	}
-Adaptative moment estimation  o Adam que calcula la taza de aprendizaje adaptativo para cada parámetro. Este método mantiene un decaimiento exponencial del promedio de las gradientes pasadas. El método adam prefiere los mínimos en las superficies de error. En la figura 4.9 mostramos el calculo de promedio de decaimiento de las gradientes pasadas $m_{t}$ y el cuadrado de las gradientes pasadas $v_{t}$
+Adam es un algoritmo de optimización que desarrollado por Diederik Kingma y Jimmy ba. 
+Adaptative moment estimation  o Adam, calcula una taza de aprendizaje adaptativo para cada parámetro. Este método mantiene un decaimiento exponencial del promedio de las gradientes anteriores. El método adam prefiere los mínimos en las superficies de error.
+ En la ecuación 4.10 mostramos el calculo de promedio de decaimiento de las gradientes pasadas $m_{t}$ y el cuadrado de las gradientes pasadas $v_{t}$
 \begin{equation}
 \label{adam1}
 \begin{aligned}
@@ -217,9 +247,11 @@ v_{t} &= \beta_{2} v_{t-1} +(1-\beta_{2})g_{t}^2
 
 \begin{itemize}
 	\item $m_{t}:$ Primer momento (media)
-	\item $v_{t}:$ Segundo momento de la gradiente.
+	\item $v_{t}:$ Segundo momento de la gradiente
+	\item $\beta_{1}:$ Taza de decaimiento del primer momento.
+	\item $\beta_{2}:$ Taza de decaimiento del segundo momento.
 \end{itemize}
-
+En la ecuación 4.11 mostramos la forma de calcular estimado de la primer y segundo momento.
 \begin{equation}
 \label{adam2}
 \begin{aligned}
@@ -227,7 +259,13 @@ v_{t} &= \beta_{2} v_{t-1} +(1-\beta_{2})g_{t}^2
 \hat{v_{t}} &= \frac{v_{t}}{1-\beta_{2}^{t}}
 \end{aligned}
 \end{equation}
-La ecuación 4.12 muestra la regla de actualización en Adam.
+
+\begin{itemize}
+	\item $\hat{m_{t}}:$ Estimación del Primer momento (media)
+	\item $\hat{v_{t}}:$ Estimación del Segundo momento de la gradiente.
+\end{itemize}
+
+La ecuación 4.12 muestra la regla de actualización en Adam. Se utiliza el $\epsilon$ para prevenir una división por cero.
 \begin{equation}
 \label{adam3}
 \begin{aligned}
@@ -235,5 +273,3 @@ La ecuación 4.12 muestra la regla de actualización en Adam.
 \end{aligned}
 \end{equation}
 
-\subsubsection{AdaMax}
-\subsubsection{Nadam}

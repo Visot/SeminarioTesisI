@@ -1,11 +1,23 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{Optimization}
-Adam Coates Abhik Lahiri Bobby~Prochnow Quoc V.~Le, Jiquan~Ngiam and Andrew~Y.
-  Ng.
-\newblock On optimization methods for deep learning.
-\newblock {\em International Conference on Machine Learning 2010}, pages 1--8,
-  2010.
+\bibitem{WEBSITE:11}
+Vadim Smolyakov.
+\newblock Neural network optimization algorithms a comparison study based on
+  tensorflow.
+\newblock
+  \url{https://medium.com/@siddharthdas_32104/cnns-architectures-lenet-alexnet-vgg-googlenet-resnet-and-more-666091488df5},
+  Ene 2017.
+\newblock Accessed on 2018-06-11.
+
+\bibitem{ADAM}
+Diederik~P. Kingma and Jimmy~Lei Ba.
+\newblock Adam : A method for stochastic optimization.
+\newblock {\em ICLR}, pages 1--15, 2015.
+
+\bibitem{NMIA}
+Timothy Dozat.
+\newblock Incorporating nesterov momentum into adam.
+\newblock {\em ICLR}, pages 1--3, 2016.
 
 \bibitem{WEBSITE:2}
 Machine learning 101 | supervised, unsupervised, reinforcement and beyond.
@@ -61,5 +73,28 @@ Josh Patterson and Adam Gibson.
 \newblock Major architectures of deep networks.
 \newblock In {\em Deep Learning A Practitioner’s Approach}, pages 132--135.
   O’Reilly Media, 2017.
+
+\bibitem{WEBSITE:9}
+Adrian Rosebrock.
+\newblock Lenet – convolutional neural network in python.
+\newblock
+  \url{https://www.pyimagesearch.com/2016/08/01/lenet-convolutional-neural-network-in-python},
+  Ago 2016.
+\newblock Accessed on 2018-06-15.
+
+\bibitem{WEBSITE:10}
+Siddharth Das.
+\newblock Cnn architectures: Lenet, alexnet, vgg, googlenet, resnet and more
+  ….
+\newblock
+  \url{https://medium.com/@siddharthdas_32104/cnns-architectures-lenet-alexnet-vgg-googlenet-resnet-and-more-666091488df5},
+  Nov 2017.
+\newblock Accessed on 2018-06-15.
+
+\bibitem{ADA}
+Elad~Hazan John~Duchi and Yoram Singer.
+\newblock Adaptive subgradient methods for online learning and stochastic
+  optimization.
+\newblock {\em Journal of Machine Learning Research 12}, pages 1--2, 2011.
 
 \end{thebibliography}

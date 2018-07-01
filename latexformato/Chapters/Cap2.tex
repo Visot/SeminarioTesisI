@@ -1,7 +1,7 @@
 \chapter{Estado del Arte}
-En este capítulo describiremos anteriores investigaciones de machine learning, además de sus aplicaciones. Además veremos algunas investigaciones GPU como un modo de obtener un mejor rendimiento y nos enfocaremos principalmente en los estudios de los métodos de optimización.
+En este capítulo describiremos anteriores investigaciones de Aprendizaje automático, además de sus aplicaciones. Además veremos algunas investigaciones GPU como un modo de obtener un mejor rendimiento y nos enfocaremos principalmente en los estudios de los métodos de optimización.
 
-También mostraremos investigaciones referentes a deep learning exclusivamente nos enfocaremos a Convolutional Neural Network(CNN) ya que son parte del tema de estudio en este seminario. 
+También mostraremos investigaciones referentes a Aprendizaje profundo exclusivamente nos enfocaremos a Convolutional Neural Network(CNN) ya que son parte del tema de estudio en este seminario. 
 
 %---Escribir un texto de un o dos párrafo(s) máximo de 10 líneas con una introducción al capítulo 
 
@@ -11,31 +11,40 @@ También mostraremos investigaciones referentes a deep learning exclusivamente n
 
 
 \section{GPU computing}
-El uso de las GPU's han permitido lograr aplicaciones que antes podriamos imaginar que eran imposibles debido a su largo tiempo de ejecución. Hoy en día las GPU's son altamentes usadas debido que cuentan con cientos de núcleos de procesadores en paralelo que permiten resolver rápidamente los problemas que son altamente paralelizables.
+Actualmente el uso de GPU's permitido lograr aplicaciones que antes podríamos imaginar que eran imposibles debido a su largo tiempo de ejecución. Hoy en día las GPU's son altamente usadas debido a que cuentan con cientos de núcleos de procesadores en paralelo que permiten resolver rápidamente los problemas que son altamente paralelizables.
 \subsection{The GPU computing Era}
-	En artículo se enfoca principalmente en describir la evolución que sufrieron las arquitecturas de GPU's, además de mostrar la importancia del uso de las GPU's para un mayor rendimiento y eficiencia que antes hubiesen sido consideradas imposibles de	bido al alto tiempo de ejecución que requerian. Además nos muestra que la escalabilidad es la principal característica que ha permito que las GPU's aumenten su paralelismo y redimiento.
-\section{Machine learning}
+	En el artículo se enfoca principalmente en describir la evolución que sufrieron las arquitecturas de GPU's, además de mostrar la importancia del uso de las GPU's para un mayor rendimiento y eficiencia que antes hubiesen sido consideradas imposibles debido al alto tiempo de ejecución que requerían. Además nos muestra que la escalabilidad es la principal característica que ha permito que las GPU's aumenten su paralelismo y rendimiento.
+\section{Aprendizaje Automático}
 El uso de machine learning representa una gran ventaja para empresas que manejan gran cantidad de datos debido a que permiten descubrir patrones y analizar los datos.
 
 \subsection{Uso de redes neuronales para encontrar el rendimiento de una GPU}
-En la actualidad existen empresas dedicadas a la creación de GPU's, en el proceso una parte fundamental es la verificación del rendimiento de las GPU's actualmente existen simuladores conocidos como GPGPU-SIM que permiten estimaciones precisas pero estos poseen algunas dificultades como el tiempo empleado en configurarlos en base al hardware real además que este proceso esta propenso a errores. Un equipo de equipo conformado por investigadores de AMD y The University of Texas at Austin, quienes propusieron el uso de redes neuronales para predecir el rendimiento.
-\section{Deep Learning}
-Dentro del área de machine learning  encontramos deep learning o aprendizaje profundo el cual consiste en un conjunto de algoritmos que modela abstracciones de alto nivel.
+Un equipo conformado por investigadores de AMD y The University of Texas at Austin, fueron quienes propusieron el uso de redes neuronales para predecir el rendimiento.
+En la actualidad existen empresas dedicadas a la creación de GPU's, en el proceso una parte fundamental es la verificación del rendimiento de las GPU's actualmente existen simuladores conocidos como GPGPU-SIM que permiten realizar estimaciones precisas pero estos presentan algunas dificultades como el tiempo empleado en configurarlos en base al hardware real además que este proceso esta propenso a errores. 
+\section{Aprendizaje Profundo}
+Dentro del área de Aprendizaje Automático encontramos deep learning o aprendizaje profundo el cual consiste en un conjunto de algoritmos que modela abstracciones de alto nivel.
 
 \subsection{Deep Machine Learning - A New Frontier in Artificial Intelligence}
-Este trabajo de investigación fue realizado por investigadores oak Ridge National Laboratory y University of tennessee, el objetivo principal de este trabajo fue presentarnos el aprendizaje profundo como un camino para la imitación del cerebro humano y sus principales cualidad como el reconocimientos de objetos, rostros, etc.
+Este trabajo de investigación fue realizado por investigadores del Oak Ridge National Laboratory y University of Tennessee, el objetivo principal de este trabajo fue presentarnos el aprendizaje profundo como un camino para la imitación del cerebro humano y sus principales cualidad como el reconocimientos de objetos, rostros, etc.
 
-Además de mostrarnos las aplicaciones del aprendizaje profundo, como : analísis de documentos, detección de voz, rostro, procesamiento natural del lenguaje, etc.
+Además de mostrarnos las aplicaciones del aprendizaje profundo, como: análisis de documentos, detección de voz, rostro, procesamiento natural del lenguaje, etc.
 
-Actualmente existen algunas empresas privadas que apoyan el campo de deep learning con el objetivo de buscar sus aplicaciones comerciales entre estas empresas tenemos: Numenta y Binatix.
+Actualmente existen algunas empresas privadas que apoyan el campo de deep learning con el objetivo de buscar sus aplicaciones comerciales, entre estas empresas tenemos: Numenta y Binatix.
 \section{Métodos de optimización}
-El campo de machine learning continuamente evoluciona y con esta evolución surgen nuevas necesidades al trabajar con grandes conjuntos de datos se buscan cada vez obtener buenos resultados sin afectar el rendimiento. Una forma de lograr esto es mediante el uso de algoritmos de optimización.
+El campo de machine learning continuamente evoluciona y con esta evolución surgen nuevas necesidades. Al trabajar con grandes conjuntos de datos se buscan cada vez obtener buenos resultados sin afectar el rendimiento. Una forma de lograr esto es mediante el uso de algoritmos de optimización.
 \subsection{Neural Network Optimization Algorithms: A comparison study based on TensorFlow}
-Vadim Smolyakov realizo un estudio comparativo de diversos optimizadores entre los cuales se encuentran el método de gradiente de descenso estocástica, Nesterov Momentum,RMSProp y Adam. Se realizo una prueba comparativa con una arquitectura simple de CNN usando el conjunto de datos del MNIST. \textquotedblleft Se comparo diferentes optimizadores y se obtuvo que SGD con Nesterov y Adam producen mejores resultados en el entrenamiento de una CNN simple usando tensorflow \textquotedblright \cite{Optimization}
+Vadim Smolyakov\cite{WEBSITE:11} realizo un estudio comparativo de diversos optimizadores entre los cuales se encuentran el método de gradiente de descenso estocástica, Nesterov Momentum, RMSProp y Adam. Se realizo una prueba comparativa con una arquitectura simple de CNN usando el conjunto de datos del MNIST. \textquotedblleft Se comparó diferentes optimizadores y se obtuvo que SGD con Nesterov y Adam producen mejores resultados en el entrenamiento de una CNN simple usando tensorflow para el dataset MNIST. \textquotedblright \cite{WEBSITE:11}
 \subsection{On Optimization Methods for Deep Learning}
-Un equipo de la universidad de standford realizó una pruebas con el objetivos de encontrar métodos adecuados para un entrenamiento en deep learning. El equipo se percato de lo común que resulta el uso de Gradiente de descenso estocástica o SGD por sus siglas en inglés en deep learning . Se realizaron pruebas con otros métodos de optimización como la gradiente conjugada y Limited memmory BFGS(L-BFGS) los cuales permitieron acelerar el proceso de entrenamiento de algoritmos de deep learning mostrando en su mayoría mejores resultados que el SGD. \textquotedblleft Usando L-BFGS el modelo CNN alcanza el 0.69\%  en el estandar del MNIST dataset. \textquotedblright
+Un equipo de la Universidad de Standford realizó unas pruebas con el objetivo de encontrar métodos adecuados para un entrenamiento en aprendizaje profundo. El equipo se percato de lo común que resulta el uso de gradiente de descenso estocástica ()SGD por sus siglas en inglés) en aprendizaje profundo . Se realizaron pruebas con otros métodos de optimización como la gradiente conjugada y Limited memmory BFGS(L-BFGS) los cuales permitieron acelerar el proceso de entrenamiento de algoritmos de deep learning mostrando en su mayoría mejores resultados que el SGD. \textquotedblleft Usando L-BFGS el modelo CNN alcanza el 0.69\%  en el estandar del MNIST dataset. \textquotedblright \cite{Optimizacion}
+
+\subsection{ADAM : A METHOD FOR STOCHASTIC OPTIMIZATION}
+Esta investigación fue la primera en proponer el método Adam para acelerar la gradiente de descenso. Fue propuesto por Diederik P. Kingma de la Universidad de Amsterdam y Jimmy Lei Ba de la Universidad de Toronto. Ellos describen el método Adam como un método sencillo de implementar, además que este método utiliza poco requisitos de memoria.
+\textquotedblleft Nuestro método esta dirigido a problemas con grandes conjunto de datos y espacio de parámetros de alta dimensión. El método combina ventajas de métodos de optimización la capacidad de Adagrad para manejar gradientes dispersos y la capacidad de RMSProp para tratar con objetivos no estacionarios\textquotedblright \cite{ADAM}
+\subsection{INCORPORATING NESTEROV MOMENTUM INTO ADAM}
+Este trabajo fue realizado por Timothy Dozat de la universidad de stanford, en este papers se propone una mejora al método Adam modificando su componente de momento, de esta manera se obtiene una convergencia más rápida.
+
+\textquotedblleft Esencialmente la investigación muestra como combinar el momento clásico con una taza de aprendizaje adaptativa. Este trabajo lleva un enfoque más allá de la investigación y mejora uno de los componentes principales sin aumentar la complejidad del algoritmo\textquotedblright \cite{NMIA}
 \section{Conclusiones}
 %Hemos visto la necesidad....
-A medida que tratamos muchos problemas vemos la necesidad de encontrar optimizadores adecuados para los tipos de problemas. En el área de deep learning comumente se trabaja en el campo de reconocimiento de imágenes a pesar de la mejorar mediante el uso de GPU's este tipo de problemas necesitan métodos óptimos para obtener una mejor performance.
+A medida que tratamos muchos problemas vemos la necesidad de encontrar optimizadores adecuados para los tipos de problemas. En el área de Aprendizaje Profundo comúnmente se trabaja en el campo de reconocimiento de imágenes. A pesar de las mejoras mediante el uso de GPU's este tipo de problemas necesitan métodos óptimos para obtener una mejor rendimiento. Métodos como Nesterov Momemtum, RMSProp y Adam surgen como principales opciones para realizar optimizaciones de la gradiente de descenso.
 %Poner unas conclusiones del capítulo y lo más importante, donde se enfoca tu trabajo y lo que se diferenncia del resto
 

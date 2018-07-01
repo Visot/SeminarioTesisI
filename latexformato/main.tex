@@ -5,6 +5,8 @@
 \usepackage{palatino} 
 \usepackage{acronym}
 \usepackage{amsmath}
+\usepackage{float}
+\usepackage[caption = false]{subfig}
 \spacing{1.5}
 \usepackage[acronym,nomain]{glossaries}
 %\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex}
@@ -58,7 +60,7 @@
 \textsc{\huge \univname}\\[0.3cm]
 \textsc{\Large Facultad de Ciencias}\\[0.2cm]
 \textsc{\large Escuela Profesional de Ciencia de la Computaci\'on}\\[2cm]
-\textsc{\LARGE \textit{Comparación de métodos de optimización en una red neuronal convolucional para tareas de clasificación}}\\[2cm] 
+\textsc{\LARGE \textit{Métodos de optimización de la gradiente de descenso en una red neuronal convolucional}}\\[2cm] 
 {\Large \textbf{SEMINARIO DE TESIS 1}}
 {\huge \bfseries \ttitle}\\[2cm] 
 % Thesis title
@@ -87,9 +89,13 @@
 %\renewcommand{\abstractname}{Abstract}
 \begin{abstract}
 \addchaptertocentry{\abstractname}
+En los últimos años el campo de la inteligencia artificial se ha desarrollado rápidamente. Temas como el reconocimiento de imágenes han sido estudiado por mucho tiempo. Actualmente este campo requiere realizar un gran números de cálculos para entrenar redes neuronales que sean capaces de imágenes distinguir entre distintos objetos. Además de que este proceso puede tardar más dependiendo del tamaño del dataset. Por lo cual surge la necesidad de encontrar métodos que permitan acelerar el proceso de entrenamiento de las redes neuronales.\\
+Por tal motivo presente seminario buscar lograr un mayor entendimiento de métodos para acelerar el proceso de entrenamiento de una red neuronal convolucional, basándonos en la teoría de redes neuronales y usando como herramienta la librería tensorflow. Esta librería  nos permite un uso controlado de las métodos de optimización.
 
+\end{abstract}\hspace{10pt}
 
-\end{abstract}
+\keywords{agasga}
+
 
 \afterpage{\blankpage}
 \tableofcontents
@@ -125,7 +131,7 @@
 {\huge \textit{Agradecimientos}}\\[1.5cm]
 \end{center}
 
-Agradezco a mis padres por todo el apoyo incondicional en estos años de estudio
+Agradezco a mis padres por todo el apoyo incondicional en estos años de estudio, a mis compañeros de clase por el apoyo y trabajo colaborativo durante el tiempo de estudio y a mi asesor por ayudarme en este seminario.
 
 
 
@@ -151,12 +157,9 @@ $\ $
 %\thispagestyle{empty} % para que no se numere esta pagina
 \input{Chapters/Cap5}
 \input{Chapters/Cap6}
-
-
 \bibliography{main}
 \bibliographystyle{unsrt}
 \afterpage{\blankpage}
-
 \appendix
 \input{Appendix/AppendixA}
 
