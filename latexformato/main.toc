@@ -10,10 +10,10 @@
 \contentsline {section}{\numberline {2.2}Aprendizaje Autom\IeC {\'a}tico}{7}{section.11}
 \contentsline {subsection}{\numberline {2.2.1}Uso de redes neuronales para encontrar el rendimiento de una GPU}{7}{subsection.12}
 \contentsline {section}{\numberline {2.3}Aprendizaje Profundo}{7}{section.13}
-\contentsline {subsection}{\numberline {2.3.1}Deep Machine Learning - A New Frontier in Artificial Intelligence}{7}{subsection.14}
+\contentsline {subsection}{\numberline {2.3.1}Deep Machine Learning - A New Frontier in Artificial Intelligence}{8}{subsection.14}
 \contentsline {section}{\numberline {2.4}M\IeC {\'e}todos de optimizaci\IeC {\'o}n}{8}{section.15}
 \contentsline {subsection}{\numberline {2.4.1}Neural Network Optimization Algorithms: A comparison study based on TensorFlow}{8}{subsection.16}
-\contentsline {subsection}{\numberline {2.4.2}On Optimization Methods for Deep Learning}{8}{subsection.17}
+\contentsline {subsection}{\numberline {2.4.2}On Optimization Methods for Deep Learning}{9}{subsection.17}
 \contentsline {subsection}{\numberline {2.4.3}ADAM : A METHOD FOR STOCHASTIC OPTIMIZATION}{9}{subsection.18}
 \contentsline {subsection}{\numberline {2.4.4}INCORPORATING NESTEROV MOMENTUM INTO ADAM}{9}{subsection.19}
 \contentsline {section}{\numberline {2.5}Conclusiones}{10}{section.20}

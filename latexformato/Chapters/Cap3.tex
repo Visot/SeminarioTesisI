@@ -1,17 +1,17 @@
 \chapter{Aprendizaje automático y Redes Neuronales}
 
-En este capítulo trataremos los principales conocimientos de Aprendizaje automático como su clasificación y su importante dentro del campo de la inteligencia artificial, además exploraremos algunos modelos importantes. 
+En este capítulo trataremos los principales conocimientos de Aprendizaje automático como su clasificación y su importancia dentro del campo de la inteligencia artificial, además exploraremos algunos modelos importantes. 
 En este seminario se dará énfasis en los algoritmos de clasificación. Luego nos enfocaremos en las redes neuronales para tratar más a fondo los problemas de clasificación.
 
 \section{Aprendizaje Automático}
-Machine Learning o aprendizaje automático es una rama de la inteligencia artificial que empezó a cobrar cobrar importancia en los años 80's, en esta rama se diseñan sistemas que aprenden a identificar patrones en un conjunto de datos. A medida que se realice este aprendizaje la máquina podrá ser capaz de realizar una predicción o tomar decisiones sin haber estado programada explícitamente para realizar esta tarea.
+Machine Learning o Aprendizaje Automático es una rama de la inteligencia artificial que empezó a cobrar cobrar importancia en los años 80's, en esta rama se diseñan sistemas que aprenden a identificar patrones en un conjunto de datos. A medida que se realice este aprendizaje la máquina podrá ser capaz de realizar una predicción o tomar decisiones sin haber estado programada explícitamente para realizar esta tarea.
 
 
 El aprendizaje automático se puede clasificar en 3 tipos: Supervizado, No supervisado, Aprendizaje con refuerzo.\cite{WEBSITE:2}
 \subsection{Aprendizaje Supervizado}
 Este tipo de aprendizaje  toma un conjuto de datos etiquetados, es decir datos cuyos resultados o clases son conocidos estos datos serán usados como entrada al sistema. Primero se entrena el modelo con los datos de entrada y luego se trata de predecir  una salida de acuerdo a sus etiquetas.
 
- \textquotedblleft El aprendizaje supervisado trata de modelar la relación entre el resultado de la predicción y las características de las entradas de manera que se puede predecir nuevos valores para un nuevo conjunto de datos \textquotedblright \cite{WEBSITE:1}
+ \textquotedblleft El aprendizaje supervisado trata de modelar la relación entre el resultado de la predicción y las características de las entradas de manera que se pueda predecir nuevos valores para un nuevo conjunto de datos \textquotedblright \cite{WEBSITE:1}
 \subsection*{Tipos de problemas}
 Dentro del aprendizaje supervisado podemos dividir los problemas en 2 tipos:
 \subsubsection*{Problemas de Regresión Lineal}
@@ -69,9 +69,9 @@ Un método muy importante es la gradiente de descenso que se usa para actualizar
 \end{figure} 
 
 \subsubsection*{Regresión Logística}
-A diferencia de la regresión Lineal, la regresión Logística es usado para precedir el resultado de un variable de tipo categórica es decir variables que pueden ser describen por un número finito de categorías.
+A diferencia de la regresión Lineal, la regresión Logística es usado para predecir el resultado de un variable de tipo categórica es decir variables que pueden ser descritas por un número finito de categorías.
 
- La regresión Logística es usado para problemas de clasificación lo hace mediante la predicción de que una salida $Y$ sea dicotoma es decir que solo tenga 2 posibles valores.
+ La regresión Logística es usado para problemas de clasificación lo cual realiza mediante la predicción de que una salida $Y$ sea dicótoma, es decir,que solo tenga 2 posibles valores.
  la regresión produce una curva la cual produce valores entre 0 y 1.
  \textquotedblleft Matemáticamente podemos como que las salidas están modeladas como una combinación de los predictores lineales.\textquotedblright \cite{WEBSITE:6}
  \begin{equation}
@@ -148,7 +148,7 @@ Los 3 definiciones anteriores de distancia son usadas para variables continuas. 
 \textquotedblleft La elección de un valor óptimo de k se logra mejor por la inspección de los datos. En general un valor grande de k es más preciso ya que reduce el ruido pero no hay garantías de que sea un valor correcto, una mejor manera de calcular el valor de $k$ es mediante el uso de la validación cruzada.
 \textquotedblright \cite{WEBSITE:7}
 
-En la figurar 3.4 muestra el algoritmo de k-nn dado un nuevo ejemplo(círculo verde) este será clasificado a de acuerdo seleccionado. Para $k=1$ el nuevo ejemplo será clasificado en la clase 1 y $k=3$ será clasificado en la clase 2.
+En la figurar 3.4 muestra el algoritmo de k-nn dado un nuevo ejemplo(círculo verde) este será clasificado de acuerdo al \textit{k} seleccionado. Para $k=1$ el nuevo ejemplo será clasificado en la clase 1 y $k=3$ será clasificado en la clase 2.
  \begin{figure}[H]
  	\centering
  	\includegraphics[width=0.7\textwidth]{Figures/knn.png}
@@ -268,13 +268,21 @@ El algoritmo intenta particionar $N$ objetos en $k$ clusters en los cuales cada 
 
 \subsection{Aprendizaje por refuerzo}
 Este tipo de aprendizaje fue inspirado por la psicología conductista, este tipo busca determinar que tipo de acciones tomar en un entorno dado. \textquotedblleft El objetivo del método es recopilar la interacción con el entorno para tomar acciones que maximicen el beneficio o minimicen el riesgo. \textquotedblright \cite{WEBSITE:1}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.9\textwidth]{Figures/esquema.jpeg}
-	\caption{Esquema de aprendizaje por refuerzo \\ Fuente:  \href{https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861}{\textit{https://towardsdatascience.com}}}
-	\label{refuerzo}
-\end{figure} 
 
+\begin{figure}[H]
+\begin{center}
+	\smartdiagramset{circular distance=4cm,
+		font=\large,
+		text width=2.5cm,
+		module minimum width=2.5cm,
+		module minimum height=1.5cm,
+		arrow tip=to}
+	\smartdiagram[circular diagram]{Agente,Accion, entorno,refuerzo}
+	
+\end{center}
+\caption{Esquema de aprendizaje por refuerzo \\ Fuente:  \textit{Fuente Propia}}
+\label{refuerzo}
+\end{figure}
 
 \section{Redes Neuronales}
 \subsection{Neuronas}

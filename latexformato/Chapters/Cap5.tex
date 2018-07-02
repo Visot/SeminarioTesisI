@@ -1,8 +1,10 @@
 \chapter{Resultados}
-En este capítulo discutiremos los resultados obtenidos durante el uso de optimizadores mencionados en el capítulo anterior para acelerar el proceso de entrenamiento de red neuronal convolucional usando el dataset CIFAR10 y utilizando una computadora con tarjeta gráfica NVIDIA  GTX950M con un total de 640 núcleos y una memoria de 4GB.\\
+En este capítulo se discutirán los resultados obtenidos durante el uso de los optimizadores mencionados en el capítulo anterior para acelerar el proceso de entrenamiento de red neuronal convolucional usando el dataset CIFAR10 y utilizando una computadora con tarjeta gráfica NVIDIA  GTX950M con un total de 640 núcleos y una memoria de 4GB.\\
 Estos ejemplos fueron obtenidos al trabajar con una red neuronal convolucional.
+
+
 \section{Precisión}
-En esta sección se muestran los resultados de precisión para la tarea de clasificación, ver apéndice A.1.\\ En la tabla 5.1 podemos ver la precisión para distintos optimizadores, en el cuadro observamos que el método nesterov al ser una mejora de momentum obtiene una mejor precisión.\\Además observamos los métodos Adam y RMSprop obtienen los mejores resultados(ver figura Figura A.4 del apéndice)
+En esta sección se muestran los resultados de precisión para la tarea de clasificación, ver apéndice A.1.\\ En la tabla 5.1 podemos ver la precisión para distintos optimizadores, en el cuadro observamos que el método Nesterov al ser una mejora de momentum obtiene una mejor precisión.\\Además se observa que los métodos Adam y RMSprop obtienen los mejores resultados(ver Figura A.4 del apéndice)
 
 \begin{table}[H]
 	\centering
@@ -42,7 +44,7 @@ En el cuadro 5.2 se realizaron 10000 iteraciones en proceso de entrenamiento de 
 
 \section{Función de costo}
 
-El objetivo principal de utilizar estos métodos fue optimizar la gradiente de descenso para así reducir la función de costo en el programa de utilizo the cross entropy como función de pérdida.
+El objetivo principal de utilizar estos métodos fue el de optimizar la gradiente de descenso para así reducir la función de costo o perdida. En el programa de utilizo \textit{the cross entropy} como función de pérdida.
 El cuadro 5.2 nos muestra los resultados de la reducción de la función de costo. En la figura A.7 del apéndice A, podemos observar mejor el comportamiento de la reducción de la función de costo en 50 iteraciones o epochs.\\
 La figura A.8 muestra la tendencia final de los métodos de optimización, mostrando que los mejores métodos continúan siendo Adam y RMSprop. 
 \begin{table}[H]

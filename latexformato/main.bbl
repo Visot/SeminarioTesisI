@@ -9,6 +9,13 @@ Vadim Smolyakov.
   Ene 2017.
 \newblock Accessed on 2018-06-11.
 
+\bibitem{Optimization}
+Adam Coates Abhik Lahiri Bobby~Prochnow Quoc V.~Le, Jiquan~Ngiam and Andrew~Y.
+  Ng.
+\newblock On optimization methods for deep learning.
+\newblock {\em International Conference on Machine Learning 2010}, pages 1--8,
+  2010.
+
 \bibitem{ADAM}
 Diederik~P. Kingma and Jimmy~Lei Ba.
 \newblock Adam : A method for stochastic optimization.
