@@ -1,11 +1,11 @@
 \chapter{Resultados}
-En este capítulo se discutirán los resultados obtenidos durante el uso de los optimizadores mencionados en el capítulo anterior para acelerar el proceso de entrenamiento de red neuronal convolucional usando el dataset CIFAR10 y utilizando una computadora con tarjeta gráfica NVIDIA  GTX950M con un total de 640 núcleos y una memoria de 4GB.\\
-Estos ejemplos fueron obtenidos al trabajar con una red neuronal convolucional.
+En este capítulo se discutirán los resultados obtenidos durante el uso de los optimizadores mencionados en el capítulo anterior, con el propósito de acelerar el proceso de entrenamiento de una red neuronal convolucional.\\ Para estas pruebas usamos los datasets CIFAR10 y CIFAR100 y utilizamos una computadora con tarjeta gráfica NVIDIA  GTX950M con un total de 640 núcleos y una memoria de 4GB.\\
+Estos ejemplos fueron obtenidos al trabajar con una red neuronal convolucional con 2 capas de convolución , 2 capas pooling y un fully conected layer, ver el Apéndice A.1
 
 
 \section{Precisión}
-En esta sección se muestran los resultados de precisión para la tarea de clasificación, ver apéndice A.1.\\ En la tabla 5.1 podemos ver la precisión para distintos optimizadores, en el cuadro observamos que el método Nesterov al ser una mejora de momentum obtiene una mejor precisión.\\Además se observa que los métodos Adam y RMSprop obtienen los mejores resultados(ver Figura A.4 del apéndice)
-
+En esta sección se muestran los resultados de precisión para la tarea de clasificación, ver apéndice A.2.\\ En la tabla 5.1 podemos ver la precisión para distintos optimizadores, en el cuadro observamos que el método Nesterov al ser una mejora de momentum obtiene una mejor precisión.\\Además se observa que los métodos Adam y RMSprop obtienen los mejores resultados(ver Figura A.4 del apéndice)
+\subsection{Precisión en dataset CIFAR-10}
 \begin{table}[H]
 	\centering
 	\caption{Precisión para 5000 epochs}
@@ -14,11 +14,11 @@ En esta sección se muestran los resultados de precisión para la tarea de clasi
 	\begin{tabular}{@{}lll@{}}
 		\toprule
 		Método& Precisión($\%$)&  Tiempo de ejecución(s)  \\ \midrule
-		Momemtum& 52.78  & 273.75 \\
-		Nesterov& 54.09  &  271.50\\
-		Adagrad& 43.70 &  273.55 \\
-		RMSprop& 69.77 & 284.40  \\
-		Adam& 69.26  & 338.00 \\ \bottomrule
+		Momemtum& 53.04  & 303.07 \\
+		Nesterov& 54.09  &  305.59\\
+		Adagrad& 44.42 &  310.20 \\
+		RMSprop& 68.91 & 322.20 \\
+		Adam& 68.02  & 316.51 \\ \bottomrule
 	\end{tabular}
 	\end{centering}
 
@@ -32,11 +32,31 @@ En el cuadro 5.2 se realizaron 10000 iteraciones en proceso de entrenamiento de 
 		\begin{tabular}{@{}lll@{}}
 			\toprule
 			Método& Precisión($\%$)&  Tiempo de ejecución(s)  \\ \midrule
-			Momemtum& 59.50  & 459.58\\
-			Nesterov& 61.12 &  468.56\\
-			Adagrad&47.20  &  471.60 \\
-			RMSprop& 69.48 &  494.21 \\
-			Adam& 68.79 & 483.99 \\ \bottomrule
+			Momemtum& 60.80  & 585.41\\
+			Nesterov& 62.37 &  605.19\\
+			Adagrad&47.62  &  598.54 \\
+			RMSprop& 70.31 &  621.17\\
+			Adam& 70.42 & 622.18 \\ \bottomrule
+		\end{tabular}
+	\end{centering}
+	
+\end{table}
+
+\subsection{Precisión en dataset CIFAR-100}
+
+\begin{table}[H]
+	\centering
+	\caption{Precisión para 10000 epochs}
+	\label{my-label}
+	\begin{centering}
+		\begin{tabular}{@{}lll@{}}
+			\toprule
+			Método& Precisión($\%$)&  Tiempo de ejecución(s)  \\ \midrule
+			Momemtum& 17.33  & 597.75\\
+			Nesterov& 17.33 &  595.53\\
+			Adagrad&7.73  &  628.75 \\
+			RMSprop& 36.66 &  622.50\\
+			Adam& 35,13 & 624.64 \\ \bottomrule
 		\end{tabular}
 	\end{centering}
 	
@@ -44,9 +64,10 @@ En el cuadro 5.2 se realizaron 10000 iteraciones en proceso de entrenamiento de 
 
 \section{Función de costo}
 
-El objetivo principal de utilizar estos métodos fue el de optimizar la gradiente de descenso para así reducir la función de costo o perdida. En el programa de utilizo \textit{the cross entropy} como función de pérdida.
+El objetivo principal de utilizar estos métodos es el de optimizar la gradiente de descenso para así reducir la función de costo o perdida. En el programa de utilizo \textit{the cross entropy} como función de pérdida.
 El cuadro 5.2 nos muestra los resultados de la reducción de la función de costo. En la figura A.7 del apéndice A, podemos observar mejor el comportamiento de la reducción de la función de costo en 50 iteraciones o epochs.\\
 La figura A.8 muestra la tendencia final de los métodos de optimización, mostrando que los mejores métodos continúan siendo Adam y RMSprop. 
+\section{Función de costo en CIFAR-10}
 \begin{table}[H]
 	\centering
 	\caption{Función costo para 5000 epochs}
@@ -55,13 +76,51 @@ La figura A.8 muestra la tendencia final de los métodos de optimización, mostr
 		\begin{tabular}{@{}ll@{}}
 			\toprule
 			Método& Función de costo\\ \midrule
-			Momemtum& 1.48 \\
-			Nesterov& 0.54 \\
-			Adagrad&0.43   \\
-			RMSprop& 0.27 \\
-			Adam& 0.37 \\ \bottomrule
+			Momemtum& 1.26 \\
+			Nesterov& 1.38\\
+			Adagrad&1.73   \\
+			RMSprop& 0.19 \\
+			Adam& 0.30 \\ \bottomrule
 		\end{tabular}
 	\end{centering}
 	
 \end{table}
 
+
+
+\begin{table}[H]
+	\centering
+	\caption{Función costo para 10000 epochs}
+	\label{my-label}
+	\begin{centering}
+		\begin{tabular}{@{}ll@{}}
+			\toprule
+			Método& Función de costo\\ \midrule
+			Momemtum& 1.10 \\
+			Nesterov& 1.08\\
+			Adagrad&1.64   \\
+			RMSprop& 0.19 \\
+			Adam& 0.14 \\ 
+		\end{tabular}
+	\end{centering}
+	
+\end{table}
+
+\section{Función de costo en CIFAR-100	}
+\begin{table}[H]
+	\centering
+	\caption{Función costo para 10000 epochs}
+	\label{my-label}
+	\begin{centering}
+		\begin{tabular}{@{}ll@{}}
+			\toprule
+			Método& Función de costo\\ \midrule
+			Momemtum& 3.46 \\
+			Nesterov& 3.48\\
+			Adagrad&4.09  \\
+			RMSprop& 0.33 \\
+			Adam& 0.34 \\ 
+		\end{tabular}
+	\end{centering}
+	
+\end{table}

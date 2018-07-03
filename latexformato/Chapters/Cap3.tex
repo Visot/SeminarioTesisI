@@ -1,26 +1,26 @@
 \chapter{Aprendizaje automático y Redes Neuronales}
 
-En este capítulo trataremos los principales conocimientos de Aprendizaje automático como su clasificación y su importancia dentro del campo de la inteligencia artificial, además exploraremos algunos modelos importantes. 
+En este capítulo trataremos los principales conocimientos de Aprendizaje Automático como su clasificación y importancia dentro del campo de la inteligencia artificial, además exploraremos algunos modelos importantes. 
 En este seminario se dará énfasis en los algoritmos de clasificación. Luego nos enfocaremos en las redes neuronales para tratar más a fondo los problemas de clasificación.
 
 \section{Aprendizaje Automático}
-Machine Learning o Aprendizaje Automático es una rama de la inteligencia artificial que empezó a cobrar cobrar importancia en los años 80's, en esta rama se diseñan sistemas que aprenden a identificar patrones en un conjunto de datos. A medida que se realice este aprendizaje la máquina podrá ser capaz de realizar una predicción o tomar decisiones sin haber estado programada explícitamente para realizar esta tarea.
+Machine Learning o Aprendizaje Automático es una rama de la inteligencia artificial que empezó a cobrar importancia en los años 80's. En esta rama se diseñan sistemas que aprenden a identificar patrones en un conjunto de datos. A medida que se realiza este aprendizaje, la máquina podrá ser capaz de realizar una predicción o tomar decisiones sin haber estado programada explícitamente para realizar esta tarea.
 
 
-El aprendizaje automático se puede clasificar en 3 tipos: Supervizado, No supervisado, Aprendizaje con refuerzo.\cite{WEBSITE:2}
+El Aprendizaje Automático se puede clasificar en 3 tipos: Supervisado, No supervisado, Aprendizaje con refuerzo.\cite{WEBSITE:2}
 \subsection{Aprendizaje Supervizado}
-Este tipo de aprendizaje  toma un conjuto de datos etiquetados, es decir datos cuyos resultados o clases son conocidos estos datos serán usados como entrada al sistema. Primero se entrena el modelo con los datos de entrada y luego se trata de predecir  una salida de acuerdo a sus etiquetas.
+Este tipo de aprendizaje  toma un conjunto de datos etiquetados, es decir datos cuyos resultados o clases son conocidos, estos datos serán usados como entrada al sistema. Primero se entrena el modelo con los datos de entrada y luego se trata de predecir  una salida de acuerdo a las etiquetas definidas.
 
- \textquotedblleft El aprendizaje supervisado trata de modelar la relación entre el resultado de la predicción y las características de las entradas de manera que se pueda predecir nuevos valores para un nuevo conjunto de datos \textquotedblright \cite{WEBSITE:1}
+ \textquotedblleft El aprendizaje supervisado trata de modelar la relación entre el resultado de la predicción y características de las entradas de manera que se puede predecir nuevos valores para un nuevo conjunto de datos \textquotedblright \cite{WEBSITE:1}
 \subsection*{Tipos de problemas}
 Dentro del aprendizaje supervisado podemos dividir los problemas en 2 tipos:
 \subsubsection*{Problemas de Regresión Lineal}
-Los problemas de regresión lineal son muy conocidos en el ámbito de aprendizaje automático y la estadística 
+Los problemas de regresión lineal son muy conocidos en el ámbito de Aprendizaje Automático y la estadística.
 \subsubsection*{Problemas de Clasificación}
 \textquotedblleft En este tipo de problemas se predice una respuesta del tipo categórica de manera que se puedan separar los datos mediante clases. \textquotedblright \cite{WEBSITE:2}
 
-\textquotedblleft El objetivo de los problemas de clasificación es asignar las observaciones en categorías discretas en lugar de estimar valores continuos. \textquotedblright \cite{WEBSITE:1}
-
+\textquotedblleft El objetivo de los problemas de clasificación es asignar resultados en categorías discretas en lugar de estimar valores continuos \textquotedblright \cite{WEBSITE:1}.\\
+Un ejemplo de su uso son las tareas de reconocimiento de imágenes.
 
 \begin{figure}[H]
 	\centering
@@ -29,9 +29,9 @@ Los problemas de regresión lineal son muy conocidos en el ámbito de aprendizaj
 	\label{Regresion}
 \end{figure} 
 
-\subsubsection*{Algoritmos de Aprendizaje Supervizado}
+\subsubsection*{Algoritmos de Aprendizaje Supervisado}
 \subsubsection*{Regresión Lineal}
-\textquotedblleft El algoritmo de regresión lineal asume que existe una relación entre las variables de entrada $x=(x_{1},...,x_{n})$ y una salida simple $y$.  Cuando se tiene solo una variable simple $x$ el método se conoce como simple linear regression y cuando se tienen múltiples entradas se le conoce como multiple linear regression.  \textquotedblright \cite{WEBSITE:3} .Es comúnmente usado para estimar valores reales en base a variables continuas. La figura 3.2 muestra una regresión lineal simple.
+\textquotedblleft El algoritmo de regresión lineal asume que existe una relación entre las variables de entrada $x=(x_{1},...,x_{n})$ y una salida simple $y$.  Cuando se tiene solo una variable simple $x$ el método se conoce como \textit{simple linear regression} y cuando se tienen múltiples entradas se le conoce como \textit{multiple linear regression}.  \textquotedblright \cite{WEBSITE:3} .Es comúnmente usado para estimar valores reales en base a variables continuas. La figura 3.2 muestra una regresión lineal simple.
 \begin{equation}
 \label{Simple learning regression}
 y=b_{0}+b_{1}*x_{1}+b_{2}*x_{2}+.....+b_{n}*x_{n}
@@ -45,7 +45,7 @@ En esta ecuación:
 	\item $b_{n}$: Coeficiente para la primera característica
 	
 \end{itemize}
-El objetivo del algoritmo de regresión lineal es obtener valores adecuados para $b_{0}$ y $b_{1}$ de manera que se reduzca la siguiente función de costo.
+El objetivo del algoritmo de regresión lineal es obtener valores adecuados para los $b_{i}$  de manera que se reduzca la siguiente función de costo.
  \begin{equation}
  \label{eq:T3}
  \begin{aligned}
@@ -55,12 +55,12 @@ El objetivo del algoritmo de regresión lineal es obtener valores adecuados para
 
 
 \begin{itemize}
-	\item $pred_{i}$: predicción de la i-esima variable
-	\item $y_{i}$   : Valor real asociado a la i-esima variable
+	\item $pred_{i}$: Predicción de la i-ésima variable
+	\item $y_{i}$   : Valor real asociado a la i-ésima variable
 	\item $n$       : Número de datos para el entrenamiento
 	
 \end{itemize}
-Un método muy importante es la gradiente de descenso que se usa para actualizar los valores de los $b_{i}$ de manera que se reduzca la función de costo $J$ de la ecuación 3.2.
+Un método importante es la gradiente de descenso que se usa para actualizar valores de los $b_{i}$ de manera que se reduzca la función de costo $J$ de la ecuación 3.2. La figura 3.2 Nos muestra un conjunto de datos y la aplicación de la regresión lineal en estos.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{Figures/Linear.png}
@@ -69,11 +69,11 @@ Un método muy importante es la gradiente de descenso que se usa para actualizar
 \end{figure} 
 
 \subsubsection*{Regresión Logística}
-A diferencia de la regresión Lineal, la regresión Logística es usado para predecir el resultado de un variable de tipo categórica es decir variables que pueden ser descritas por un número finito de categorías.
+A diferencia de la Regresión Lineal, la Regresión Logística es usado para predecir el resultado de un variable de tipo categórica es decir variables que pueden ser descritas por un número finito de categorías.
 
- La regresión Logística es usado para problemas de clasificación lo cual realiza mediante la predicción de que una salida $Y$ sea dicótoma, es decir,que solo tenga 2 posibles valores.
- la regresión produce una curva la cual produce valores entre 0 y 1.
- \textquotedblleft Matemáticamente podemos como que las salidas están modeladas como una combinación de los predictores lineales.\textquotedblright \cite{WEBSITE:6}
+ La regresión Logística es usado para problemas de clasificación lo cual realiza mediante la predicción de que una salida $Y$ dicótoma, es decir,que solo tenga 2 posibles valores.
+ la regresión produce una curva, la cual genera valores entre 0 y 1.
+ \textquotedblleft Matemáticamente podemos ver como que las salidas están modeladas como una combinación de los predictores lineales.\textquotedblright \cite{WEBSITE:6}
  \begin{equation}
  \label{eq:t}
  \begin{aligned}
@@ -98,7 +98,7 @@ A diferencia de la regresión Lineal, la regresión Logística es usado para pre
   Y_{pre}&=\frac{1}{1+e^{f(X)}}
   \end{aligned}
   \end{equation}
- En la ecuación 3.3, $Y$ define la función logística que se muestra en la figura 3.3. Esta forma también se puede conocer como la función sigmoidal en el perceptron.
+ En la ecuación 3.3, $Y$ define la función logística que se muestra en la figura 3.3. Esta también se puede conocer como la función sigmoidal en el perceptron.
  El algoritmo usa SGD para hallar los valores adecuados de $b_{i}$ de manera que el $erro=Y_{pre}- Y$ sea mínimo.
  El valor de la predicción es 1 si $Y_{pred}>0.5$ y 0 en caso contrario. De esta forma se determina el objeto con características $X$ si pertenece o no a una clase.
  
@@ -125,15 +125,15 @@ Es un algoritmo de clasificación que almacena los conjuntos de entrenamiento de
 	
 \end{itemize}
 
-Definimos $d_{E}$ como la función distancia entre los vectores  $x_{i}$ y $y_{i}$ están función distancia pueden una de las siguientes clasificaciones:
+Definimos $d_{E}$ como la función distancia entre los vectores  $x_{i}$ y $y_{i}$ .\\ Esta función distancia puede clasificarse en:
 
   \begin{itemize}
 
-  \item distancia euclideana:    $(\sum_{i=1}^{k}(x_{i} - y_{i})^2)^\frac{1}{2}$
-  \item distancia Manhattan:     $\sum_{i=1}^{k}|x_{i} - y_{i})|  $
-  \item distancia Minkowski:     $(\sum_{i=1}^{k}(|x_{i} - y_{i}|)^p)\frac{1}{p}$
+  \item Distancia Euclideana:    $(\sum_{i=1}^{k}(x_{i} - y_{i})^2)^\frac{1}{2}$
+  \item Distancia Manhattan:     $\sum_{i=1}^{k}|x_{i} - y_{i})|  $
+  \item Distancia Minkowski:     $(\sum_{i=1}^{k}(|x_{i} - y_{i}|)^p)\frac{1}{p}$
   \end{itemize}
-Los 3 definiciones anteriores de distancia son usadas para variables continuas.  Para el caso de variables categóricas debería usarse la distancia de Hamming cuya definición se muestra en la ecuación 3.6
+Los 3 definiciones anteriores de distancia son usadas en variables continuas.  Para el caso de las variables categóricas se deberá usar la distancia de Hamming cuya definición se muestra en la ecuación 3.6
 
 
   \begin{equation}
@@ -145,7 +145,7 @@ Los 3 definiciones anteriores de distancia son usadas para variables continuas. 
   \end{aligned}
   \end{equation}
   	
-\textquotedblleft La elección de un valor óptimo de k se logra mejor por la inspección de los datos. En general un valor grande de k es más preciso ya que reduce el ruido pero no hay garantías de que sea un valor correcto, una mejor manera de calcular el valor de $k$ es mediante el uso de la validación cruzada.
+\textquotedblleft La elección de un valor óptimo k se logra mejor por la inspección de los datos. En general un valor grande de k es más preciso, ya que reduce el ruido pero no hay garantías de que sea un valor correcto, una mejor manera de calcular el valor de $k$ es mediante el uso de la validación cruzada.
 \textquotedblright \cite{WEBSITE:7}
 
 En la figurar 3.4 muestra el algoritmo de k-nn dado un nuevo ejemplo(círculo verde) este será clasificado de acuerdo al \textit{k} seleccionado. Para $k=1$ el nuevo ejemplo será clasificado en la clase 1 y $k=3$ será clasificado en la clase 2.
@@ -158,7 +158,7 @@ En la figurar 3.4 muestra el algoritmo de k-nn dado un nuevo ejemplo(círculo ve
 \subsubsection*{Máquinas de soporte Vectorial(SVM)}
 Las Maquinas de soporte vectorial fueron creadas por Vladimir Vapnik y constituyen un método para realizar tareas de clasificación y regresión.\\ Las SVM usan el concepto de planos de decisión. Un plano de decisión separa un conjunto de objetos que tienes diferentes etiquetas de clases. Las SVM no están restringidas a los problemas lineales debido a las \textit{funciones Kernel.}
 \textbf{Funciones Kernels}\\
-Las SVM pueden tener distintos tipos de kernels que tienen como objetivo tomar la data y transforma una forma requerida algunas de estas funciones son:
+Las SVM pueden tener distintos tipos de kernels que tienen como objetivo tomar la data y transformarla. Algunas funciones kernels conocidas:
 \begin{itemize}
 	\item Lineal: $\ker(x_{i},x_{j})= x_{i} \cdot x_{j}$
 	\item Polinomial: $\ker(x_{i},x_{j})= ( \gamma x_{i} \cdot x_{j}+C)^d$
@@ -175,9 +175,9 @@ En la figura 3.5 muestra el efecto de las funciones kernels en un conjunto de da
 
 Podemos dividir SVM en 2 categoríasas:\\
 \textbf{Super Vector Classificacion}\\
-Los SVC realizan la tarea de clasificación encontrando un hiperplano que maximeze el margen entre 2 clases.Los vectores que definen el hiperplano son llamados \textit{support vector}.\\ Para la clasificación es necesaria mapear los datos a un espacio de características de mayor dimensión donde resulte más fácil la separación lineal.  La imagen de la Figura 3.5 muestra de manera gráfica que cambio de espacio nos permite separar clases de manera más sencilla.\\ \\
+Los SVC realizan la tarea de clasificación encontrando un hiperplano que maximicé el margen entre 2 clases.Los vectores que definen el hiperplano son llamados \textit{support vector}.\\ Para la clasificación es necesaria mapear los datos a un espacio de características de mayor dimensión donde resulte más fácil la separación lineal.  La imagen de la Figura 3.5 muestra de manera gráfica que cambio de espacio nos permite separar clases de manera más sencilla.\\ \\
 \textbf{Super Vector Regression}\\
-La idea de SVR trata de mapear los datos de entrenamiento $x \in X$ , a un espacio de mayor dimensión mediante una mapeo no lineal $ \varphi : X \to F$ .\\
+SVR trata de mapear los datos de entrenamiento $x \in X$ , a un espacio de mayor dimensión mediante una mapeo no lineal $ \varphi : X \to F$ .\\
 Las SVR son parecidas a las máquinas de soporte Vectorial para la clasificación pero con la diferencia de que la salida es un número real que es difícil de predecir con la información que se posee además de que tiene infinitas posibilidades. Para los problemas de regresión se usan los kernels Radial y polinomial. La figura 3.6 muestra un ejemplo de problema de regresión para un caso no lineal, mediante la mapeo $ \varphi $ se cambia el espacio.
 
 \begin{itemize}
@@ -193,8 +193,8 @@ Las SVR son parecidas a las máquinas de soporte Vectorial para la clasificació
 \end{figure} 
 
 \subsubsection*{Naive Bayes}
-Esta basado en el teorema de bayes donde se asume la independencia entre los predictores.\textquotedblleft El modelo Naive Bayes es fácil de construir, debido a que no tiene que estimar los parámetros iterativamente lo cual lo hace particularmente util para un gran conjunto de datos \textquotedblright \cite{WEBSITE:8}.\\
-Como la  técnica de clasificación esta basada en el teorema de bayes supone que las características de una clase no esta relacionada con otras características.\\ Podemos ilustrar mejor lo dicho mediante el siguiente ejemplo  \textquotedblleft una fruta puede considerarse una manzana si es roja, redonda y de aproximadamente 3 pulgadas de diámetro. Incluso si estas características dependen unas de otras o de la existencia de otras características, todas estas propiedades contribuyen de forma independiente a la probabilidad de que esta fruta sea una manzana y es por eso que se la conoce como \textbf{naives}  \textquotedblright \cite{WEBSITE:4}
+Esta basado en el Teorema de Bayes donde se asume la independencia entre los predictores.\textquotedblleft El modelo Naive Bayes es fácil de construir, debido a que no tiene la necesidad de estimar los parámetros iterativamente por lo cual es particularmente útil para un gran conjunto de datos \textquotedblright \cite{WEBSITE:8}.\\
+Como la  técnica de clasificación se basa en el Teorema de Bayes supone que cada característica de una clase no esta relacionada con otras características.\\ Podemos ilustrar mejor lo dicho mediante el siguiente ejemplo  \textquotedblleft Una fruta puede considerarse una manzana si es roja, redonda y de aproximadamente 3 pulgadas de diámetro. Incluso si estas características dependen unas de otras o de la existencia de otras características, todas estas propiedades contribuyen de forma independiente a la probabilidad de que esta fruta sea una manzana y es por eso que se la conoce como \textbf{Naives}  \textquotedblright \cite{WEBSITE:4}
 
 
 \begin{equation}
@@ -206,34 +206,33 @@ Como la  técnica de clasificación esta basada en el teorema de bayes supone qu
 \end{equation}
 
 \begin{itemize}
-	\item $P(c|x):$ probabilidad condicional de una clase(target) dado un predictor(atributo)
-	\item $P(c):$ probabilidad de la clase
-	\item $P(x|c):$es la probabilidad condicional de la clase dada por el predictor.
-	\item $P(x):$ probabilidad del predictor.
+	\item $P(c|x):$ Probabilidad condicional de una clase(target) dado un predictor(atributo)
+	\item $P(c):$ Probabilidad de la clase
+	\item $P(x|c):$Probabilidad condicional de la clase dada por el predictor.
+	\item $P(x):$ Probabilidad del predictor.
 	
 \end{itemize}
 
 \subsubsection*{Arboles de decisión}
-Los arboles de decisión son modelos usados para tareas de regresión y clasificación utilizando la estructura de un árbol. La idea se basa en dividir el conjunto de datos en subconjuntos cada vez más pequeños a su vez se desarrolla un árbol de decisión. El resultado final será un árbol con nodos de decisión y nodos hojas.\\
-Los nodos de decisión tienen 2 o más ramas y los nodos hojas representa una clasificación o decisión. La raiz corresponde al mejor predictor. Un árbol de decisión puede ser usado para manejar datos categóricos o numéricos.\\
+Los arboles de decisión son modelos usados para tareas de regresión y clasificación, estos utiliza la estructura de un árbol. La idea se basa en dividir el conjunto de datos en subconjuntos cada vez más pequeños que a su vez desarrolla un árbol de decisión. El resultado final será un árbol con nodos de decisión y nodos hojas.\\
+Los nodos de decisión tienen 2 o más ramas y los nodos hojas representa una clasificación o decisión. La raíz corresponde al mejor predictor. Un árbol de decisión puede ser usado para manejar datos categóricos o numéricos.\\
 
 \textbf{Árbol de decisión para clasificación}.\\
-El algoritmo principal para construir de decisión es el ID3 que fue desarrollado por J. R. Quinlan.\\ \textquotedblleft ID3 realiza una algoritmo greeady para realizar un búsqueda de arriba hacia abajo a través del espacio de posibles ramas . ID3 usa entropía e información ganada para construir el árbol de decisión \textquotedblright.\\ A diferencia de Naives bayes en los arboles de decisión es importante asumir la dependencia de los predictores.\\
+El algoritmo principal para construir un árbol de decisión es el ID3 que fue desarrollado por J. R. Quinlan.\\ \textquotedblleft ID3 realiza una algoritmo greeady para realizar un búsqueda de arriba hacia abajo a través del espacio de posibles ramas . ID3 usa entropía e información ganada para construir el árbol de decisión \textquotedblright.\\ A diferencia de Naives Bayes, en un árbol de decisión es importante asumir la dependencia de los predictores.\\
 \begin{itemize}
 	\item \textbf{Entropía}: Para el algoritmo ID3 es importante tener la entropía para calcular la homogeneidad de la muestra.
 	\item \textbf{Información ganada}: se basa en la disminución de la entropía después que un conjunto de datos se divide en atributos.
 \end{itemize}
 
 \textbf{Árbol de decisión para regresión}.\\
-Al igual que el caso de clasificación, se usa el algoritmo ID3 con la diferencia que la información ganada por la desviación standard de reducción. Este tipo de desviación se basa en la disminución de la desviación standard cuando el conjunto de datos se divide en un atributo.
-\subsubsection*{Neural Networks}
-Los modelos de redes neuronales fue inspirado de las redes neuronales biológicas y realizan tareas complejas como reconocimiento de imágenes
-El tema de Neural Network será tratado con más detenimiento en la siguiente sección.
-\subsection{Aprendizaje No Supervizado}
-Mientras que el aprendizaje supervizado aprende  de un conjunto de datos de entrenamiento con respuestas o etiquetas correctas. En el aprendizaje no supervizado los datos de entrenamiento no poseen ninguno tipo de etiqueta, el sistema debe de interpretar los datos por si mismo.
-El aprendizaje no supervizado es usado principalmente para el reconocimiento de patrones y modelado descriptivo.
+Al igual que el caso de clasificación, se usa el algoritmo ID3 con la diferencia que se usa la información ganada por la desviación estándar de reducción. Este tipo de desviación se basa en la disminución de la desviación estándar cuando el conjunto de datos se divide en un atributo.
+
+\subsection{Aprendizaje No Supervisado}
+Mientras que el aprendizaje supervisado aprende en base a un conjunto de datos de entrenamiento que contienen respuestas o etiquetas correctas. En el aprendizaje no supervisado los datos de entrenamiento no poseen ninguno tipo de etiqueta, por lo tanto los sistemas deben de interpretar los datos por si mismos.
+El aprendizaje no supervisado es usado principalmente para el reconocimiento de patrones y modelado descriptivo.
+A continuación discutiremos algunos algoritmos del Aprendizaje No Supervisado.
 \subsubsection*{Clustering}
-Clustering se refiere a agrupar objetos con características similares es decir se busca la relación entre ellos sin necesidad de que exista un conocimiento a priori de esos grupos.
+Clustering se refiere a agrupar objetos con características similares, es decir buscar la relación entre ellos sin necesidad de que exista un conocimiento a priori de esos grupos.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{Figures/clustering.png}
@@ -241,7 +240,7 @@ Clustering se refiere a agrupar objetos con características similares es decir 
 	\label{Clustering}
 \end{figure} 
 \subsubsection*{K-means Clustering}
-El algoritmo intenta particionar $N$ objetos en $k$ clusters en los cuales cada objeto pertenece al cluster que posee la media más cercana. Este método produce $k$ clústeres con la mayor distinción posible. El k adecuado no se conoce a priori por lo cual debe calcularse a partir de datos. El objetivo de k-means es minimizar la función de error al cuadrado mostrada en la ecuación 3.8.
+El algoritmo realiza la partición de  $N$ objetos en $k$ clusters en los cuales cada objeto pertenece al cluster que posee la media más cercana. Este método produce $k$ clústeres con la mayor distinción posible. El k adecuado no se conoce a priori por lo cual debe calcularse a partir de datos. El objetivo de k-means es minimizar la función de error al cuadrado mostrada en la ecuación 3.8.
 
 \begin{equation}
   \label{eq:clustering}
@@ -251,11 +250,11 @@ El algoritmo intenta particionar $N$ objetos en $k$ clusters en los cuales cada 
 \end{equation}
 
 \begin{itemize}
-	\item $J$: función de error cuadrado
-	\item $k:$ número de cluster
-	\item $n:$ número de casos.
-	\item $x_{i}^j:$ caso i
-	\item $c_{j}:$ centroide del cluster j
+	\item $J$: Función de error cuadrado.
+	\item $k:$ Número de cluster.
+	\item $n:$ Número de casos.
+	\item $x_{i}^j:$ Objeto i
+	\item $c_{j}:$ Centroide del cluster j
 \end{itemize}
 %%% añadir algoritmo
 \begin{figure}[H]
@@ -267,7 +266,7 @@ El algoritmo intenta particionar $N$ objetos en $k$ clusters en los cuales cada 
 
 
 \subsection{Aprendizaje por refuerzo}
-Este tipo de aprendizaje fue inspirado por la psicología conductista, este tipo busca determinar que tipo de acciones tomar en un entorno dado. \textquotedblleft El objetivo del método es recopilar la interacción con el entorno para tomar acciones que maximicen el beneficio o minimicen el riesgo. \textquotedblright \cite{WEBSITE:1}
+Este tipo de aprendizaje fue inspirado por la psicología conductista, este busca determinar que tipo de acciones tomar en un entorno dado. \textquotedblleft El objetivo del método es recopilar la interacción con el entorno para tomar acciones que maximicen el beneficio o minimicen el riesgo. \textquotedblright \cite{WEBSITE:1}
 
 \begin{figure}[H]
 \begin{center}
@@ -286,9 +285,9 @@ Este tipo de aprendizaje fue inspirado por la psicología conductista, este tipo
 
 \section{Redes Neuronales}
 \subsection{Neuronas}
-En la biología la neurona es conocida como la unidad fundamental del cerebro humano, el cual está compuesto por millones de neuronas interconectadas entre si(sinapsis). El trabajo de las neuronas consiste en recibir información, procesarla y enviarla a otras células.\\ Este modelo fue copiado en 1943 por Warren S. McCulloch y Walter H. Pitts para poder diseñar un neurona artificial que análogamente con las neuronas del cerebro humano, la neurona artificial tomará una cantidad n de entradas $x_{1}, x_{2}, x_{3}, .. , x_{n}$ estas entradas serán multiplicadas por pesos $w_{1}, w_{2}, w_{3}, .. , w_{n}$ además se puede añadir una constante que llamaremos bias($b$) para producir un salida.
+En la biología, la neurona es conocida como la unidad fundamental del cerebro humano, el cual está compuesto por millones de neuronas interconectadas entre si(sinapsis). El trabajo de las neuronas consiste en recibir información, procesarla y enviarla a otras células.\\ Este modelo fue copiado en 1943 por Warren S. McCulloch y Walter H. Pitts para poder diseñar un neurona artificial que es análoga a las neuronas del cerebro humano, la neurona artificial tomará una cantidad n de entradas $x_{1}, x_{2}, x_{3}, .. , x_{n}$ estas entradas serán multiplicadas por pesos $w_{1}, w_{2}, w_{3}, .. , w_{n}$ además se puede añadir una constante que llamaremos bias($b$) para producir un salida.
 
-La entrada a de la neurona será la suma total de los productos z=  $\sum_{i=1}^{n}{ w_{i}x_{i}}+b$ , el valor de z será la entrada a la neurona la cual la evaluará con una función f de tal forma que nuestra salida sea $y=f(z)$.\\ En la ecuación 3.9 observamos la misma salida expresada en forma vectorial para nuestros vectores  $x = [x_{1}  x_{2}  x_{3}  ...  x_{n}]$ y $w = [w_{1}  w_{2}  w_{3}  ...  w_{n}]$
+La entrada a la neurona será la suma total de los productos z=  $\sum_{i=1}^{n}{ w_{i}x_{i}}+b$ , el valor de z , esta se evaluará con una función f de tal forma que nuestra salida será $y=f(z)$.\\ En la ecuación 3.9 observamos la misma salida expresada en forma vectorial para nuestros vectores  $x = [x_{1}  x_{2}  x_{3}  ...  x_{n}]$ y $w = [w_{1}  w_{2}  w_{3}  ...  w_{n}]$
 
 
 
@@ -299,7 +298,7 @@ y&=f(x\cdot w+b)
 \end{aligned}
 \end{equation}
 \subsubsection{Funciones de Activación}
-La función $f$ anteriormente mencionada es una función no lineal, conocida como función de activación.\\ La tarea principal de la función de activación es introducir no linealidad a la salida de una neurona. Esto es importante debido a que la vida real no trabajamos con data no lineal y de esta forma la neurona puede aprender representaciones no lineales.\\ Entre funciones de activación tenemos algunas comúnmente usada como:
+La función $f$ anteriormente mencionada es una función no lineal, conocida como función de activación.\\ La tarea principal de la función de activación es introducir no linealidad a la salida de una neurona. Esto es importante debido a que la vida real no trabajamos con datos no lineal y de esta forma la neurona puede aprender representaciones no lineales.\\ Entre funciones de activación tenemos algunas comúnmente usada como:
 \begin{itemize}
 	\item \textbf{Sigmoid}: Toma un valor real, y lo transforma en una valor en el rango de 0 a 1.\\
 	$ \sigma (x) = \frac{1}{1+e^{-x}}$
@@ -323,8 +322,9 @@ La función $f$ anteriormente mencionada es una función no lineal, conocida com
 \end{figure} 
 
 \subsection{Redes Neuronales Artificiales}
-Las redes neuronales artificiales(ANN)toman de ejemplo la arquitectura del cerebro como inspiración para la construcción de sistemas inteligente. Actualmente son la base para el desarrollo de la inteligencia artificial. Las redes neuronales están constituidas de las uniones de las neuronas.\\
-En la figura 3.10 podemos ver la comparación entre una neurona biológica y un artificial etiquetas con A y B respectivamente. Además observamos que las redes neuronales artificiales (etiqueta D) imitan el la unión biológicas de las neuronas o sinapsis(Etiqueta C).
+Las redes neuronales artificiales(ANN)toman de ejemplo la arquitectura del cerebro como inspiración para la construcción de sistemas inteligente. Actualmente son la base para el desarrollo de la inteligencia artificial.\\
+Una red neuronal está constituida por las uniones de neuronas.\\
+En la figura 3.10 podemos ver la comparación entre una neurona biológica y un artificial etiquetadas con A y B respectivamente. Además observamos que las redes neuronales artificiales (etiqueta D) imitan el la unión biológicas de las neuronas o sinapsis(Etiqueta C).
 
 \begin{figure}[H]
 	\centering
@@ -333,7 +333,7 @@ En la figura 3.10 podemos ver la comparación entre una neurona biológica y un 
 	\label{neuronas}
 \end{figure} 
 \subsubsection{Redes Neuronales Prealimentadas}
-Fue uno de los primeros y más simples tipos de redes neuronales que se desarrollaron. Contiene múltiples neuronas (nodos) ordenadas en capas de modo que los nodos en capas adyacentes se conectan. Cada una de estas conexiones poseen un peso asociado a dicha conexión.\\
+Estás redes fueron de las primeras y más simples de los tipos de redes neuronales que fueron desarrolladas. Contienen múltiples neuronas (nodos) ordenadas en capas de modo que los nodos en capas adyacentes se conectan. Cada una de estas conexiones poseen un peso asociado a dicha conexión.\\
 En la figura 3.12 mostramos el esquema de Redes prealimentadas con sus distintas capas(layer).
 \begin{figure}[H]
 	\centering
@@ -346,19 +346,19 @@ En la figura 3.12 mostramos el esquema de Redes prealimentadas con sus distintas
 	\item \textbf{Nodo Oculto(Hidden Node):} El trabajo de los nodos ocultos es calcular y transferir la información hacia a el nodo de salida. Una Red prealimentada tiene solo una capa de entrada y una salida pero puede tener múltiples capas ocultas.
 	\item \textbf{Output Node:}Su tarea principal es realizar cálculos y transferir la información fuera de la red.
 \end{itemize}
-En las redes neuronales prealimentadas la información solo se propaga en una dirección hacia adelante desde los nodos de entradas pasando por los nodos ocultos hacia los nodos de salida. No existen ciclos en este tipo de red.\\
+En las redes neuronales prealimentadas, la información solo se propaga en una dirección hacia adelante desde los nodos de entradas pasando por los nodos ocultos hacia los nodos de salida. No existen ciclos en este tipo de red.\\
 Dentro de las redes neuronales prealimentadas tenemos algunos ejemplos:
 \begin{itemize}
 	\item \textbf{Perceptron Simple:} Es un red prealimentada simple que no posee capa oculta.Solo puede aprender de funciones lineales.
 	\item \textbf{Perceptron Multicapas:} Esta red posee una o más capas ocultas. Este perceptron puede aprender de funciones no lineales.
-	\item \textbf{Redes neuronales de convolución:} Este tipo de redes neuronal será explica con más detalle en el capítulo 4 sección 1.
+	\item \textbf{Redes neuronales de convolución:} Este tipo de redes neuronal será explicada con más detalle en el capítulo 4 sección 1.
 \end{itemize}
 \subsubsection{Algoritmo de propagación hacia atrás}
-La propagación hacia atrás trata de aprender de los errores, como ya hemos visto en el aprendizaje supervizado los conjuntos de entrenamiento se encuentran etiquetados. Por lo cual podemos saber cual es la salida esperada. \\
+La propagación hacia atrás trata de aprender de los errores, como ya hemos visto en el aprendizaje supervisado los conjuntos de entrenamiento se encuentran etiquetados. Por lo cual podemos saber cual es la salida esperada. \\
 El algoritmos se aplica de la siguiente forma:
 
 \begin{enumerate}
-	\item Se toma un ejemplo y se asignan pesos aleatorios a todas las conexiones de la red. Luego por medio de las conexiones y las funciones de activación se calcula la salida en las capas ocultas y de salida.
+	\item Se toma un ejemplo y se asignan pesos aleatorios a todas las conexiones de la red. Luego por medio de las conexiones y funciones de activación se calcula la salida en las capas ocultas y de salida.
 	\item Se calcula el error total y se propagan estos errores hacia atrás a través de la red y se calcula la gradiente, luego se usan métodos como gradientes de descenso para ajustar los pesos y reducir el error en la capa de salida. La técnica de gradiente de descenso será explicada con más detalle en el siguiente capítulo.
 	\item Se repite el proceso con los otros ejemplos
 \end{enumerate}
@@ -369,13 +369,13 @@ El algoritmos se aplica de la siguiente forma:
 	\label{backpropagation}
 \end{figure} 
 \subsubsection{Conjunto de datos para una red neuronal}
-Para alimentar nuestra red es importante tener información que le permita aprender. Esta información es llamada conjunto de datos o dataset, el cual nos permite entrenar a nuestra red y testear.\\ Una tarea principal para construir nuestro modelo es separar este dataset en 3 categorías.
+Para alimentar nuestra red es importante tener información que le permita aprender. Esta información es llamada conjunto de datos o dataset, el cual nos permite entrenar a nuestra red y testearla.\\ Una tarea principal para construir nuestro modelo es separar este dataset en 3 categorías.
 \begin{itemize}
 	\item \textbf{Datos de entrenamiento:} Permite entrar nuestro modelo.
 	\item \textbf{Datos de Validación:} Permite evaluar y actualizar los parámetros de entrenamiento
 	\item \textbf{Datos de testeo:} Permite testear el funcionamiento del modelo al ingresar datos nuevos.
 \end{itemize}
-
+Con esta división es posible entrenar nuestra red y verificar su funcionamiento. La figura 3.14 nos muestra el esquema de la división de los datos.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\textwidth]{Figures/validation.PNG}

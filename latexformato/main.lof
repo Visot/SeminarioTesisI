@@ -2,55 +2,75 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Regresi\IeC {\'o}n y clasificaci\IeC {\'o}n Fuente: \href {https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2}{\textit {https://medium.com/}}\relax }}{13}{figure.caption.27}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Regresi\IeC {\'o}n Lineal Fuente: \href {https://www.forexmt4indicators.com/linear-regression-mt4-indicator/}{\textit {www.forexmt4indicators.com/}}\relax }}{14}{figure.caption.32}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Regresi\IeC {\'o}n Log\IeC {\'\i }stica Fuente: \href {https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/}{\textit {www.analyticsvidhya.com}}\relax }}{16}{figure.caption.36}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces knn Fuente: \href {https://medium.com/@adi.bronshtein/a-quick-introduction-to-k-nearest-neighbors-algorithm-62214cea29c7}{\textit {www.medium.com/}}\relax }}{17}{figure.caption.40}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces transformaci\IeC {\'o}n con la funci\IeC {\'o}n kernel Fuente: \href {http://www.statsoft.com/Textbook/Support-Vector-Machines}{\textit {www.statsoft.com}}\relax }}{18}{figure.caption.42}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces transformaci\IeC {\'o}n para un problema de regresi\IeC {\'o}n Fuente: \href {http://www.saedsayad.com/support_vector_machine_reg.htm}{\textit {www.saedsayad.com}}\relax }}{20}{figure.caption.43}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Clustering Fuente: \href {https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2}{\textit {https://medium.com/}}\relax }}{22}{figure.caption.50}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces k means clustering Fuente: \href {http://www.saedsayad.com/clustering_kmeans.htm}{\textit {www.saedsayad.com}}\relax }}{23}{figure.caption.53}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema de aprendizaje por refuerzo Fuente: \textit {Fuente Propia}\relax }}{24}{figure.caption.55}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Funciones de activaci\IeC {\'o}n Fuente: \href {https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}{\textit {https://ujjwalkarn.me}}\relax }}{26}{figure.caption.60}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Redes neuronales biol\IeC {\'o}gicas y artificiales Fuente: \href {https://medium.com/@ivanliljeqvist/the-essence-of-artificial-neural-networks-5de300c995d6}{\textit {https://medium.com}}\relax }}{26}{figure.caption.62}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Esquema de Redes Neuronales Prealimentadas Fuente: \href {https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}{\textit {https://ujjwalkarn.me}}\relax }}{27}{figure.caption.64}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Propagaci\IeC {\'o}n hacia atr\IeC {\'a}s Fuente: \href {https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}{\textit {https://ujjwalkarn.me}}\relax }}{29}{figure.caption.69}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Divisi\IeC {\'o}n del dataset Fuente: \href {http://magizbox.com/training/machinelearning/site/evaluation/}{\textit {http://magizbox.com}}\relax }}{30}{figure.caption.71}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Regresi\IeC {\'o}n y clasificaci\IeC {\'o}n Fuente: \href {https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2}{\textit {https://medium.com/}}\relax }}{14}{figure.caption.28}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Regresi\IeC {\'o}n Lineal Fuente: \href {https://www.forexmt4indicators.com/linear-regression-mt4-indicator/}{\textit {www.forexmt4indicators.com/}}\relax }}{15}{figure.caption.33}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Regresi\IeC {\'o}n Log\IeC {\'\i }stica Fuente: \href {https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/}{\textit {www.analyticsvidhya.com}}\relax }}{17}{figure.caption.37}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces knn Fuente: \href {https://medium.com/@adi.bronshtein/a-quick-introduction-to-k-nearest-neighbors-algorithm-62214cea29c7}{\textit {www.medium.com/}}\relax }}{18}{figure.caption.41}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces transformaci\IeC {\'o}n con la funci\IeC {\'o}n kernel Fuente: \href {http://www.statsoft.com/Textbook/Support-Vector-Machines}{\textit {www.statsoft.com}}\relax }}{19}{figure.caption.43}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces transformaci\IeC {\'o}n para un problema de regresi\IeC {\'o}n Fuente: \href {http://www.saedsayad.com/support_vector_machine_reg.htm}{\textit {www.saedsayad.com}}\relax }}{21}{figure.caption.44}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Clustering Fuente: \href {https://medium.com/deep-math-machine-learning-ai/different-types-of-machine-learning-and-their-types-34760b9128a2}{\textit {https://medium.com/}}\relax }}{23}{figure.caption.50}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces k means clustering Fuente: \href {http://www.saedsayad.com/clustering_kmeans.htm}{\textit {www.saedsayad.com}}\relax }}{24}{figure.caption.53}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema de aprendizaje por refuerzo Fuente: \textit {Fuente Propia}\relax }}{25}{figure.caption.55}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Funciones de activaci\IeC {\'o}n Fuente: \href {https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}{\textit {https://ujjwalkarn.me}}\relax }}{27}{figure.caption.60}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Redes neuronales biol\IeC {\'o}gicas y artificiales Fuente: \href {https://medium.com/@ivanliljeqvist/the-essence-of-artificial-neural-networks-5de300c995d6}{\textit {https://medium.com}}\relax }}{27}{figure.caption.62}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Esquema de Redes Neuronales Prealimentadas Fuente: \href {https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}{\textit {https://ujjwalkarn.me}}\relax }}{28}{figure.caption.64}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Propagaci\IeC {\'o}n hacia atr\IeC {\'a}s Fuente: \href {https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}{\textit {https://ujjwalkarn.me}}\relax }}{30}{figure.caption.69}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Divisi\IeC {\'o}n del dataset Fuente: \href {http://magizbox.com/training/machinelearning/site/evaluation/}{\textit {http://magizbox.com}}\relax }}{31}{figure.caption.71}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Estructura de la imagen de entrada Fuente: \href {https://www.safaribooksonline.com/library/view/deep-learning/9781491924570/ch04.html}{\textit {Deep Learning by Adam Gibson, Josh Patterson}}\relax }}{33}{figure.caption.75}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Operacion de convoluci\IeC {\'o}n Fuente: \href {http://openresearch.ai/t/network-in-network/39}{\textit {www.openresearch.ai}}\relax }}{35}{figure.caption.79}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Estructura de la imagen de entrada Fuente: \href {https://blog.paperspace.com/intro-to-optimization-in-deep-learning-gradient-descent/}{\textit {https://blog.paperspace.com/}}\relax }}{39}{figure.caption.85}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Funci\IeC {\'o}n costo en SGD Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{40}{figure.caption.90}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Actualizaci\IeC {\'o}n sin momentum Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{41}{figure.caption.95}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Actualizaci\IeC {\'o}n con momentum Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{42}{figure.caption.97}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Convergencia Nesterov Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{43}{figure.caption.100}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Estructura de la imagen de entrada Fuente: \href {https://www.safaribooksonline.com/library/view/deep-learning/9781491924570/ch04.html}{\textit {Deep Learning by Adam Gibson, Josh Patterson}}\relax }}{34}{figure.caption.75}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Operacion de convoluci\IeC {\'o}n Fuente: \href {http://openresearch.ai/t/network-in-network/39}{\textit {www.openresearch.ai}}\relax }}{36}{figure.caption.79}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Estructura de la imagen de entrada Fuente: \href {https://blog.paperspace.com/intro-to-optimization-in-deep-learning-gradient-descent/}{\textit {https://blog.paperspace.com/}}\relax }}{40}{figure.caption.85}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Funci\IeC {\'o}n costo en SGD Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{42}{figure.caption.90}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Actualizaci\IeC {\'o}n sin momentum Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{43}{figure.caption.95}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Actualizaci\IeC {\'o}n con momentum Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{44}{figure.caption.97}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Convergencia Nesterov Fuente: \href {https://www.doc.ic.ac.uk/~js4416/163/website/neural-networks/optimisers.html}{\textit {www.doc.ic.ac.uk}}\relax }}{44}{figure.caption.100}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces optmizadores 5000 epochs Fuente :{\textit {Fuente Propia}}\relax }}{56}{figure.caption.123}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Estructura de la imagen de entrada Fuente: \textit {Fuente Propia}\relax }}{56}{figure.caption.123}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{56}{subfigure.1.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{56}{subfigure.1.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{56}{subfigure.1.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{56}{subfigure.1.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{56}{subfigure.1.5}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces optmizadores 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{57}{figure.caption.129}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{57}{subfigure.3.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{57}{subfigure.3.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{57}{subfigure.3.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{57}{subfigure.3.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{57}{subfigure.3.5}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Comparaci\IeC {\'o}n de optimizadores para 5000 epochs Fuente: \textit {Fuente Propia}\relax }}{58}{figure.caption.135}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{58}{subfigure.4.1}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Comparaci\IeC {\'o}n de optimizadores para 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{58}{figure.caption.137}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{58}{subfigure.5.1}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces funci\IeC {\'o}n de costo de optimizadores Fuente: \textit {Fuente Propia}\relax }}{59}{figure.caption.140}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{59}{subfigure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{59}{subfigure.6.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{59}{subfigure.6.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{59}{subfigure.6.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{59}{subfigure.6.5}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Comparaci\IeC {\'o}n de las funciones de costo rango 0-50 Fuente: \textit {Fuente Propia}\relax }}{60}{figure.caption.146}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{60}{subfigure.7.1}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Comparaci\IeC {\'o}n de las funciones de costo rango 0-500 Fuente: \textit {Fuente Propia}\relax }}{60}{figure.caption.148}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{60}{subfigure.8.1}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Capas de la red neuronal usada Fuente: \textit {Fuente Propia}\relax }}{58}{figure.caption.130}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces optmizadores 5000 epochs Fuente :{\textit {Fuente Propia}}\relax }}{59}{figure.caption.133}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{59}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{59}{subfigure.2.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{59}{subfigure.2.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{59}{subfigure.2.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{59}{subfigure.2.5}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces optmizadores 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{60}{figure.caption.139}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{60}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{60}{subfigure.3.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{60}{subfigure.3.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{60}{subfigure.3.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{60}{subfigure.3.5}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Comparaci\IeC {\'o}n de precisi\IeC {\'o}n de optimizadores para 5000 epochs Fuente: \textit {Fuente Propia}\relax }}{61}{figure.caption.145}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{61}{subfigure.4.1}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Comparaci\IeC {\'o}n de optimizadores para 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{61}{figure.caption.147}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{61}{subfigure.5.1}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces optmizadores 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{62}{figure.caption.150}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{62}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{62}{subfigure.6.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{62}{subfigure.6.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{62}{subfigure.6.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{62}{subfigure.6.5}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Error en los optimizadores 5000 epochs Fuente: \textit {Fuente Propia}\relax }}{63}{figure.caption.158}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{63}{subfigure.7.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{63}{subfigure.7.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{63}{subfigure.7.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{63}{subfigure.7.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{63}{subfigure.7.5}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Comparaci\IeC {\'o}n de las funciones de costo rango 0-50 Fuente: \textit {Fuente Propia}\relax }}{64}{figure.caption.164}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{64}{subfigure.8.1}
+\contentsline {figure}{\numberline {A.9}{\ignorespaces Comparaci\IeC {\'o}n de las errores rango 0-500 Fuente: \textit {Fuente Propia}\relax }}{64}{figure.caption.166}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{64}{subfigure.9.1}
+\contentsline {figure}{\numberline {A.10}{\ignorespaces Error en los optimizadores 10000 epochs -CIFAR10 Fuente: \textit {Fuente Propia}\relax }}{65}{figure.caption.168}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{65}{subfigure.10.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{65}{subfigure.10.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{65}{subfigure.10.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{65}{subfigure.10.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{65}{subfigure.10.5}
+\contentsline {figure}{\numberline {A.11}{\ignorespaces Error en los optimizadores con 10000 epochs - CIFAR 100 Fuente: \textit {Fuente Propia}\relax }}{67}{figure.caption.175}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{67}{subfigure.11.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{67}{subfigure.11.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{67}{subfigure.11.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{67}{subfigure.11.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{67}{subfigure.11.5}
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Comparaci\IeC {\'o}n los errores rango 9900-10000 Fuente: \textit {Fuente Propia}\relax }}{68}{figure.caption.181}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{68}{subfigure.12.1}

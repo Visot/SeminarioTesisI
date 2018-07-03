@@ -13,8 +13,11 @@
 %\addbibresource{main.bib}
 \usepackage[autostyle=true]{csquotes}
 \usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
 \usepackage{smartdiagram}
 \usepackage{afterpage}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=4cm, minimum height=1.5cm,text centered, draw=black, fill=blue!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
 \newcommand\blankpage{%
     \null
     \thispagestyle{empty}%
@@ -90,9 +93,10 @@
 %\renewcommand{\abstractname}{Abstract}
 \begin{abstract}
 \addchaptertocentry{\abstractname}
-En las ultimas décadas el campo de la inteligencia artificial se ha desarrollado rápidamente. Temas como el reconocimiento de imágenes han sido estudiado por mucho tiempo. Actualmente este campo requiere realizar un gran números de cálculos para entrenar redes neuronales que sean capaces de distinguir y clasificar distintos objetos contenidos en imágenes. Incluso este proceso puede tardar más dependiendo del tamaño del dataset. Por lo cual surge la necesidad de encontrar métodos que permitan acelerar el proceso de entrenamiento de las redes neuronales.\\
+En las últimas décadas el campo de la inteligencia artificial se ha desarrollado rápidamente. Temas como el reconocimiento de imágenes han sido estudiado por mucho tiempo. Actualmente este campo requiere realizar un gran números de cálculos para entrenar redes neuronales que sean capaces de distinguir y clasificar distintos objetos contenidos en imágenes. Incluso este proceso puede tardar más dependiendo del tamaño del dataset. Por lo cual surge la necesidad de encontrar métodos que permitan acelerar el proceso de entrenamiento de las redes neuronales.\\
 Por tal motivo presente seminario buscar lograr un mayor entendimiento de métodos para acelerar el proceso de entrenamiento de una red neuronal convolucional, basándonos en la teoría de redes neuronales y usando como herramienta la librería tensorflow, esta nos permite un uso controlado de las métodos de optimización.
 
+\textbf{KEYWORDS}:  Dataset, Métodos Adaptativos, CNN, SGD, Optimizadores.
 \end{abstract}\hspace{10pt}
 
 \keywords{agasga}

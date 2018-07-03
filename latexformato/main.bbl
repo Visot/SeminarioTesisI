@@ -1,5 +1,21 @@
 \begin{thebibliography}{10}
 
+\bibitem{GPU}
+John Nickolls William~J. Dally.
+\newblock The gpu computing era.
+\newblock {\em IEEE Micro}, 30:56--69, 2010.
+
+\bibitem{HAND}
+César~Estrebou Franco~Ronchetti, Facundo~Quiroga and Laura Lanzarini.
+\newblock Handshape recognition for argentinian sign language using probsom.
+\newblock {\em JCST}, 16(1):1--5, 2010.
+
+\bibitem{DML}
+Derek~Rose Itamar~Arel and Thomas Karnowski.
+\newblock Deep machine learning - a new frontier in artificial intelligence
+  research [research frontier].
+\newblock {\em IEEE Computational Intelligence Magazine}, pages 1--7, 2010.
+
 \bibitem{WEBSITE:11}
 Vadim Smolyakov.
 \newblock Neural network optimization algorithms a comparison study based on
