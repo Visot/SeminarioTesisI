@@ -1,5 +1,5 @@
 \chapter{Conclusiones y Trabajo Futuro}
-En este capítulo se describirán las conclusiones generales que se encontraron al probar y estudiar los distintos métodos de optimización utilizados para el proceso de acelerar el entrenamiento de una red neuronal convolucional.\\ Además, se propondrán algunas mejoras para que el trabajo obtenga mejores resultados.
+En este capítulo se describirán las conclusiones generales que se encontraron al probar y estudiar los distintos métodos de optimización utilizados para el proceso de acelerar el entrenamiento de nuestra 2 redes neuronales convolucionales en los dataset CIFAR-10 y CIFAR-100.\\ Además, se propondrán algunas mejoras para que el trabajo obtenga mejores resultados.
 
 
 \section{Conclusiones}
@@ -8,9 +8,11 @@ En este capítulo se describirán las conclusiones generales que se encontraron 
 \begin{itemize}
 
 \item[•] Los métodos de optimización Adam y RMSprop obtuvieron los mejores resultados de precisión en ambas pruebas.
-\item[•] A pesar de que el método de optimización Adam fue propuesto a partir del RMSprop. Adam fue superado en las pruebas realizadas.
-\item[•] El método Adagrad fue el que menor precisión obtuvo en las pruebas, esto se debió a su dificultad de trabajar con la suma de las gradientes al cuadrado lo cual poco a poco redujo su taza de aprendizaje.
-\item[•] El RMSprop como una mejora del Adagrad, obtuvó mejores resultados que el Adagrad. Esto debido a que trabajo con el promedio de la raíz de la gradiente anterior y tasas de decaimiento para controlar el problema de la disminución de la tasa de aprendizaje del método Adagrad.
+
+\item[•] A pesar de que el método de optimización Adam fue propuesto a partir del RMSprop. Adam fue superado en algunas de pruebas realizadas.
+\item[•] Entre los métodos adaptativos Adam, RMSprop y Adagrad . Solo este último obtuvo los peores resultados, esto se debió a su dificultad de trabajar con la suma de las gradientes al cuadrado lo cual poco a poco redujo su tasa de aprendizaje.
+\item[•] El RMSprop como una mejora del Adagrad, obtuvó mejores resultados que este último. Esto debido a que RMSprop trabaja con el promedio de la raíz de la gradiente anterior y tasas de decaimiento para controlar el problema de la disminución de la tasa de aprendizaje del método Adagrad.
+\item[•] Adam es el método que tiene un decaimiento más acelerado al calcular el error en la función de costo cross-entropy.
 
 \end{itemize}
 

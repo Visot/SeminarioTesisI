@@ -1,11 +1,12 @@
 \chapter{Resultados}
-En este capítulo se discutirán los resultados obtenidos durante el uso de los optimizadores mencionados en el capítulo anterior, con el propósito de acelerar el proceso de entrenamiento de una red neuronal convolucional.\\ Para estas pruebas usamos los datasets CIFAR10 y CIFAR100 y utilizamos una computadora con tarjeta gráfica NVIDIA  GTX950M con un total de 640 núcleos y una memoria de 4GB.\\
-Estos ejemplos fueron obtenidos al trabajar con una red neuronal convolucional con 2 capas de convolución , 2 capas pooling y un fully conected layer, ver el Apéndice A.1
+En este capítulo se discutirán los resultados obtenidos durante el uso de los optimizadores mencionados en el capítulo anterior, con el propósito de acelerar el proceso de entrenamiento de una red neuronal convolucional.\\ Para estas pruebas usamos los datasets CIFAR10 y CIFAR100 que contienen 10 y 100 clases de objetos en su dataset respectivamente. Estos resultados fueron obtenidos usando una computadora con tarjeta gráfica NVIDIA  GTX950M con un total de 640 núcleos y una memoria de 4GB.\\
+Nuestra red neuronal convolucional contiene 2 capas de convolución , 2 capas pooling y un fully conected layer( ver Figura A.1 del Apéndice A.1)
 
 
 \section{Precisión}
-En esta sección se muestran los resultados de precisión para la tarea de clasificación, ver apéndice A.2.\\ En la tabla 5.1 podemos ver la precisión para distintos optimizadores, en el cuadro observamos que el método Nesterov al ser una mejora de momentum obtiene una mejor precisión.\\Además se observa que los métodos Adam y RMSprop obtienen los mejores resultados(ver Figura A.4 del apéndice)
+En esta sección se mostrarán los resultados de precisión para la tarea de clasificación,usando los dataset CIFAR 10 y CIFAR 100.
 \subsection{Precisión en dataset CIFAR-10}
+ En la tabla 5.1 podemos ver la precisión para distintos optimizadores(ver Figura A.2 del apéndice A.2), en el cuadro observamos que el método Nesterov al ser una mejora de momentum obtiene una mejor precisión.\\Además se observa que los métodos Adam y RMSprop obtienen los mejores resultados.(ver Figura A.5 del apéndice A.2)
 \begin{table}[H]
 	\centering
 	\caption{Precisión para 5000 epochs}
@@ -23,7 +24,8 @@ En esta sección se muestran los resultados de precisión para la tarea de clasi
 	\end{centering}
 
 \end{table}
-En el cuadro 5.2 se realizaron 10000 iteraciones en proceso de entrenamiento de nuestra red.\\ El método de RMSprop continuó obteniendo mejores resultados, pero también se pudo observar que el método Adam produjo un resultado cercano al RMSprop en un menor tiempo de ejecución.
+
+En el cuadro 5.2 se realizaron 10000 iteraciones en proceso de entrenamiento de nuestra red. Los resultados de la precisión de cada método se muestra este cuadro(ver Figura A.3 del apéndice A.2).\\ El método de ADAM superó al RMSprop que había obteniendo mejores resultados hasta el momento, pero también se pudo observar que el método Adam produjo un resultado ligeramente mejor que el RMSprop pero también empleo un tiempo de ejecución ligeramente mayor.(ver Figura A.5 del apéndice A.2)
 \begin{table}[H]
 	\centering
 	\caption{Precisión para 10000 epochs}
@@ -43,7 +45,7 @@ En el cuadro 5.2 se realizaron 10000 iteraciones en proceso de entrenamiento de 
 \end{table}
 
 \subsection{Precisión en dataset CIFAR-100}
-
+Para obtener más información respecto a los optimizadores se utilizó otro dataset el CIFAR-100 donde obtuvimos los siguientes resultados, (ver Figura A.6 del apéndice A.2) para entrenar la red neural de manera que esta sea capaz de reconocer 100 clases de objetos.\\ En el cuadro 5.3 observamos que los métodos Momentum y Nesterov obtuvieron resultados muy cercanos, pero el método Nesterov lo logra en un menor tiempo. Adagrad obtiene una precisión de 7.73$\%$ la cual fue la más baja de todos los métodos. RMSprop volvió a superar a Adam para este nuevo conjunto de datos, ambos obtuvieron los mejores resultados. (ver Figura A.7 del apéndice A.2) 
 \begin{table}[H]
 	\centering
 	\caption{Precisión para 10000 epochs}
@@ -65,9 +67,11 @@ En el cuadro 5.2 se realizaron 10000 iteraciones en proceso de entrenamiento de 
 \section{Función de costo}
 
 El objetivo principal de utilizar estos métodos es el de optimizar la gradiente de descenso para así reducir la función de costo o perdida. En el programa de utilizo \textit{the cross entropy} como función de pérdida.
-El cuadro 5.2 nos muestra los resultados de la reducción de la función de costo. En la figura A.7 del apéndice A, podemos observar mejor el comportamiento de la reducción de la función de costo en 50 iteraciones o epochs.\\
-La figura A.8 muestra la tendencia final de los métodos de optimización, mostrando que los mejores métodos continúan siendo Adam y RMSprop. 
+
 \section{Función de costo en CIFAR-10}
+El cuadro 5.4 nos muestra los resultados de la reducción de la función de costo mostrando la disminución del error en el dataset CIFAR-10 para 5000 iteraciones(ver Figura A.8 del apéndice A.3).\\ En la figura A.9 del apéndice A.3, podemos observar el comportamiento de la reducción de la función de costo en 50 iteraciones o epochs.\\ La gráfica nos muestra que Adam empieza con un erro alto pero rápidamente logra disminuir y obtener el menor error.\\ \\
+
+La figura A.10 del apéndice A.3, muestra la tendencia final de los métodos de optimización, mostrando que los mejores métodos continúan siendo Adam y RMSprop. 
 \begin{table}[H]
 	\centering
 	\caption{Función costo para 5000 epochs}
@@ -75,7 +79,7 @@ La figura A.8 muestra la tendencia final de los métodos de optimización, mostr
 	\begin{centering}
 		\begin{tabular}{@{}ll@{}}
 			\toprule
-			Método& Función de costo\\ \midrule
+			Método& Error en función de costo\\ \midrule
 			Momemtum& 1.26 \\
 			Nesterov& 1.38\\
 			Adagrad&1.73   \\
@@ -86,7 +90,7 @@ La figura A.8 muestra la tendencia final de los métodos de optimización, mostr
 	
 \end{table}
 
-
+En el cuadro 5.5 mostramos los resultados obtenidos en la reducción del error para 10000 iteraciones usando el CIFAR-10.(ver Figura A.11 del apéndice A.3). En el cuadro se observa que el método Adam obtiene el menor error en comparación a los demás métodos.
 
 \begin{table}[H]
 	\centering
@@ -95,7 +99,7 @@ La figura A.8 muestra la tendencia final de los métodos de optimización, mostr
 	\begin{centering}
 		\begin{tabular}{@{}ll@{}}
 			\toprule
-			Método& Función de costo\\ \midrule
+			Método& Error en función de costo\\ \midrule
 			Momemtum& 1.10 \\
 			Nesterov& 1.08\\
 			Adagrad&1.64   \\
@@ -105,8 +109,9 @@ La figura A.8 muestra la tendencia final de los métodos de optimización, mostr
 	\end{centering}
 	
 \end{table}
-
+\vspace{4cm}
 \section{Función de costo en CIFAR-100	}
+El cuadro 5.6 muestra los resultados al reducir el error en la función de costo. El cuadro muestrá que Adam y RMSprop tienen los menores errores para clasificar 100 clases de imágenes.
 \begin{table}[H]
 	\centering
 	\caption{Función costo para 10000 epochs}
@@ -114,7 +119,7 @@ La figura A.8 muestra la tendencia final de los métodos de optimización, mostr
 	\begin{centering}
 		\begin{tabular}{@{}ll@{}}
 			\toprule
-			Método& Función de costo\\ \midrule
+			Método& Error en función de costo\\ \midrule
 			Momemtum& 3.46 \\
 			Nesterov& 3.48\\
 			Adagrad&4.09  \\

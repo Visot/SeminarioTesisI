@@ -96,7 +96,7 @@ La gradiente de descenso es un algoritmo más común para optimizar redes neuron
 Dentro de la gradiente de descenso podemos diferenciar 3 variantes de acuerdo al la cantidad de datos que se usan para calcular la gradiente de nuestra función objetivo entre estas variantes tenemos a:\\
 
 \subsubsection{Batch gradient descent}
-Esta variante calcula la gradiente de descenso de una función de costo, con respecto a un parámetro $\theta$, \textit{para todo el conjunto de datos}. En la ecuación 4.1 podemos observar la actualización que se dará para cada ejecución. $\eta$ representa la taza o tamaño de los pasos para encontrar el mínimo local.
+Esta variante calcula la gradiente de descenso de una función de costo, con respecto a un parámetro $\theta$, \textit{para todo el conjunto de datos}. En la ecuación 4.1 podemos observar la actualización que se dará para cada ejecución. $\eta$ representa la tasa o tamaño de los pasos para encontrar el mínimo local.
 \begin{equation}
 \label{bgds}
 \begin{aligned}
@@ -218,14 +218,14 @@ Como $G_{t} \in \Re^{dxd} $contiene la suma de los cuadrados de las gradientes p
 \end{aligned}
 \end{equation}
 El método Adagrap en palabras de sus autores:
-\textquotedblleft Informalmente nuestros procedimientos dan a las características más frecuentes tazas de aprendizaje bajas y para características poco frecuentes tazas de aprendizaje altas. Por lo tanto, la adaptación permite identificar características predictivas pero comparativamente raras. \textquoteright  \cite{ADA} 
+\textquotedblleft Informalmente nuestros procedimientos dan a las características más frecuentes tasas de aprendizaje bajas y para características poco frecuentes tasas de aprendizaje altas. Por lo tanto, la adaptación permite identificar características predictivas pero comparativamente raras. \textquoteright  \cite{ADA} 
 
-De esta afirmación notamos que el principal beneficio de Adagrad es que nos evita el hecho de trabajar con una taza fija por otro lado su principal desventaja se basa en el la suma de los gradientes al cuadrado aumentará en cada iteración lo cual provocará que su taza sea cada vez más pequeña.
+De esta afirmación notamos que el principal beneficio de Adagrad es que nos evita el hecho de trabajar con una tasa fija por otro lado su principal desventaja se basa en el la suma de los gradientes al cuadrado aumentará en cada iteración lo cual provocará que su tasa sea cada vez más pequeña.
 
 
 \subsubsection{RMSprop}
-Es un método de aprendizaje por adaptación de la taza que fue propuesto por Geoff Hinton.
-Este modelo se desarrollo con el objetivo resolver el problema de disminuir radicalmente la tasa de aprendizaje en Adagrad.\\ RMSprop divide la taza de aprendizaje mediante el decaimiento del promedio de la suma de las gradientes al cuadrado.
+Es un método de aprendizaje por adaptación de la tasa que fue propuesto por Geoff Hinton.
+Este modelo se desarrollo con el objetivo resolver el problema de disminuir radicalmente la tasa de aprendizaje en Adagrad.\\ RMSprop divide la tasa de aprendizaje mediante el decaimiento del promedio de la suma de las gradientes al cuadrado.
 \begin{equation}
 \label{RMS}
 \begin{aligned}
@@ -241,7 +241,7 @@ E[g^2]_{t} &= \gamma E[g^2]_{t-1} + (1-\gamma)g^{2}_{t}\\
 Divide la gradiente $g_{t}$ por la raíz $\sqrt{E[g^2]_{t} +\epsilon}$ hace que el aprendizaje trabaje mucho mejor.
 \subsubsection{Adam	}
 Adam es un algoritmo de optimización que desarrollado por Diederik Kingma y Jimmy ba\cite{ADAM} .
-Adaptative moment estimation  o Adam, calcula una taza de aprendizaje adaptativo para cada parámetro. Este método mantiene un decaimiento exponencial del promedio de las gradientes anteriores. El método tiene refiere los mínimos en las superficies de error.
+Adaptative moment estimation  o Adam, calcula una tasa de aprendizaje adaptativo para cada parámetro. Este método mantiene un decaimiento exponencial del promedio de las gradientes anteriores. El método tiene refiere los mínimos en las superficies de error.
  En la ecuación 4.10 mostramos el cálculo del promedio de decaimiento de las gradientes pasadas $m_{t}$ y el cuadrado de las gradientes pasadas $v_{t}$
 \begin{equation}
 \label{adam1}

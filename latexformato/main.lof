@@ -27,50 +27,52 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Capas de la red neuronal usada Fuente: \textit {Fuente Propia}\relax }}{58}{figure.caption.130}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces optmizadores 5000 epochs Fuente :{\textit {Fuente Propia}}\relax }}{59}{figure.caption.133}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{59}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{59}{subfigure.2.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{59}{subfigure.2.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{59}{subfigure.2.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{59}{subfigure.2.5}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces optmizadores 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{60}{figure.caption.139}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{60}{subfigure.3.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{60}{subfigure.3.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{60}{subfigure.3.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{60}{subfigure.3.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{60}{subfigure.3.5}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Comparaci\IeC {\'o}n de precisi\IeC {\'o}n de optimizadores para 5000 epochs Fuente: \textit {Fuente Propia}\relax }}{61}{figure.caption.145}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{61}{subfigure.4.1}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Comparaci\IeC {\'o}n de optimizadores para 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{61}{figure.caption.147}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{61}{subfigure.5.1}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces optmizadores 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{62}{figure.caption.150}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{62}{subfigure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{62}{subfigure.6.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{62}{subfigure.6.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{62}{subfigure.6.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{62}{subfigure.6.5}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Error en los optimizadores 5000 epochs Fuente: \textit {Fuente Propia}\relax }}{63}{figure.caption.158}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{63}{subfigure.7.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{63}{subfigure.7.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{63}{subfigure.7.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{63}{subfigure.7.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{63}{subfigure.7.5}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Comparaci\IeC {\'o}n de las funciones de costo rango 0-50 Fuente: \textit {Fuente Propia}\relax }}{64}{figure.caption.164}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{64}{subfigure.8.1}
-\contentsline {figure}{\numberline {A.9}{\ignorespaces Comparaci\IeC {\'o}n de las errores rango 0-500 Fuente: \textit {Fuente Propia}\relax }}{64}{figure.caption.166}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{64}{subfigure.9.1}
-\contentsline {figure}{\numberline {A.10}{\ignorespaces Error en los optimizadores 10000 epochs -CIFAR10 Fuente: \textit {Fuente Propia}\relax }}{65}{figure.caption.168}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{65}{subfigure.10.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{65}{subfigure.10.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{65}{subfigure.10.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{65}{subfigure.10.4}
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{65}{subfigure.10.5}
-\contentsline {figure}{\numberline {A.11}{\ignorespaces Error en los optimizadores con 10000 epochs - CIFAR 100 Fuente: \textit {Fuente Propia}\relax }}{67}{figure.caption.175}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Capas de la red neuronal usada Fuente: \textit {Fuente Propia}\relax }}{59}{figure.caption.130}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces optmizadores 5000 epochs Fuente :{\textit {Fuente Propia}}\relax }}{60}{figure.caption.133}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{60}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{60}{subfigure.2.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{60}{subfigure.2.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{60}{subfigure.2.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{60}{subfigure.2.5}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces optmizadores 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{61}{figure.caption.139}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{61}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{61}{subfigure.3.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{61}{subfigure.3.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{61}{subfigure.3.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{61}{subfigure.3.5}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Comparaci\IeC {\'o}n de precisi\IeC {\'o}n de optimizadores para 5000 epochs Fuente: \textit {Fuente Propia}\relax }}{62}{figure.caption.145}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{62}{subfigure.4.1}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Comparaci\IeC {\'o}n de optimizadores para 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{62}{figure.caption.147}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{62}{subfigure.5.1}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces optmizadores 10000 epochs Fuente: \textit {Fuente Propia}\relax }}{63}{figure.caption.150}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{63}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{63}{subfigure.6.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{63}{subfigure.6.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{63}{subfigure.6.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{63}{subfigure.6.5}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Comparaci\IeC {\'o}n de optimizadores para 10000 epochs - CIFAR100 Fuente: \textit {Fuente Propia}\relax }}{64}{figure.caption.156}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{64}{subfigure.7.1}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Error en los optimizadores 5000 epochs Fuente: \textit {Fuente Propia}\relax }}{65}{figure.caption.160}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{65}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{65}{subfigure.8.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{65}{subfigure.8.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{65}{subfigure.8.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{65}{subfigure.8.5}
+\contentsline {figure}{\numberline {A.9}{\ignorespaces Comparaci\IeC {\'o}n de las funciones de costo rango 0-50 Fuente: \textit {Fuente Propia}\relax }}{66}{figure.caption.166}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{66}{subfigure.9.1}
+\contentsline {figure}{\numberline {A.10}{\ignorespaces Comparaci\IeC {\'o}n de las errores rango 0-500 Fuente: \textit {Fuente Propia}\relax }}{66}{figure.caption.168}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{66}{subfigure.10.1}
+\contentsline {figure}{\numberline {A.11}{\ignorespaces Error en los optimizadores 10000 epochs -CIFAR10 Fuente: \textit {Fuente Propia}\relax }}{67}{figure.caption.170}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{67}{subfigure.11.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{67}{subfigure.11.2}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{67}{subfigure.11.3}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{67}{subfigure.11.4}
 \contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{67}{subfigure.11.5}
-\contentsline {figure}{\numberline {A.12}{\ignorespaces Comparaci\IeC {\'o}n los errores rango 9900-10000 Fuente: \textit {Fuente Propia}\relax }}{68}{figure.caption.181}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{68}{subfigure.12.1}
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Error en los optimizadores con 10000 epochs - CIFAR 100 Fuente: \textit {Fuente Propia}\relax }}{69}{figure.caption.177}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{69}{subfigure.12.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {fig 2}}}{69}{subfigure.12.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {fig 3}}}{69}{subfigure.12.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {fig 3}}}{69}{subfigure.12.4}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {fig 4}}}{69}{subfigure.12.5}
+\contentsline {figure}{\numberline {A.13}{\ignorespaces Comparaci\IeC {\'o}n los errores rango 9900-10000 Fuente: \textit {Fuente Propia}\relax }}{70}{figure.caption.183}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fig 1}}}{70}{subfigure.13.1}

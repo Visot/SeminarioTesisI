@@ -15,9 +15,9 @@
 \contentsline {section}{\numberline {2.4}M\IeC {\'e}todos de optimizaci\IeC {\'o}n}{9}{section.16}
 \contentsline {subsection}{\numberline {2.4.1}Neural Network Optimization Algorithms: A comparison study based on TensorFlow}{9}{subsection.17}
 \contentsline {subsection}{\numberline {2.4.2}On Optimization Methods for Deep Learning}{9}{subsection.18}
-\contentsline {subsection}{\numberline {2.4.3}ADAM : A METHOD FOR STOCHASTIC OPTIMIZATION}{10}{subsection.19}
-\contentsline {subsection}{\numberline {2.4.4}INCORPORATING NESTEROV MOMENTUM INTO ADAM}{10}{subsection.20}
-\contentsline {section}{\numberline {2.5}Conclusiones}{11}{section.21}
+\contentsline {subsection}{\numberline {2.4.3}Adam : A method for stochastic optimization}{10}{subsection.19}
+\contentsline {subsection}{\numberline {2.4.4}Incorporating Nesterov Momentum into Adam}{10}{subsection.20}
+\contentsline {section}{\numberline {2.5}Conclusiones}{10}{section.21}
 \contentsline {chapter}{\numberline {3}Aprendizaje autom\IeC {\'a}tico y Redes Neuronales}{12}{chapter.22}
 \contentsline {section}{\numberline {3.1}Aprendizaje Autom\IeC {\'a}tico}{12}{section.23}
 \contentsline {subsection}{\numberline {3.1.1}Aprendizaje Supervizado}{13}{subsection.24}
@@ -52,19 +52,19 @@
 \contentsline {subsubsection}{Adam }{47}{section*.107}
 \contentsline {chapter}{\numberline {5}Resultados}{48}{chapter.111}
 \contentsline {section}{\numberline {5.1}Precisi\IeC {\'o}n}{48}{section.112}
-\contentsline {subsection}{\numberline {5.1.1}Precisi\IeC {\'o}n en dataset CIFAR-10}{49}{subsection.113}
-\contentsline {subsection}{\numberline {5.1.2}Precisi\IeC {\'o}n en dataset CIFAR-100}{50}{subsection.116}
+\contentsline {subsection}{\numberline {5.1.1}Precisi\IeC {\'o}n en dataset CIFAR-10}{48}{subsection.113}
+\contentsline {subsection}{\numberline {5.1.2}Precisi\IeC {\'o}n en dataset CIFAR-100}{49}{subsection.116}
 \contentsline {section}{\numberline {5.2}Funci\IeC {\'o}n de costo}{50}{section.118}
 \contentsline {section}{\numberline {5.3}Funci\IeC {\'o}n de costo en CIFAR-10}{50}{section.119}
-\contentsline {section}{\numberline {5.4}Funci\IeC {\'o}n de costo en CIFAR-100 }{51}{section.122}
-\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro}{52}{chapter.124}
-\contentsline {section}{\numberline {6.1}Conclusiones}{52}{section.125}
-\contentsline {section}{\numberline {6.2}Trabajo Futuro}{53}{section.126}
-\contentsline {chapter}{\numberline {A}Arquitectura de la red y Resultados obtenidos}{58}{appendix.128}
-\contentsline {section}{\numberline {A.1}Capas de la red neuronal convolucional}{58}{section.129}
-\contentsline {section}{\numberline {A.2}Resultados de precisi\IeC {\'o}n de entrenamiento}{59}{section.131}
-\contentsline {subsection}{\numberline {A.2.1}CIFAR-10}{59}{subsection.132}
-\contentsline {subsection}{\numberline {A.2.2}CIFAR-100}{62}{subsection.149}
-\contentsline {section}{\numberline {A.3}Resultados del error en el entrenamiento}{63}{section.156}
-\contentsline {subsection}{\numberline {A.3.1}CIFAR-10}{63}{subsection.157}
-\contentsline {subsection}{\numberline {A.3.2}CIFAR-100}{67}{subsection.174}
+\contentsline {section}{\numberline {5.4}Funci\IeC {\'o}n de costo en CIFAR-100 }{52}{section.122}
+\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro}{53}{chapter.124}
+\contentsline {section}{\numberline {6.1}Conclusiones}{53}{section.125}
+\contentsline {section}{\numberline {6.2}Trabajo Futuro}{54}{section.126}
+\contentsline {chapter}{\numberline {A}Arquitectura de la red y Resultados obtenidos}{59}{appendix.128}
+\contentsline {section}{\numberline {A.1}Capas de la red neuronal convolucional}{59}{section.129}
+\contentsline {section}{\numberline {A.2}Resultados de precisi\IeC {\'o}n de entrenamiento}{60}{section.131}
+\contentsline {subsection}{\numberline {A.2.1}CIFAR-10}{60}{subsection.132}
+\contentsline {subsection}{\numberline {A.2.2}CIFAR-100}{63}{subsection.149}
+\contentsline {section}{\numberline {A.3}Resultados del error en el entrenamiento}{65}{section.158}
+\contentsline {subsection}{\numberline {A.3.1}CIFAR-10}{65}{subsection.159}
+\contentsline {subsection}{\numberline {A.3.2}CIFAR-100}{69}{subsection.176}
