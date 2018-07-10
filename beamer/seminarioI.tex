@@ -76,9 +76,7 @@
 \section{Marco Teórico}
 \subsection{Aprendizaje Automático}
 \begin{frame}{Aprendizaje Automático}
-	Se encarga consiste aprenden a identificar patrones en un conjunto de
-	datos. A medida que se realiza este aprendizaje, la máquina podrá ser capaz
-	de realizar una predicción o tomar decisiones sin haber estado programada
+	Consiste en lograr que las computadoras sean capaces de realizar una predicción o tomar decisiones sin haber estado programada
 	explícitamente para realizar esta tarea.\\
 	El Aprendizaje Automático puede ser divido de la siguiente forma:
 	\begin{itemize}
@@ -87,35 +85,7 @@
 		\item Aprendizaje por Refuerzo
 	\end{itemize}
 \end{frame}
-\begin{frame}{Aprendizaje Supervisado}
-	El aprendizaje supervisado tiene los siguiente tipos de problemas:
-	\begin{itemize}
-		\item Regresión Lineal
-		\item Regresión Logística 
-		\item Clasificación
-	\end{itemize}
-\end{frame}
-\begin{frame}{Aprendizaje No Supervisado}
-	En este tipo de aprendizaje tenemos problemas de clustering.
 
-\end{frame}
-
-\begin{frame}{Aprendizaje por Refuerzo}
-\begin{figure}[H]
-	\begin{center}
-		\smartdiagramset{circular distance=2cm,
-			font=\large,
-			text width=1.6cm,
-			module minimum width=1.8cm,
-			module minimum height=0.5cm,
-			arrow tip=to}
-		\smartdiagram[circular diagram]{Agente,Accion, entorno,refuerzo}
-		
-	\end{center}
-	\caption{Esquema de aprendizaje por refuerzo }
-	\label{refuerzo}
-\end{figure}
-\end{frame}
 \subsection{Redes Neuronales}
 \begin{frame}{Redes Neuronales Artificiales}
 Estas redes toman como inspiración la arquitectura
@@ -150,9 +120,16 @@ Es un tipo de red neuronal más simple que existe. Esta red puede clasificarse en
 \end{figure} 
 \end{frame}
 \begin{frame}{Back Propagation}
-	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{figures/backp.png}
+		\caption{Propagación hacia atrás}
+		\label{backpropagation}
+	\end{figure} 
 \end{frame}
-\begin{frame}{Redes Neuronales Convolucionales}
+\begin{frame}{Redes Neuronales Convolucionales(CNN)}
+Las CNN son un tipo de redes neuronales especiales para procesar datos
+como imágenes. La primera CNN fue creada por Yann LeCun. 
 
 \end{frame}
 
@@ -167,12 +144,59 @@ Es un tipo de red neuronal más simple que existe. Esta red puede clasificarse en
 	
 \end{frame}
 
+\begin{frame}{Input Layer}
+Se encarga de recibir la información de entrada.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{figures/image.png}
+		\caption{Estructura de la imagen de entrada}
+	
+	\end{figure} 	
+\end{frame}
+
+\begin{frame}{Convolutional Layer}
+	La capa calculará
+	el producto punto entre la región de las neuronas de la capa de entrada y los
+	pesos a los que están colocados localmente en la capa de salida. Posee los siguientes hiperparámetros:\\
+	\begin{itemize}
+		\item Filter size.
+		\item Output depth.
+		\item Stride.
+		\item Zero padding.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Convolutional Layer}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures/convolucion.jpeg}
+	\caption{Operacion de convolución}
+	\label{convolucion}
+\end{figure}
+	
+\end{frame}
+\begin{frame}{Pooling Layer}
+	Se encarga de reducir el tamaño espacial(ancho,alto) de los datos de representación.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{figures/pooling.png}
+			\caption{Operación Max pool}
+
+		\end{figure} 
+\end{frame}
+
+\begin{frame}{Fully Conected Layer}
+	Esta capa será la encargada de reconocer a que clase pertenece una imagen de
+	prueba de acuerdo a su puntaje o probabilidad.
+	
+\end{frame}
+
 \section{Métodos de Optimización}
 
 \begin{frame}{Gradiente de Descenso}
-	
-\end{frame}
-\begin{frame}{Gradiente de Descenso}
+	La gradiente de descenso es una forma de minimizar la función de costo $J(\theta)$ parametrizada por los parámetros $\theta \in\Re^{d}$.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.6\textwidth]{figures/gd.png}
@@ -200,7 +224,10 @@ Es un tipo de red neuronal más simple que existe. Esta red puede clasificarse en
 	\end{itemize}
 \end{frame}
 \subsection{Momentum}
+
 \begin{frame}{Momentum}
+	El momentum es un método que ayuda a la SGD a acelerar en la dirección
+	correcta, mientras evitas las oscilaciones
 	\begin{equation}
 	\label{mbgds}
 	\begin{aligned}
@@ -210,7 +237,9 @@ Es un tipo de red neuronal más simple que existe. Esta red puede clasificarse en
 	\end{equation}
 \end{frame}
 \subsection{Nesterov}
+
 \begin{frame}{Nesterov}
+	 Esta técnica es una variante de momentum donde se usa el término $\gamma \nu_{t-1}$ para mover los parámetros de $\theta$.
 	\begin{equation}
 	\label{mbgds}
 	\begin{aligned}
@@ -221,6 +250,7 @@ Es un tipo de red neuronal más simple que existe. Esta red puede clasificarse en
 \end{frame}
 \subsection{Adagrad}
 \begin{frame}{Adagrad}
+	Es un algoritmo optimización basado en la gradiente de descenso, del tipo adaptativo.
 	\begin{equation}
 		\label{adagrad1}
 		\begin{aligned}
@@ -235,9 +265,16 @@ Es un tipo de red neuronal más simple que existe. Esta red puede clasificarse en
 		\theta_{t+1,i} &= \theta_{t,i} - \frac{\eta}{\sqrt{G_{t,ii}+\epsilon}} \cdot g_{t,i}
 		\end{aligned}
 	\end{equation}
+	
+	\begin{itemize}
+		\item $G_{t,ii}$: suma de los cuadrados de las gradientes pasadas con respecto a $\theta_{i}$
+		\item $\epsilon $ es un término pequeño para evitar la división por 0.
+	\end{itemize}
 \end{frame}
 \subsection{RMSprop}
 \begin{frame}{RMSprop}
+	Método del tipo adaptativo que se desarrollo con el objetivo resolver el problema
+	de disminuir radicalmente la tasa de aprendizaje en Adagrad.
 	\begin{equation}
 		\label{RMS}
 		\begin{aligned}
@@ -248,6 +285,8 @@ Es un tipo de red neuronal más simple que existe. Esta red puede clasificarse en
 \end{frame}
 \subsection{Adam}
 \begin{frame}{Adam}
+	Adaptative moment estimation o Adam, calcula una
+	tasa de aprendizaje adaptativo para cada parámetro.
 	\begin{equation}
 		\label{adam1}
 		\begin{aligned}
@@ -255,16 +294,25 @@ Es un tipo de red neuronal más simple que existe. Esta red puede clasificarse en
 		v_{t} &= \beta_{2} v_{t-1} +(1-\beta_{2})g_{t}^2
 		\end{aligned}
 	\end{equation}
+
+	\begin{equation}
+	\label{adam2}
+	\begin{aligned}
+	\hat{m_{t}}&= \frac{m_{t}}{1-\beta_{1}^{t}} \\
+	\hat{v_{t}} &= \frac{v_{t}}{1-\beta_{2}^{t}}
+	\end{aligned}
+	\end{equation}
+
+
+	\begin{equation}
+		\label{adam3}
+		\begin{aligned}
+		\theta_{t+1}&= \theta_{t+1} - \frac{\eta}{\sqrt{\hat{v_{t}}}+\epsilon} \hat{m_{t}}	
+		\end{aligned}
+	\end{equation}
 \end{frame}
+
 \section{Resultados}
-\begin{frame}{Resultados}
-	Para obtener nuestros resultados utilizamos 2 datasets:
-	\begin{itemize}
-		 \item CIFAR 10
-		 \item CIFAR 100
-	\end{itemize}
-	
-\end{frame}
 \begin{frame}{Resultados CIFAR-10}
 	\begin{figure}
 		\centering

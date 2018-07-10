@@ -1,13 +1,16 @@
-\beamer@slide {refuerzo}{8}
-\beamer@slide {neuronas}{10}
-\beamer@slide {neuronasredes}{12}
-\beamer@slide {image}{17}
-\beamer@slide {mbgds}{20}
+\beamer@slide {neuronas}{7}
+\beamer@slide {neuronasredes}{9}
+\beamer@slide {backpropagation}{10}
+\beamer@slide {convolucion}{15}
+\beamer@slide {image}{18}
 \beamer@slide {mbgds}{21}
-\beamer@slide {adagrad1}{22}
-\beamer@slide {adagrad2}{22}
-\beamer@slide {RMS}{23}
-\beamer@slide {adam1}{24}
+\beamer@slide {mbgds}{22}
+\beamer@slide {adagrad1}{23}
+\beamer@slide {adagrad2}{23}
+\beamer@slide {RMS}{24}
+\beamer@slide {adam1}{25}
+\beamer@slide {adam2}{25}
+\beamer@slide {adam3}{25}
 \beamer@slide {precision5000}{26}
 \beamer@slide {some example2}{27}
 \beamer@slide {some2}{28}
