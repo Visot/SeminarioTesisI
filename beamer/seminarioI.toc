@@ -6,10 +6,10 @@
 \beamer@subsectionintoc {3}{1}{Aprendizaje Autom\'atico}{5}{0}{3}
 \beamer@subsectionintoc {3}{2}{Redes Neuronales}{9}{0}{3}
 \beamer@sectionintoc {4}{M\'etodos de Optimizaci\'on}{16}{0}{4}
-\beamer@subsectionintoc {4}{1}{Momentum}{19}{0}{4}
-\beamer@subsectionintoc {4}{2}{Nesterov}{20}{0}{4}
-\beamer@subsectionintoc {4}{3}{Adagrad}{21}{0}{4}
-\beamer@subsectionintoc {4}{4}{RMSprop}{22}{0}{4}
-\beamer@subsectionintoc {4}{5}{Adam}{23}{0}{4}
-\beamer@sectionintoc {5}{Resultados}{24}{0}{5}
-\beamer@sectionintoc {6}{Conclusiones y Trabajos Futuros}{27}{0}{6}
+\beamer@subsectionintoc {4}{1}{Momentum}{20}{0}{4}
+\beamer@subsectionintoc {4}{2}{Nesterov}{21}{0}{4}
+\beamer@subsectionintoc {4}{3}{Adagrad}{22}{0}{4}
+\beamer@subsectionintoc {4}{4}{RMSprop}{23}{0}{4}
+\beamer@subsectionintoc {4}{5}{Adam}{24}{0}{4}
+\beamer@sectionintoc {5}{Resultados}{25}{0}{5}
+\beamer@sectionintoc {6}{Conclusiones y Trabajos Futuros}{37}{0}{6}

@@ -3,6 +3,7 @@
 \usepackage{smartdiagram}
 \usepackage{xmpmulti}
 \usepackage{pgfpages}
+
 %\setbeameroption{show notes}
 %\setbeameroption{show notes on second screen=right}
 \mode<presentation> {
@@ -87,6 +88,7 @@
 	\end{itemize}
 \end{frame}
 \begin{frame}{Aprendizaje Supervisado}
+	El aprendizaje supervisado tiene los siguiente tipos de problemas:
 	\begin{itemize}
 		\item Regresión Lineal
 		\item Regresión Logística 
@@ -94,9 +96,8 @@
 	\end{itemize}
 \end{frame}
 \begin{frame}{Aprendizaje No Supervisado}
-	\begin{itemize}
-		\item 
-	\end{itemize}
+	En este tipo de aprendizaje tenemos problemas de clustering.
+
 \end{frame}
 
 \begin{frame}{Aprendizaje por Refuerzo}
@@ -171,7 +172,14 @@ Es un tipo de red neuronal más simple que existe. Esta red puede clasificarse en
 \begin{frame}{Gradiente de Descenso}
 	
 \end{frame}
-
+\begin{frame}{Gradiente de Descenso}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{figures/gd.png}
+		\caption{Gradiente de descenso}
+		\label{image}
+	\end{figure}
+\end{frame}
 \begin{frame}{Variantes de la Gradiente de Descenso}
 	Existen 3 variantes de la gradiente de descenso:
 	\begin{itemize}
@@ -258,20 +266,131 @@ Es un tipo de red neuronal más simple que existe. Esta red puede clasificarse en
 	
 \end{frame}
 \begin{frame}{Resultados CIFAR-10}
-	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6\textwidth]{figures/tablep5000.png}
+		\caption{Precisión 50000 epochs }
+		\label{precision5000}
+	\end{figure} 
+\end{frame}
+\begin{frame}{Resultados CIFAR-10 - Precisión}
+	\begin{figure}[H]
+		\includegraphics[width=0.6\textwidth]{figures/optimizadores5000.png}
+		\caption{Comparación de precisión para 5000 epochs	}
+		\label{some example2}
+	\end{figure}
 \end{frame}
 
-\begin{frame}{Resultados CIFAR-100}
-	
+\begin{frame}{Errores Función de Costo CIFAR-10}
+	\begin{figure}[H]
+		\includegraphics[width=0.6\textwidth]{figures/tablecost5000.png}
+		\caption{Comparación de errores función de costo 5000 epochs	}
+		\label{some2}
+	\end{figure}
+\end{frame}
+\begin{frame}{Errores Función de Costo CIFAR-10}
+	\begin{figure}[H]
+		\includegraphics[width=0.6\textwidth]{figures/optimizadorescross5000050}
+		\caption{Comportamiento de errores en la función de costo 5000 epochs	}
+		\label{some}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Resultados CIFAR-10 - Precisión}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6\textwidth]{figures/tablep10000.png}
+		\caption{Precisión 100000 epochs }
+		\label{precision10000}
+	\end{figure} 
+\end{frame}
+\begin{frame}{Resultados CIFAR-10 - Precisión}
+	\begin{figure}[H]
+		\includegraphics[width=0.6\textwidth]{figures/optimizadores10000.png}
+		\caption{Comparación de precisión para 10000 epochs	}
+		\label{some example4}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Errores Función de Costo CIFAR-10}
+	\begin{figure}[H]
+		\includegraphics[width=0.6\textwidth]{figures/tablecost10000.png}
+		\caption{Comparación de errores función de costo 10000 epochs	}
+		\label{some2}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Errores Función de Costo CIFAR-10 }
+	\begin{figure}[H]
+		\includegraphics[width=0.7\textwidth]{figures/optimizadorescross50000500}
+		\caption{Comparación de las errores rango 0-500}
+		\label{some6}
+		
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Resultados CIFAR-100 - Precisión}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6\textwidth]{figures/tablep10000c100.png}
+		\caption{Precisión 100000 epochs }
+		\label{precisionc10000}
+	\end{figure} 	
+\end{frame}
+
+\begin{frame}{Resultados CIFAR-100 - Precisión}
+	\begin{figure}[H]
+		\includegraphics[width=0.6\textwidth]{figures/cifar100result.png}
+		\caption{Comparación de precisión para 10000 epochs	}
+		\label{some example43}
+	\end{figure}	
+\end{frame}
+
+\begin{frame}{Errores Función de Costo CIFAR-100}
+	\begin{figure}[H]
+		\includegraphics[width=0.7\textwidth]{figures/cifar100error.png}
+		\caption{Comparación los errores rango 9900-10000}
+		\label{some62}
+		
+	\end{figure}
 \end{frame}
 \section{Conclusiones y Trabajos Futuros}
 
 \begin{frame}{Conclusiones}
+	\begin{itemize}
+		\item Los métodos de optimización Adam y RMSprop obtuvieron los mejores
+		resultados de precisión en ambas pruebas.
+		\item A pesar de que el método de optimización Adam fue propuesto a partir
+		del RMSprop. Adam fue superado en algunas de pruebas realizadas.
+		\item Adam es el método que tiene un decaimiento más acelerado al calcular el
+		error en la función de costo cross-entropy.
 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusiones}
+	\begin{itemize}
+		\item Entre los métodos adaptativos Adam, RMSprop y Adagrad . Solo este
+		último obtuvo los peores resultados, esto se debió a su dificultad de
+		trabajar con la suma de las gradientes al cuadrado lo cual poco a poco
+		redujo su tasa de aprendizaje.
+		\item El RMSprop como una mejora del Adagrad, obtuvó mejores resultados
+		que este último. Esto debido a que RMSprop trabaja con el promedio
+		de la raíz de la gradiente anterior y tasas de decaimiento para controlar
+		el problema de la disminución de la tasa de aprendizaje del método
+		Adagrad.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Trabajos Futuro}
-	
+	\begin{itemize}
+		\item Correcto diseño de una red neuronal convolucional.
+		\item Obtener resultados con distintos hardwares.
+		\item Realizar una implementación más interactiva.
+	\end{itemize}
 \end{frame}
 
 \end{document}
