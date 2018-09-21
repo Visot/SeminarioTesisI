@@ -1,5 +1,5 @@
 \chapter{Estado del Arte}
-En este capítulo se describirán las investigaciones anteriores con relación al Aprendizaje Automático, además de sus aplicaciones. También se verán algunas investigaciones de GPUs como una manera de obtener un mejor rendimiento y nos enfocaremos principalmente en los estudios de los métodos de optimización.
+En este capítulo se describirán las investigaciones anteriores con relación al Aprendizaje Automático, además de sus aplicaciones. También se verán algunas investigaciones referente al reconocimiento de voz y los algoritmos usados para estas tareas.
 
 Este trabajo también presentará investigaciones referentes a Aprendizaje Profundo, exclusivamente nos enfocaremos a la Redes Neuronales Convolucionales(CNN), ya que son parte del tema de estudio en la presente investigación.
 
@@ -48,6 +48,10 @@ Este trabajo fue realizado por Timothy Dozat de la Universidad de Stanford, en e
 
 \textquotedblleft Esencialmente la investigación muestra cómo combinar el momento clásico con una tasa de aprendizaje adaptativa. Este trabajo lleva un enfoque más allá de la investigación y mejora uno de los componentes principales sin aumentar la complejidad del algoritmo\textquotedblright \cite{NMIA}
 \vspace{2cm}
+\section{Reconocimiento de Voz}
+\subsection{Review of Algorithms and Applications in Speech Recognition System}
+Este trabajo fue realizado por CR Rashmi del \textit{ Cork Institute of Tecnology (CIT) } en la investigación se describe el reconocimiento del habla como un método poder realizar distintas aplicaciones como: reconocimiento del hablante(Identificación Biométrica), emociones, acento, etc. Además se presentan distintos algoritmos que usan transformada de fourier y modelos probabilísticos que son aplicados a tareas de reconocimiento de voz.\\ Esta investigación se centra en los algoritmos para la extracción de características y coincidencia de patrones.\\ Entre principales algoritmos para la extracción de características que muestran tenemos: RCC, MFCC, LPC, etc. Siendo el MFCC uno de los mejores para realizar tareas de reconocimiento del hablante. Por otro lado en coincidencia de patrones tenemos algoritmos como VQ, HMM, SVM, MLP, GMM, etc. Para tareas de reconocimiento de emociones y géneros destaca el GMM.
+
 \section{Conclusiones}
 %Hemos visto la necesidad....
 A medida que tratamos muchos problemas vemos la necesidad de encontrar optimizadores adecuados para los diferentes tipos de problemas. En el área de Aprendizaje Profundo comúnmente se trabaja en el campo de reconocimiento de imágenes.\\ A pesar de las mejoras mediante el uso de GPUs este tipo de problemas necesitan soluciones óptimos para obtener un mejor rendimiento. Métodos como Nesterov Momemtum, RMSProp y Adam surgen como principales opciones para realizar optimizaciones de la gradiente de descenso.
